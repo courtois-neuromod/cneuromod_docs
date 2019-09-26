@@ -5,4 +5,4 @@
    :caption: Contents:
 
    ETHICS
-   ELECTROPHYSIO
+   PHYSIOLOGY
