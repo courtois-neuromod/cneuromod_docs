@@ -1,6 +1,12 @@
 # Courtois NeuroMod documentation
 
-A central repository for important documentation of the Courtois NeuroMod project. List of content:
- * `consent_form_english.pdf`: the informed consent form signed by participants (English version).
- * `consent_form_french.pdf`: the informed consent form signed by participants (French version).
- * `courtois_neuromod_project_description.pdf`: scientific summary of the Courtois NeuroMod project, as approved by the Ethics review board. 
+A central repository for important documentation of the Courtois NeuroMod project. The docs are built with sphinx. Content is mostly composed of markdown files (with a few .rst) located in `source`, and  
+the website is located in `build`. To update the website, install the dependencies (python3) using:
+```
+pip install -r requirements.txt
+```
+
+and then type
+```
+make html
+```
