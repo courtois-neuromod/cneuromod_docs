@@ -3,7 +3,7 @@ Courtois NeuroMod
 
 .. warning:: This site is under construction. The first data release is scheduled for June 2020. Thank you for your patience!
 
-The Courtois project on Neural Modelling (Courtois NeuroMod) aims at training artificial neural networks using extensive experimental data on individual human brain activity and behaviour. This repository contains all the documentation pertaining to NeuroMod data.
+The Courtois project on Neural Modelling (Courtois NeuroMod) aims at training artificial neural networks using extensive experimental data on individual human brain activity and behaviour.
 
 Six subjects are getting scanned weekly for five years, for a total of 500 hours of functional data per subject, covering several cognitive domains:
 
@@ -17,7 +17,7 @@ Functional neuroimaging data are collected with several state-of-the-art techniq
 * magnetoencephalography,
 * a variety of sensors (including electrodermal activity and occulometry).
 
-All Courtois NeuroMod data are freely shared with the scientific community to advance research at the interface of neuroscience and artificial intelligence.
+Courtois NeuroMod data are freely shared with the scientific community to advance research at the interface of neuroscience and artificial intelligence. 
 
 
 .. image:: img/logo_neuromod_black.png
