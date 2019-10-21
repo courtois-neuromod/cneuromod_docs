@@ -6,3 +6,4 @@
 
    ETHICS
    PHYSIOLOGY
+   MRI

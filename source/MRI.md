@@ -1,4 +1,4 @@
-# MRI Data
+# MRI sequences
 
 ## Anatomical sessions
 
@@ -24,7 +24,7 @@ GRE_MTI:            2:12
 GRE_MTO:            2:12
 GRE_T1W:            0:57
 GRE_ME:             4:45
- 
+
 
 TODO: acq params, link to osf.io of JCA protocol
 
