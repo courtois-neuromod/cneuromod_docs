@@ -2,7 +2,9 @@
 
 ## HCP-trt
 
-Four out of six participants have repeated fifteen times the functional localizers developed by the Human Connectome Project, for a total of approximately 10 hours of functional data per subject. This `cneuromod` dataset is called HCP test-retest (`HCP-trt`). The protocol consisted of seven tasks, namely; gambling, motor, language processing, social cognition, relational processing, emotional processing, and working memory. The descriptions below were adapted from the HCP protocol site. Before each task participants are given detailed instructions, and are given examples, as well as a practice run.
+Four out of six participants (`P01`, `P02`, `P03`, `P05`) have repeated fifteen times the functional localizers developed by the Human Connectome Project, for a total of approximately 10 hours of functional data per subject. This `cneuromod` dataset is called HCP test-retest (`HCP-trt`). The protocol consisted of seven tasks, namely; gambling, motor, language processing, social cognition, relational processing, emotional processing, and working memory. The descriptions below were adapted from the HCP protocol site. Before each task participants are given detailed instructions, and are given examples, as well as a practice run.
+
+EXPLAIN WHERE TO FIND THE DATA IN DATALAD. The eprime scripts for preparation and presentation of the stimuli can be found in the following github [repository](). EXPLAIN HOW THE STIMULI ARE NAMED, AND WHERE TO FIND THE STIMULI IN DATALAD.
 
 ### Gambling
 Duration: approximately 4 minutes. Participants played a card guessing game where they were told to guess whether the number of a card (represented by a “?” presented for 1500ms on the screen) was above or below 5 (Delgado et al. 2000). They indicated their choice using button press, and following their choice they were shown the correct number. If they guessed correctly they were told they won money ($1.00 - reward condition), if they guessed incorrectly they were told they lost money ($0.50 - loss condition), and if the number was exactly 5 they were told that they neither won or lost money (neutral condition). Note that no money was actually given to the participants and, as such, this task may not be valid but was still included to accurately reproduce the HCP protocol. The conditions were presented in blocks of 8 trials that were either mostly reward (6 reward trials pseudo randomly interleaved with either 1 neutral and 1 loss trial, 2 neutral trials, or 2 loss trials) or mostly loss (6 loss trials pseudo-randomly interleaved with either 1 neutral and 1 reward trial, 2 neutral trials, or 2 reward trials). There were four blocks per run (2 mostly win and 2 mostly loss), and two runs in total.
@@ -28,4 +30,14 @@ Duration: approximately 5 minutes. There were two subtasks: a category specific 
 ### Resting state
 Duration: 15 minutes. In every other session, one resting-state fMRI run was acquired. Participants were asked to have their eye open, be looking at fixation cross in the middle of the screen and be instructed to not fall asleep. A total of five resting-state fMRI runs were acquired per subject.
 
-# Movie-10
+## Movie-10
+
+This dataset includes about 10 hours of functional data for all 6 participants (`P01-P06`). The participants watched the following movies:
+ * [The Bourne supremacy](https://en.wikipedia.org/wiki/The_Bourne_Supremacy_%28film%29). Duration ~100 minutes.
+ * [The wolf of wall street](https://en.wikipedia.org/wiki/The_Wolf_of_Wall_Street_%282013_film%29). Duration ~170 minutes.
+ * [Hidden figures](https://en.wikipedia.org/wiki/Hidden_Figures). Duration ~120 minutes. This movie was presented twice, for a total duration of ~240 minutes.
+ * [Life](https://en.wikipedia.org/wiki/Life_(British_TV_series)) episode 2: "Reptiles and Amphibians".  Duration ~XX minutes. This movie was presented twice, for a total duration of ~XX minutes.
+
+ Each movie was cut into a series of ~10 minutes clips. Exact cutting points were manually selected to not interrupt the narrative flow. Fade out to a black screen was added at the end of each clip, and with a few seconds overlap between the end of a clip and the beginning of the next clip. The number of clips presented in a given session varied, and some subjects took short breaks inside a session.
+
+ EXPLAIN WHERE TO FIND THE DATA IN DATALAD. The python & psychopy scripts for preparation and presentation of the clips can be found in the following github [repository](). EXPLAIN HOW THE CLIPS ARE NAMED, AND WHERE TO FIND THE ACTUAL CLIPS IN DATA LAD.
