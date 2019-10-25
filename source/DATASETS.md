@@ -2,7 +2,7 @@
 
 ## HCP-trt
 
-Four out of six participants (`P01`, `P02`, `P03`, `P05`) have repeated fifteen times the functional localizers developed by the Human Connectome Project, for a total of approximately 10 hours of functional data per subject. This `cneuromod` dataset is called HCP test-retest (`HCP-trt`). The protocol consisted of seven tasks, namely; gambling, motor, language processing, social cognition, relational processing, emotional processing, and working memory. The descriptions below were adapted from the HCP protocol site. Before each task participants are given detailed instructions, and are given examples, as well as a practice run.
+Four out of six participants (`P01-03`, `P05`) were scanned for a total of approximately 10 hours of functional data per subject. This `cneuromod` dataset is called HCP test-retest (`HCP-trt`), because participants repeated 15 times the functional localizers developed by the Human Connectome Project. The protocol consisted of seven tasks, described below (text adapted from the HCP protocol site). Before each task participants are given detailed instructions, and are given examples, as well as a practice run. A session was typically composed either of two repetitions of the HCP localizers, or of one resting-state run, and one repetition of HCP localizers. 
 
 EXPLAIN WHERE TO FIND THE DATA IN DATALAD. The eprime scripts for preparation and presentation of the stimuli can be found in the following github [repository](). EXPLAIN HOW THE STIMULI ARE NAMED, AND WHERE TO FIND THE STIMULI IN DATALAD.
 
