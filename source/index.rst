@@ -4,7 +4,7 @@
    :maxdepth: 1
    :caption: Contents:
 
-   TASKS
+   DATASETS
    ETHICS
    PHYSIOLOGY
    MRI
