@@ -54,10 +54,10 @@ html_theme = 'sphinx_rtd_theme'
 html_short_title = 'CNeuroMod'
 
 # The logo
-html_logo = 'img/cneurmod.png'
+html_logo = 'img/logo_neuromod_black.png'
 
 # icon
-html_favicon = 'img/cneurmod.png'
+html_favicon = 'img/logo_neuromod_small.png'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
