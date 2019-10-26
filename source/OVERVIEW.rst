@@ -1,5 +1,5 @@
 Courtois NeuroMod
-=============
+=================
 
 .. warning:: This site is under construction. The first data release is scheduled for June 2020. Thank you for your patience!
 
@@ -17,7 +17,7 @@ Functional neuroimaging data are collected with several state-of-the-art techniq
 * magnetoencephalography,
 * a variety of sensors (including electrodermal activity and occulometry).
 
-Courtois NeuroMod data are freely shared with the scientific community to advance research at the interface of neuroscience and artificial intelligence. 
+Courtois NeuroMod data are freely shared with the scientific community to advance research at the interface of neuroscience and artificial intelligence.
 
 
 .. image:: img/logo_neuromod_black.png
