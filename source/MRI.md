@@ -30,11 +30,13 @@ This software also allowed to trigger the start of the eyetracking system.
 
 ## Functional acquisitions
 
-Sequence:                              CMRR multiband GRE-EPI.
-Slice acceleration (multiband) factor: 4
-Resolution:                            2mm isotropic
-Matrix size:                           96x96
+Sequence | CMRR multiband GRE-EPI.
+Slice acceleration (multiband) factor | 4
+Resolution | 2mm isotropic
+Matrix size | 96x96
+
 TODO: acq params
+
 
 
 The functional acquisitions are all identical to the ones used in the HCP-trt dataset. The Siemens pdf exam card can be found [here](./_static/mri/functional_protocol_HCP-trt.pdf), and is briefly recaped below. Note that the parameters of the functional MRI sequence relevant for data analysis can be found in the BIDS dataset and included metadata.
