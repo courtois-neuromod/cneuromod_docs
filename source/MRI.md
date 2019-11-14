@@ -13,7 +13,7 @@ All visual stimuli were presented with a projector onto a blank screen located i
 
 ### Auditory system
 
-For functional sessions, participant are equipped with MRI compatible headphone inserts.
+For functional sessions, participant are equipped with MRI compatible Sensimetrics headphone inserts.
 On the computer used for stimuli presentation, a custom impulse response of the headphones is applied with an online finite impulse response filter using the LADSPA DSP to all the presented stimuli.
 This impulse response was provided by the manufacturer.
 
@@ -24,12 +24,21 @@ Eprime scripts provided by the Human Connectome project were adapted for our pre
 ### Other stimuli
 
 A custom overlay on top of Psychopy was used to present the different tasks and synchronize task with the scanner TTL.
+This software also allowed to trigger the start of the eyetracking system.
 
 ## Video  game controller
 
 ## Functional acquisitions
 
+Sequence:                              CMRR multiband GRE-EPI.
+Slice acceleration (multiband) factor: 4
+Resolution:                            2mm isotropic
+Matrix size:                           96x96
 TODO: acq params
+
+
+For each participant positioning in the scanner, a short acquisition (3 volumes) with reversed phase encoding direction was acquired to allow retrospective correction of B0 field inhomogeneity-induced distortion.
+
 
 For further information regarding the fMRI data structure and parameters, consult the BIDS dataset and included metadata.
 [BIDS dataset](https://git.unf-montreal.ca/neuromod/)
