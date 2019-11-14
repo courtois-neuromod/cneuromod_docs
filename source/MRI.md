@@ -3,7 +3,7 @@
 Magnetic resonance imaging (MRI) for the Courtois neuromod project is being acquired at the functional neuroimaging unit ([UNF](https://unf-montreal.ca/)), located at the "Centre de Recherche de l'Institut Universitaire de Gériatrie de Montréal" ([CRIUGM](http://www.criugm.qc.ca/)) and affiliated with [Université de Montréal](https://www.umontreal.ca/) as well as the [CIUSSS du Centre-Sud-de-l'île-de-Montréal](https://ciusss-centresudmtl.gouv.qc.ca/propos/services-en-anglais). The scanner is a Siemens Prisma Fit, with a 64 channels head coil. Most imaging in the Courtois Neuromod project are composed solely of functional MRI runs. Periodically, an entire session is dedicated to anatomical scans. The scanning environment includes a number of stimulation and response equipment, detailed below.   
 
 ## Personalized head cases
-<img src="./_static/mri/headcase.png" alt="head case" width="200" align="right" hspace="10"/> In order to minimize movement during neuroimaging scans, each participant wears a custom-designed, personalized headcase built by a company called [Caseforge](https://caseforge.co) during scanning. The headcase are milled based on a scan of each participant's head generated using a handheld 3D scanner, as well as the shape of the MRI coil. Caseforge  mills the personalized headcases in foam blocks.
+<img src="./_static/mri/headcase.png" alt="head case" width="200" align="right" hspace="10"/> In order to minimize movement during neuroimaging scans, each participant wears a custom-designed, personalized headcase built by a company called [Caseforge](https://caseforge.co) during scanning. The headcase are milled based on a scan of each participant's head generated using a handheld 3D scanner, as well as the shape of the MRI coil. Caseforge  mills the personalized headcases in polystyrene foam blocks.
 
 ## Stimuli
 
@@ -13,20 +13,18 @@ All visual stimuli were presented with a projector onto a blank screen located i
 
 ### Auditory system
 
-For functional sessions, participant are equipped with MRI compatible Sensimetrics headphone inserts.
-On the computer used for stimuli presentation, a custom impulse response of the headphones is applied with an online finite impulse response filter using the LADSPA DSP to all the presented stimuli.
-This impulse response was provided by the manufacturer.
+For functional sessions, participant wore MRI compatible  S15 [Sensimetric] (http://www.sens.com/products/model-s15/) headphone inserts, proving high-quality acoustic stimulation and substantial attenuation of background noise.  On the computer used for stimuli presentation, a custom impulse response of the headphones is applied with an online finite impulse response filter using the LADSPA DSP to all the presented stimuli.This impulse response was provided by the manufacturer. Sounds was amplified using an [AudioSource] (http://audiosource.net/shop/amp100vs/) AMP100V amplifier, situated in the control room.
 
 ### HCPTRT Stimuli
 
-Eprime scripts provided by the Human Connectome project were adapted for our presentation system and used in the study
+Eprime scripts provided by the Human Connectome project for the  the 7 tfMRI tasks were adapted for our presentation system, and run using Eprime 2.0. 
 
 ### Other stimuli
-
 A custom overlay on top of Psychopy was used to present the different tasks and synchronize task with the scanner TTL.
-This software also allowed to trigger the start of the eyetracking system.
+This software also allowed to trigger the start of the eyetracking system, and onset the stimuli presenation. TTL pulses were also recorded in the Acknowledge software.
 
 ## Video  game controller
+Under developement
 
 ## Functional acquisitions
 
@@ -39,7 +37,7 @@ TODO: acq params
 
 
 
-The functional acquisitions are all identical to the ones used in the HCP-trt dataset. The Siemens pdf exam card can be found [here](./_static/mri/functional_protocol_HCP-trt.pdf), and is briefly recaped below. Note that the parameters of the functional MRI sequence relevant for data analysis can be found in the BIDS dataset and included metadata.
+The functional acquisitions are all identical to the ones used in the HCP-trt dataset. The Siemens pdf exam card can be found [here](./_static/mri/functional_protocol_HCP-trt.pdf), and is briefly recaped below. Note that the parameters of the functional MRI sequence relevant for data analysis can be found in the BIDS dataset, and included metadata.
 [BIDS dataset](https://git.unf-montreal.ca/neuromod/).
 
 Functional MRI data was acquired using a simultaneaus multi-slice sequence available through the Siemens PRISMA scanner (...) with a repetition time of 1.49 seconds and a resolution of 2 milliters isotropic (...).
