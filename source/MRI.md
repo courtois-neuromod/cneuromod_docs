@@ -37,13 +37,17 @@ Matrix size:                           96x96
 TODO: acq params
 
 
+The functional acquisitions are all identical to the ones used in the HCP-trt dataset. The Siemens pdf exam card can be found [here](./_static/mri/functional_protocol_HCP-trt.pdf), and is briefly recaped below. Note that the parameters of the functional MRI sequence relevant for data analysis can be found in the BIDS dataset and included metadata.
+[BIDS dataset](https://git.unf-montreal.ca/neuromod/).
+
+Functional MRI data was acquired using a simultaneaus multi-slice sequence available through the Siemens PRISMA scanner (...) with a repetition time of 1.49 seconds and a resolution of 2 milliters isotropic (...).
+
 For each participant positioning in the scanner, a short acquisition (3 volumes) with reversed phase encoding direction was acquired to allow retrospective correction of B0 field inhomogeneity-induced distortion.
 
-
-For further information regarding the fMRI data structure and parameters, consult the BIDS dataset and included metadata.
-[BIDS dataset](https://git.unf-montreal.ca/neuromod/)
-
 ## Anatomical acquisitions
+
+The Siemens pdf exam card of the anatomical sessions can be found [here](./_static/mri/anatomical_protocol_2019-01-22.pdf), and is briefly recaped below. Note that the parameters of the MRI sequences relevant for data analysis can be found in the BIDS dataset and included metadata.
+[BIDS dataset](https://git.unf-montreal.ca/neuromod/).
 
 ### Brain
 
