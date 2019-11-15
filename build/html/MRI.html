@@ -91,10 +91,8 @@
 <li class="toctree-l1"><a class="reference internal" href="ETHICS.html">Ethics</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">MRI</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#image-acquisition">Image acquisition</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#scanner">Scanner</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#personalized-head-cases">Personalized head cases</a></li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="#scanner">Scanner</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#personalized-head-cases">Personalized head cases</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#functional-sequences">Functional sequences</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#brain-anatomical-sequences">Brain anatomical sequences</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#spinal-cord-anatomical-sequences">Spinal cord anatomical sequences</a></li>
@@ -106,7 +104,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#stimuli-presentation">Stimuli presentation</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#physiological-measurements">Physiological measurements</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#physiological-measures">Physiological measures</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#biopac">Biopac</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#plethysmograph">Plethysmograph</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#skin-conductance">Skin conductance</a></li>
@@ -187,11 +185,11 @@
 <h2>Image acquisition<a class="headerlink" href="#image-acquisition" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="scanner">
 <h3>Scanner<a class="headerlink" href="#scanner" title="Permalink to this headline">¶</a></h3>
-<p><img src="./_static/mri/mri.jpg" alt="UNF MRI" width="350" align="right" hspace="10"/> Magnetic resonance imaging (MRI) for the Courtois neuromod project is being acquired at the functional neuroimaging unit (<a class="reference external" href="https://unf-montreal.ca/">UNF</a>), located at the “Centre de Recherche de l’Institut Universitaire de Gériatrie de Montréal” (<a class="reference external" href="http://www.criugm.qc.ca/">CRIUGM</a>) and affiliated with <a class="reference external" href="https://www.umontreal.ca/">Université de Montréal</a> as well as the <a class="reference external" href="https://ciusss-centresudmtl.gouv.qc.ca/propos/services-en-anglais">CIUSSS du Centre-Sud-de-l’île-de-Montréal</a>. The scanner is a Siemens Prisma Fit, with a 64 channels head coil. Most imaging in the Courtois Neuromod project are composed solely of functional MRI runs. Periodically, an entire session is dedicated to anatomical scans. The scanning environment includes a number of additional equipment, detailed below.</p>
-<div class="section" id="personalized-head-cases">
-<h4>Personalized head cases<a class="headerlink" href="#personalized-head-cases" title="Permalink to this headline">¶</a></h4>
-<p><img src="./_static/mri/headcase.png" alt="head case" width="200" align="right" hspace="10"/> In order to minimize movement during neuroimaging scans, each participant wears a custom-designed, personalized headcase built by a company called <a class="reference external" href="https://caseforge.co">Caseforge</a> during scanning. The headcase are milled based on a scan of each participant’s head generated using a handheld 3D scanner, and taking into consideration the shape of the chosen MRI coil. Caseforge  mills the personalized headcases in polystyrene foam blocks.</p>
+<p><img src="./_static/mri/mri.jpg" alt="UNF MRI" width="350" align="right" hspace="10"/> Magnetic resonance imaging (MRI) for the Courtois neuromod project is being acquired at the functional neuroimaging unit (<a class="reference external" href="https://unf-montreal.ca/">UNF</a>), located at the “Centre de Recherche de l’Institut Universitaire de Gériatrie de Montréal” (<a class="reference external" href="http://www.criugm.qc.ca/">CRIUGM</a>) and affiliated with <a class="reference external" href="https://www.umontreal.ca/">Université de Montréal</a> as well as the <a class="reference external" href="https://ciusss-centresudmtl.gouv.qc.ca/propos/services-en-anglais">CIUSSS du Centre-Sud-de-l’île-de-Montréal</a>. The scanner is a Siemens Prisma Fit, with a 64 channels head coil. Most imaging in the Courtois Neuromod project are composed solely of functional MRI runs. Periodically, an entire session is dedicated to anatomical scans.</p>
 </div>
+<div class="section" id="personalized-head-cases">
+<h3>Personalized head cases<a class="headerlink" href="#personalized-head-cases" title="Permalink to this headline">¶</a></h3>
+<p><img src="./_static/mri/headcase.png" alt="head case" width="200" align="right" hspace="10"/> In order to minimize movement during neuroimaging scans, each participant wears a custom-designed, personalized headcase during scanning, built by <a class="reference external" href="https://caseforge.co">Caseforge</a>. The headcase are milled based on a scan of each participant’s head generated using a handheld 3D scanner, and taking into consideration the shape of the chosen MRI coil. Caseforge mills the personalized headcases in polystyrene foam blocks.</p>
 </div>
 <div class="section" id="functional-sequences">
 <h3>Functional sequences<a class="headerlink" href="#functional-sequences" title="Permalink to this headline">¶</a></h3>
@@ -199,18 +197,18 @@
 </div>
 <div class="section" id="brain-anatomical-sequences">
 <h3>Brain anatomical sequences<a class="headerlink" href="#brain-anatomical-sequences" title="Permalink to this headline">¶</a></h3>
-<p>The Siemens pdf exam card of the anatomical sessions can be found <a class="reference external" href="./_static/mri/anatomical_protocol_2019-01-22.pdf">here</a>, and is briefly recaped below. Note that the parameters of the MRI sequences relevant for data analysis can be found in the BIDS dataset and included metadata.
-<a class="reference external" href="https://git.unf-montreal.ca/neuromod/">BIDS dataset</a>.</p>
-<p>Localizer:          ~0:21
-ANA T1W:             6:38
-ANA T2W:             5:57
-DWI:                 4:04
-GRE3D_MTW    :       3:34
-GRE3D_PDW    :       3:34
-GRE3D_T1W    :       2:18
-TFL_b1MAP_6MM:       0:21
-T1_MPRAGE:           7:26
-T2_SWI_TRA_P2_!5MM:  4:54</p>
+<p>Note that the parameters of the functional MRI sequence relevant for data analysis can be found in the <a class="reference external" href="https://git.unf-montreal.ca/neuromod/">BIDS dataset</a>, and included metadata. The acquisition parameters are identical for all anatomical sessions. The Siemens pdf exam card of the anatomical sessions can be found <a class="reference external" href="./_static/mri/anatomical_protocol_2019-01-22.pdf">here</a>, and is briefly recapitulated below. A standard (brain) anatomical session starts with a 21 s localizer scan, and then includes the following sequences:</p>
+<ul class="simple">
+<li><p>T1-weighted MPRAGE sequence (duration 6:38 mn, TR=, TE=)</p></li>
+<li><p>T2-weighted sequence (duration 5:57 mn, …)</p></li>
+<li><p>Diffusion-weighted sequence (duration 4:04 mn, …)</p></li>
+<li><p>gradient-echo magnetization-transfer sequence (duration 3:34 mn, …)</p></li>
+<li><p>gradient-echo proton density sequence (duration 3:34 mn, …)</p></li>
+<li><p>gradient-echo T1-weighted sequence (duration 2:18 mn, …)</p></li>
+<li><p>Field map (duration 0:21, …)</p></li>
+<li><p>T1-weighted MPRAGE sequence (duration 7:26 mn, …)</p></li>
+<li><p>T2 susceptibility-weighted imaging (duration 4:54 mn, ….)</p></li>
+</ul>
 </div>
 <div class="section" id="spinal-cord-anatomical-sequences">
 <h3>Spinal cord anatomical sequences<a class="headerlink" href="#spinal-cord-anatomical-sequences" title="Permalink to this headline">¶</a></h3>
@@ -240,8 +238,8 @@ GRE_ME:             4:45</p>
 This software also allowed to trigger the start of the eyetracking system, and onset the stimuli presentation. TTL pulses were also recorded in the <a class="reference external" href="https://www.biopac.com/wp-content/uploads/AcqKnowledge-Specialized.pdf">ACQKNOWLEDGE software</a>. All task stimuli scripts are available through <a class="reference external" href="https://github.com/courtois-neuromod/task_stimuli">github</a>.</p>
 </div>
 </div>
-<div class="section" id="physiological-measurements">
-<h2>Physiological measurements<a class="headerlink" href="#physiological-measurements" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="physiological-measures">
+<h2>Physiological measures<a class="headerlink" href="#physiological-measures" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="biopac">
 <h3>Biopac<a class="headerlink" href="#biopac" title="Permalink to this headline">¶</a></h3>
 <p>During all sequences, electrophysiological signals were recorded using a Biopac M160  MRI compatible systems and amplifiers. Measurements were acquired at 1000 Hz. Recodings were synch to the scans via the TTL pulse. All measurements were recorded and monitored using Biopac’s Acknowledge sofware.</p>
