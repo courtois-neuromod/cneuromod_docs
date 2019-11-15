@@ -37,6 +37,7 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Derivatives" href="DERIVATIVES.html" />
     <link rel="prev" title="Physiology" href="PHYSIOLOGY.html" /> 
 </head>
 
@@ -90,21 +91,23 @@
 <li class="toctree-l1"><a class="reference internal" href="ETHICS.html">Ethics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="PHYSIOLOGY.html">Physiology</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">MRI</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#personalized-head-cases">Personalized head cases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#siements-prisma-scanner">Siements Prisma scanner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#functional-acquisitions">Functional acquisitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#anatomical-acquisitions">Anatomical acquisitions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#brain">Brain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cervical-spinal-cord">Cervical spinal cord</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#personalized-head-cases">Personalized head cases</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#stimuli">Stimuli</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#visual-presentation">Visual presentation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#auditory-system">Auditory system</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#stimuli-presentation">Stimuli presentation</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#functional-acquisitions">Functional acquisitions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#anatomical-acquisitions">Anatomical acquisitions</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#brain">Brain</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#cervical-spinal-cord">Cervical spinal cord</a></li>
 </ul>
 </li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="DERIVATIVES.html">Derivatives</a></li>
 </ul>
 
             
@@ -171,30 +174,13 @@
             
   <div class="section" id="mri">
 <h1>MRI<a class="headerlink" href="#mri" title="Permalink to this headline">¶</a></h1>
-<p><img src="./_static/mri/mri.jpg" alt="UNF MRI" width="350" align="right" hspace="10"/> Magnetic resonance imaging (MRI) for the Courtois neuromod project is being acquired at the functional neuroimaging unit (<a class="reference external" href="https://unf-montreal.ca/">UNF</a>), located at the “Centre de Recherche de l’Institut Universitaire de Gériatrie de Montréal” (<a class="reference external" href="http://www.criugm.qc.ca/">CRIUGM</a>) and affiliated with <a class="reference external" href="https://www.umontreal.ca/">Université de Montréal</a> as well as the <a class="reference external" href="https://ciusss-centresudmtl.gouv.qc.ca/propos/services-en-anglais">CIUSSS du Centre-Sud-de-l’île-de-Montréal</a>. The scanner is a Siemens Prisma Fit, with a 64 channels head coil. Most imaging in the Courtois Neuromod project are composed solely of functional MRI runs. Periodically, an entire session is dedicated to anatomical scans. The scanning environment includes a number of stimulation and response equipment, detailed below.</p>
-<div class="section" id="personalized-head-cases">
-<h2>Personalized head cases<a class="headerlink" href="#personalized-head-cases" title="Permalink to this headline">¶</a></h2>
-<p><img src="./_static/mri/headcase.png" alt="head case" width="200" align="right" hspace="10"/> In order to minimize movement during neuroimaging scans, each participant wears a custom-designed, personalized headcase built by a company called <a class="reference external" href="https://caseforge.co">Caseforge</a> during scanning. The headcase are milled based on a scan of each participant’s head generated using a handheld 3D scanner, as well as the shape of the MRI coil. Caseforge  mills the personalized headcases in polystyrene foam blocks.</p>
-</div>
-<div class="section" id="stimuli">
-<h2>Stimuli<a class="headerlink" href="#stimuli" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="visual-presentation">
-<h3>Visual presentation<a class="headerlink" href="#visual-presentation" title="Permalink to this headline">¶</a></h3>
-<p>All visual stimuli were presented with a projector onto a blank screen located in the MRI room, through a waveguide.</p>
-</div>
-<div class="section" id="auditory-system">
-<h3>Auditory system<a class="headerlink" href="#auditory-system" title="Permalink to this headline">¶</a></h3>
-<p>For functional sessions, participant wore MRI compatible  S15 [Sensimetric] (http://www.sens.com/products/model-s15/) headphone inserts, proving high-quality acoustic stimulation and substantial attenuation of background noise.  On the computer used for stimuli presentation, a custom impulse response of the headphones is applied with an online finite impulse response filter using the LADSPA DSP to all the presented stimuli.This impulse response was provided by the manufacturer. Sounds was amplified using an [AudioSource] (http://audiosource.net/shop/amp100vs/) AMP100V amplifier, situated in the control room.</p>
-</div>
-<div class="section" id="stimuli-presentation">
-<h3>Stimuli presentation<a class="headerlink" href="#stimuli-presentation" title="Permalink to this headline">¶</a></h3>
-<p>For the HCP-trt dataset, Eprime scripts provided by the Human Connectome project were adapted for our presentation system, and run using Eprime 2.0. For all other tasks, a custom overlay on top of Psychopy was used to present the different tasks and synchronize task with the scanner TTL.
-This software also allowed to trigger the start of the eyetracking system, and onset the stimuli presentation. TTL pulses were also recorded in the <a class="reference external" href="https://www.biopac.com/wp-content/uploads/AcqKnowledge-Specialized.pdf">ACQKNOWLEDGE software</a>. All task stimuli scripts are available through <a class="reference external" href="https://github.com/courtois-neuromod/task_stimuli">github</a>.</p>
-</div>
+<div class="section" id="siements-prisma-scanner">
+<h2>Siements Prisma scanner<a class="headerlink" href="#siements-prisma-scanner" title="Permalink to this headline">¶</a></h2>
+<p><img src="./_static/mri/mri.jpg" alt="UNF MRI" width="350" align="right" hspace="10"/> Magnetic resonance imaging (MRI) for the Courtois neuromod project is being acquired at the functional neuroimaging unit (<a class="reference external" href="https://unf-montreal.ca/">UNF</a>), located at the “Centre de Recherche de l’Institut Universitaire de Gériatrie de Montréal” (<a class="reference external" href="http://www.criugm.qc.ca/">CRIUGM</a>) and affiliated with <a class="reference external" href="https://www.umontreal.ca/">Université de Montréal</a> as well as the <a class="reference external" href="https://ciusss-centresudmtl.gouv.qc.ca/propos/services-en-anglais">CIUSSS du Centre-Sud-de-l’île-de-Montréal</a>. The scanner is a Siemens Prisma Fit, with a 64 channels head coil. Most imaging in the Courtois Neuromod project are composed solely of functional MRI runs. Periodically, an entire session is dedicated to anatomical scans. The scanning environment includes a number of additional equipment, detailed below.</p>
 </div>
 <div class="section" id="functional-acquisitions">
 <h2>Functional acquisitions<a class="headerlink" href="#functional-acquisitions" title="Permalink to this headline">¶</a></h2>
-<p>Note that the parameters of the functional MRI sequence relevant for data analysis can be found in the <a class="reference external" href="https://git.unf-montreal.ca/neuromod/">BIDS dataset</a>, and included metadata. The functional acquisition parameters are all identical to the one used in the HCP-trt dataset. The Siemens exam card can be found <a class="reference external" href="./_static/mri/functional_protocol_HCP-trt.pdf">here</a>, and is briefly recapitulated below. Functional MRI data was acquired using an accelerated simultaneous multi-slice , gradient echo-planar imaging sequence <a class="reference external" href="http://www.ncbi.nlm.nih.gov/pubmed/23899722">(Xu et al., 2013)</a> developed at the Center for Magnetic Resonance Research (CMRR) University of Minnesota, as part of the Human Connectome Project <a class="reference external" href="https://www.nature.com/articles/nn.4361">(Glasser et al., 2016)</a>. The sequence is available on the Siemens PRISMA scanner at UNF through a concept to production (C2P) agreement, and was used with the following paramaters: slice acceleration factor of 4, TR = 1.49 s, TE = 37 ms, flip angle = 52 degrees, voxel size = 2 mm x 2 mm x 2 mm, 60 slices, acquisition matrix 96x96. In each session, a short acquisition (3 volumes) with reversed phase encoding direction was acquired to allow retrospective correction of B0 field inhomogeneity-induced distortion.</p>
+<p>Note that the parameters of the functional MRI sequence relevant for data analysis can be found in the <a class="reference external" href="https://git.unf-montreal.ca/neuromod/">BIDS dataset</a>, and included metadata. The functional acquisition parameters are all identical to the one used in the HCP-trt dataset. The Siemens exam card can be found <a class="reference external" href="./_static/mri/functional_protocol_HCP-trt.pdf">here</a>, and is briefly recapitulated below. Functional MRI data was acquired using an accelerated simultaneous multi-slice, gradient echo-planar imaging sequence <a class="reference external" href="http://www.ncbi.nlm.nih.gov/pubmed/23899722">(Xu et al., 2013)</a> developed at the Center for Magnetic Resonance Research (CMRR) University of Minnesota, as part of the Human Connectome Project <a class="reference external" href="https://www.nature.com/articles/nn.4361">(Glasser et al., 2016)</a>. The sequence is available on the Siemens PRISMA scanner at UNF through a concept to production (C2P) agreement, and was used with the following paramaters: slice acceleration factor of 4, TR = 1.49 s, TE = 37 ms, flip angle = 52 degrees, voxel size = 2 mm x 2 mm x 2 mm, 60 slices, acquisition matrix 96x96. In each session, a short acquisition (3 volumes) with reversed phase encoding direction was acquired to allow retrospective correction of B0 field inhomogeneity-induced distortion.</p>
 </div>
 <div class="section" id="anatomical-acquisitions">
 <h2>Anatomical acquisitions<a class="headerlink" href="#anatomical-acquisitions" title="Permalink to this headline">¶</a></h2>
@@ -224,6 +210,26 @@ GRE_T1W:            0:57
 GRE_ME:             4:45</p>
 <p>TODO: acq params, link to osf.io of JCA protocol</p>
 </div>
+<div class="section" id="personalized-head-cases">
+<h3>Personalized head cases<a class="headerlink" href="#personalized-head-cases" title="Permalink to this headline">¶</a></h3>
+<p><img src="./_static/mri/headcase.png" alt="head case" width="200" align="right" hspace="10"/> In order to minimize movement during neuroimaging scans, each participant wears a custom-designed, personalized headcase built by a company called <a class="reference external" href="https://caseforge.co">Caseforge</a> during scanning. The headcase are milled based on a scan of each participant’s head generated using a handheld 3D scanner, and taking into consideration the shape of the chosen MRI coil. Caseforge  mills the personalized headcases in polystyrene foam blocks.</p>
+</div>
+</div>
+<div class="section" id="stimuli">
+<h2>Stimuli<a class="headerlink" href="#stimuli" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="visual-presentation">
+<h3>Visual presentation<a class="headerlink" href="#visual-presentation" title="Permalink to this headline">¶</a></h3>
+<p>All visual stimuli were projected onto a blank screen located in the MRI room, through a waveguide.</p>
+</div>
+<div class="section" id="auditory-system">
+<h3>Auditory system<a class="headerlink" href="#auditory-system" title="Permalink to this headline">¶</a></h3>
+<p>For functional sessions, participant wore MRI compatible  S15 <a class="reference external" href="http://www.sens.com/products/model-s15/">Sensimetric</a> headphone inserts, proving high-quality acoustic stimulation and substantial attenuation of background noise.  On the computer used for stimuli presentation, a custom impulse response of the headphones is applied with an online finite impulse response filter using the LADSPA DSP to all the presented stimuli.This impulse response was provided by the manufacturer. Sounds was amplified using an <a class="reference external" href="http://audiosource.net/shop/amp100vs/">AudioSource</a> AMP100V amplifier, situated in the control room.</p>
+</div>
+<div class="section" id="stimuli-presentation">
+<h3>Stimuli presentation<a class="headerlink" href="#stimuli-presentation" title="Permalink to this headline">¶</a></h3>
+<p>For the HCP-trt dataset, Eprime scripts provided by the Human Connectome project were adapted for our presentation system, and run using Eprime 2.0. For all other tasks, a custom overlay on top of Psychopy was used to present the different tasks and synchronize task with the scanner TTL.
+This software also allowed to trigger the start of the eyetracking system, and onset the stimuli presentation. TTL pulses were also recorded in the <a class="reference external" href="https://www.biopac.com/wp-content/uploads/AcqKnowledge-Specialized.pdf">ACQKNOWLEDGE software</a>. All task stimuli scripts are available through <a class="reference external" href="https://github.com/courtois-neuromod/task_stimuli">github</a>.</p>
+</div>
 </div>
 </div>
 
@@ -234,6 +240,8 @@ GRE_ME:             4:45</p>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="DERIVATIVES.html" class="btn btn-neutral float-right" title="Derivatives" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="PHYSIOLOGY.html" class="btn btn-neutral float-left" title="Physiology" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
