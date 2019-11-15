@@ -15,34 +15,14 @@ All visual stimuli were presented with a projector onto a blank screen located i
 
 For functional sessions, participant wore MRI compatible  S15 [Sensimetric] (http://www.sens.com/products/model-s15/) headphone inserts, proving high-quality acoustic stimulation and substantial attenuation of background noise.  On the computer used for stimuli presentation, a custom impulse response of the headphones is applied with an online finite impulse response filter using the LADSPA DSP to all the presented stimuli.This impulse response was provided by the manufacturer. Sounds was amplified using an [AudioSource] (http://audiosource.net/shop/amp100vs/) AMP100V amplifier, situated in the control room.
 
-### HCPTRT Stimuli
+### Stimuli presentation
 
-Eprime scripts provided by the Human Connectome project for the  the 7 tfMRI tasks were adapted for our presentation system, and run using Eprime 2.0.
-
-### Other stimuli
-A custom overlay on top of Psychopy was used to present the different tasks and synchronize task with the scanner TTL.
-This software also allowed to trigger the start of the eyetracking system, and onset the stimuli presenation. TTL pulses were also recorded in the Acknowledge software.
-
-## Video  game controller
-Under developement
+For the HCP-trt dataset, Eprime scripts provided by the Human Connectome project were adapted for our presentation system, and run using Eprime 2.0. For all other tasks, a custom overlay on top of Psychopy was used to present the different tasks and synchronize task with the scanner TTL.
+This software also allowed to trigger the start of the eyetracking system, and onset the stimuli presentation. TTL pulses were also recorded in the [ACQKNOWLEDGE software](https://www.biopac.com/wp-content/uploads/AcqKnowledge-Specialized.pdf). All task stimuli scripts are available through [github](https://github.com/courtois-neuromod/task_stimuli).
 
 ## Functional acquisitions
 
-Sequence | CMRR multiband GRE-EPI.
-Slice acceleration (multiband) factor | 4
-Resolution | 2mm isotropic
-Matrix size | 96x96
-
-TODO: acq params
-
-
-
-The functional acquisitions are all identical to the ones used in the HCP-trt dataset. The Siemens pdf exam card can be found [here](./_static/mri/functional_protocol_HCP-trt.pdf), and is briefly recaped below. Note that the parameters of the functional MRI sequence relevant for data analysis can be found in the BIDS dataset, and included metadata.
-[BIDS dataset](https://git.unf-montreal.ca/neuromod/).
-
-Functional MRI data was acquired using a simultaneaus multi-slice sequence available through the Siemens PRISMA scanner (...) with a repetition time of 1.49 seconds and a resolution of 2 milliters isotropic (...).
-
-For each participant positioning in the scanner, a short acquisition (3 volumes) with reversed phase encoding direction was acquired to allow retrospective correction of B0 field inhomogeneity-induced distortion.
+ Note that the parameters of the functional MRI sequence relevant for data analysis can be found in the [BIDS dataset](https://git.unf-montreal.ca/neuromod/), and included metadata. The functional acquisition parameters are all identical to the one used in the HCP-trt dataset. The Siemens exam card can be found [here](./_static/mri/functional_protocol_HCP-trt.pdf), and is briefly recapitulated below. Functional MRI data was acquired using an accelerated simultaneous multi-slice , gradient echo-planar imaging sequence [(Xu et al., 2013)](http://www.ncbi.nlm.nih.gov/pubmed/23899722) developed at the Center for Magnetic Resonance Research (CMRR) University of Minnesota, as part of the Human Connectome Project [(Glasser et al., 2016)](https://www.nature.com/articles/nn.4361). The sequence is available on the Siemens PRISMA scanner at UNF through a concept to production (C2P) agreement, and was used with the following paramaters: slice acceleration factor of 4, TR = 1.49 s, TE = 37 ms, flip angle = 52 degrees, voxel size = 2 mm x 2 mm x 2 mm, 60 slices, acquisition matrix 96x96. In each session, a short acquisition (3 volumes) with reversed phase encoding direction was acquired to allow retrospective correction of B0 field inhomogeneity-induced distortion.
 
 ## Anatomical acquisitions
 
