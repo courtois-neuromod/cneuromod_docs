@@ -6,7 +6,7 @@
 
 ## Functional acquisitions
 
- Note that the parameters of the functional MRI sequence relevant for data analysis can be found in the [BIDS dataset](https://git.unf-montreal.ca/neuromod/), and included metadata. The functional acquisition parameters are all identical to the one used in the HCP-trt dataset. The Siemens exam card can be found [here](./_static/mri/functional_protocol_HCP-trt.pdf), and is briefly recapitulated below. Functional MRI data was acquired using an accelerated simultaneous multi-slice , gradient echo-planar imaging sequence [(Xu et al., 2013)](http://www.ncbi.nlm.nih.gov/pubmed/23899722) developed at the Center for Magnetic Resonance Research (CMRR) University of Minnesota, as part of the Human Connectome Project [(Glasser et al., 2016)](https://www.nature.com/articles/nn.4361). The sequence is available on the Siemens PRISMA scanner at UNF through a concept to production (C2P) agreement, and was used with the following paramaters: slice acceleration factor of 4, TR = 1.49 s, TE = 37 ms, flip angle = 52 degrees, voxel size = 2 mm x 2 mm x 2 mm, 60 slices, acquisition matrix 96x96. In each session, a short acquisition (3 volumes) with reversed phase encoding direction was acquired to allow retrospective correction of B0 field inhomogeneity-induced distortion.
+ Note that the parameters of the functional MRI sequence relevant for data analysis can be found in the [BIDS dataset](https://git.unf-montreal.ca/neuromod/), and included metadata. The functional acquisition parameters are all identical to the one used in the HCP-trt dataset. The Siemens exam card can be found [here](./_static/mri/functional_protocol_HCP-trt.pdf), and is briefly recapitulated below. Functional MRI data was acquired using an accelerated simultaneous multi-slice, gradient echo-planar imaging sequence [(Xu et al., 2013)](http://www.ncbi.nlm.nih.gov/pubmed/23899722) developed at the Center for Magnetic Resonance Research (CMRR) University of Minnesota, as part of the Human Connectome Project [(Glasser et al., 2016)](https://www.nature.com/articles/nn.4361). The sequence is available on the Siemens PRISMA scanner at UNF through a concept to production (C2P) agreement, and was used with the following paramaters: slice acceleration factor of 4, TR = 1.49 s, TE = 37 ms, flip angle = 52 degrees, voxel size = 2 mm x 2 mm x 2 mm, 60 slices, acquisition matrix 96x96. In each session, a short acquisition (3 volumes) with reversed phase encoding direction was acquired to allow retrospective correction of B0 field inhomogeneity-induced distortion.
 
 ## Anatomical acquisitions
 
@@ -44,17 +44,17 @@ GRE_ME:             4:45
 TODO: acq params, link to osf.io of JCA protocol
 
 ### Personalized head cases
-<img src="./_static/mri/headcase.png" alt="head case" width="200" align="right" hspace="10"/> In order to minimize movement during neuroimaging scans, each participant wears a custom-designed, personalized headcase built by a company called [Caseforge](https://caseforge.co) during scanning. The headcase are milled based on a scan of each participant's head generated using a handheld 3D scanner, as well as the shape of the MRI coil. Caseforge  mills the personalized headcases in polystyrene foam blocks.
+<img src="./_static/mri/headcase.png" alt="head case" width="200" align="right" hspace="10"/> In order to minimize movement during neuroimaging scans, each participant wears a custom-designed, personalized headcase built by a company called [Caseforge](https://caseforge.co) during scanning. The headcase are milled based on a scan of each participant's head generated using a handheld 3D scanner, and taking into consideration the shape of the chosen MRI coil. Caseforge  mills the personalized headcases in polystyrene foam blocks.
 
 ## Stimuli
 
 ### Visual presentation
 
-All visual stimuli were presented with a projector onto a blank screen located in the MRI room, through a waveguide.
+All visual stimuli were projected onto a blank screen located in the MRI room, through a waveguide.
 
 ### Auditory system
 
-For functional sessions, participant wore MRI compatible  S15 [Sensimetric] (http://www.sens.com/products/model-s15/) headphone inserts, proving high-quality acoustic stimulation and substantial attenuation of background noise.  On the computer used for stimuli presentation, a custom impulse response of the headphones is applied with an online finite impulse response filter using the LADSPA DSP to all the presented stimuli.This impulse response was provided by the manufacturer. Sounds was amplified using an [AudioSource] (http://audiosource.net/shop/amp100vs/) AMP100V amplifier, situated in the control room.
+For functional sessions, participant wore MRI compatible  S15 [Sensimetric](http://www.sens.com/products/model-s15/) headphone inserts, proving high-quality acoustic stimulation and substantial attenuation of background noise.  On the computer used for stimuli presentation, a custom impulse response of the headphones is applied with an online finite impulse response filter using the LADSPA DSP to all the presented stimuli.This impulse response was provided by the manufacturer. Sounds was amplified using an [AudioSource](http://audiosource.net/shop/amp100vs/) AMP100V amplifier, situated in the control room.
 
 ### Stimuli presentation
 
