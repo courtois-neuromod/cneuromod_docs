@@ -189,15 +189,15 @@
 </div>
 <div class="section" id="personalized-head-cases">
 <h3>Personalized head cases<a class="headerlink" href="#personalized-head-cases" title="Permalink to this headline">¶</a></h3>
-<p><img src="./_static/mri/headcase.png" alt="head case" width="200" align="right" hspace="10"/> In order to minimize movement during neuroimaging scans, each participant wears a custom-designed, personalized headcase during scanning, built by <a class="reference external" href="https://caseforge.co">Caseforge</a>. The headcase are milled based on a scan of each participant’s head generated using a handheld 3D scanner, and taking into consideration the shape of the chosen MRI coil. Caseforge mills the personalized headcases in polystyrene foam blocks.</p>
+<p><img src="./_static/mri/headcase.png" alt="head case" width="200" align="right" hspace="10"/> In order to minimize movement, each participant wears a custom-designed, personalized headcase during scanning, built by <a class="reference external" href="https://caseforge.co">Caseforge</a>. The headcases are milled based on a head scan of each participant generated using a handheld 3D scanner, and the shape of the MRI coil. Caseforge mills the personalized headcases in polystyrene foam blocks.</p>
 </div>
 <div class="section" id="functional-sequences">
 <h3>Functional sequences<a class="headerlink" href="#functional-sequences" title="Permalink to this headline">¶</a></h3>
-<p>Note that the parameters of the functional MRI sequence relevant for data analysis can be found in the <a class="reference external" href="https://git.unf-montreal.ca/neuromod/">BIDS dataset</a>, and included metadata. The functional acquisition parameters are all identical to the one used in the HCP-trt dataset. The Siemens exam card can be found <a class="reference external" href="./_static/mri/functional_protocol_HCP-trt.pdf">here</a>, and is briefly recapitulated below. Functional MRI data was acquired using an accelerated simultaneous multi-slice, gradient echo-planar imaging sequence <a class="reference external" href="http://www.ncbi.nlm.nih.gov/pubmed/23899722">(Xu et al., 2013)</a> developed at the Center for Magnetic Resonance Research (CMRR) University of Minnesota, as part of the Human Connectome Project <a class="reference external" href="https://www.nature.com/articles/nn.4361">(Glasser et al., 2016)</a>. The sequence is available on the Siemens PRISMA scanner at UNF through a concept to production (C2P) agreement, and was used with the following paramaters: slice acceleration factor of 4, TR = 1.49 s, TE = 37 ms, flip angle = 52 degrees, voxel size = 2 mm x 2 mm x 2 mm, 60 slices, acquisition matrix 96x96. In each session, a short acquisition (3 volumes) with reversed phase encoding direction was acquired to allow retrospective correction of B0 field inhomogeneity-induced distortion.</p>
+<p>The parameters of the functional MRI sequence relevant for data analysis can be found in the <a class="reference external" href="https://git.unf-montreal.ca/neuromod/">BIDS dataset</a>, and included metadata. The functional acquisition parameters are all identical to the one used in the HCP-trt dataset. The Siemens exam card can be found <a class="reference external" href="./_static/mri/functional_protocol_HCP-trt.pdf">here</a>, and is briefly recapitulated below. Functional MRI data was acquired using an accelerated simultaneous multi-slice, gradient echo-planar imaging sequence <a class="reference external" href="http://www.ncbi.nlm.nih.gov/pubmed/23899722">(Xu et al., 2013)</a> developed at the Center for Magnetic Resonance Research (CMRR) University of Minnesota, as part of the Human Connectome Project <a class="reference external" href="https://www.nature.com/articles/nn.4361">(Glasser et al., 2016)</a>. The sequence is available on the Siemens PRISMA scanner at UNF through a concept to production (C2P) agreement, and was used with the following paramaters: slice acceleration factor = 4, TR = 1.49 s, TE = 37 ms, flip angle = 52 degrees, voxel size = 2 mm x 2 mm x 2 mm, 60 slices, acquisition matrix 96x96. In each session, a short acquisition (3 volumes) with reversed phase encoding direction was acquired to allow retrospective correction of B0 field inhomogeneity-induced distortion.</p>
 </div>
 <div class="section" id="brain-anatomical-sequences">
 <h3>Brain anatomical sequences<a class="headerlink" href="#brain-anatomical-sequences" title="Permalink to this headline">¶</a></h3>
-<p>Note that the parameters of the functional MRI sequence relevant for data analysis can be found in the <a class="reference external" href="https://git.unf-montreal.ca/neuromod/">BIDS dataset</a>, and included metadata. The acquisition parameters are identical for all anatomical sessions. The Siemens pdf exam card of the anatomical sessions can be found <a class="reference external" href="./_static/mri/anatomical_protocol_2019-01-22.pdf">here</a>, and is briefly recapitulated below. A standard (brain) anatomical session starts with a 21 s localizer scan, and then includes the following sequences:</p>
+<p>The parameters of the brain anatomical MRI sequences relevant for data analysis can be found in the <a class="reference external" href="https://git.unf-montreal.ca/neuromod/">BIDS dataset</a>, and included metadata. The acquisition parameters are identical for all anatomical sessions. The Siemens pdf exam card of the anatomical sessions can be found <a class="reference external" href="./_static/mri/anatomical_protocol_2019-01-22.pdf">here</a>, and is briefly recapitulated below. A standard (brain) anatomical session starts with a 21 s localizer scan, and then includes the following sequences:</p>
 <ul class="simple">
 <li><p>T1-weighted MPRAGE sequence (duration 6:38 mn, TR=, TE=)</p></li>
 <li><p>T2-weighted sequence (duration 5:57 mn, …)</p></li>
@@ -212,14 +212,15 @@
 </div>
 <div class="section" id="spinal-cord-anatomical-sequences">
 <h3>Spinal cord anatomical sequences<a class="headerlink" href="#spinal-cord-anatomical-sequences" title="Permalink to this headline">¶</a></h3>
-<p>A detailed description of the protocol can be found here: <a class="reference external" href="https://osf.io/tt4z9/">Spinal Cord MRI Protocols</a>, including sequences ported to other MRI manufacturers.</p>
-<p>Localizer:         ~0:21
-T2W:                4:02
-*DWI gated:        ~2:12<br />GRE_MTI:            2:12
-GRE_MTO:            2:12
-GRE_T1W:            0:57
-GRE_ME:             4:45</p>
-<p>TODO: acq params, link to osf.io of JCA protocol</p>
+<p>The parameters of the spinal cord anatomical MRI sequences relevant for data analysis can be found in the <a class="reference external" href="https://git.unf-montreal.ca/neuromod/">BIDS dataset</a>, and included metadata. The acquisition parameters are identical for all anatomical sessions, and follow a community <a class="reference external" href="https://osf.io/tt4z9/">spinal cord standard imaging protocol</a>. The Siemens pdf exam card of the anatomical sessions can be found <a class="reference external" href="./_static/mri/anatomical_spinal_cord_protocol_2019-01-22.pdf">here</a>, and is briefly recapitulated below. A standard (spinal cord) anatomical session starts with a 21 s localizer scan, and then includes the following sequences:</p>
+<ul class="simple">
+<li><p>T2-weighted sequence (duration 4:02 mn, …)</p></li>
+<li><p>Gated diffusion-weighted sequence (duration 2:12 mn, …)</p></li>
+<li><p>gradient-echo magnetization-transfer MTI (duration 2:12 mn, …)</p></li>
+<li><p>gradient-echo magnetization-transfer MTO (duration 2:12 mn, …)</p></li>
+<li><p>gradient-echo T1-weighted sequence (duration 0:57 mn, …)</p></li>
+<li><p>gradient-echo ME (duration 4:45 mn, …)</p></li>
+</ul>
 </div>
 </div>
 <div class="section" id="stimuli">
