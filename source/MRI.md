@@ -14,10 +14,12 @@
 
 ### Brain anatomical sequences
 
- The parameters of the brain anatomical MRI sequences relevant for data analysis can be found in the [BIDS dataset](https://git.unf-montreal.ca/neuromod/), and included metadata. The acquisition parameters are identical for all anatomical sessions. The Siemens pdf exam card of the anatomical sessions can be found [here](./_static/mri/anatomical_protocol_2019-01-22.pdf), and is briefly recapitulated below. A standard (brain) anatomical session starts with a 21 s localizer scan, and then includes the following sequences:
+ The parameters of the brain anatomical MRI sequences relevant for data analysis can be found in the [BIDS dataset](https://git.unf-montreal.ca/neuromod/), and included metadata. The acquisition parameters are identical for all anatomical sessions. The Siemens pdf exam card of the anatomical sessions can be found [here](./_static/mri/anatomical_protocol_2019-01-22.pdf), and is briefly recapitulated below.
+ The T1w, T2w and dMRI sequences were imported from the [CCF Protocol](http://protocols.humanconnectome.org/CCF/) for Prisma.
+ A standard (brain) anatomical session starts with a 21 s localizer scan, and then includes the following sequences:
   * T1-weighted MPRAGE sequence (duration 6:38 mn, TR=, TE=)
   * T2-weighted sequence (duration 5:57 mn, ...)
-  * Diffusion-weighted sequence (duration 4:04 mn, ...)
+  * Diffusion-weighted sequence (duration 4:04 mn, ...) CMRR-multiband sequence with 98-direction block of [gradient table](./_static/mri/DiffusionVectors_98_99dir_2016.03.07.dvs)
   * gradient-echo magnetization-transfer sequence (duration 3:34 mn, ...)
   * gradient-echo proton density sequence (duration 3:34 mn, ...)
   * gradient-echo T1-weighted sequence (duration 2:18 mn, ...)
@@ -34,7 +36,7 @@ The parameters of the spinal cord anatomical MRI sequences relevant for data ana
  * gradient-echo magnetization-transfer MTO (duration 2:12 mn, ...)
  * gradient-echo T1-weighted sequence (duration 0:57 mn, ...)
  * gradient-echo ME (duration 4:45 mn, ...)
- 
+
 ## Stimuli
 
 ### Visual presentation
