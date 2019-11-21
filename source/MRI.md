@@ -20,11 +20,11 @@
   * Diffusion-weighted 2D axial sequence (duration 4:04 min, TR = 2.3 s, TE = 82 ms, 57 slices, voxel size = 2 mm isotropic,  phase-encoding P-A, SMS=3 through-plane acceleration, b-max = 3000 s/mm^2). We've also added 5x b=0 scans with reversed phase encoding (A-P) for correcting susceptibility distortions. 
   * gradient-echo magnetization-transfer 3D sequence (duration 3:34 min, 28 = ms, TE = 3.3 ms, flip angle = 6 deg, voxel size = 1.5 mm isotropic, R=2 in-plane GRAPPA, MT pulse Gaussian shape centered at 1.2 kHz offset).
   * gradient-echo proton density 3D sequence (same parameters as above, without the MT pulse).
-  * gradient-echo T1-weighted 3D sequence (same parameters as above, except: ).
+  * gradient-echo T1-weighted 3D sequence (same parameters as above, except: TR = 18 ms, flip angle = 20 deg).
   * gradient-echo T1-weighted sequence (duration 2:18 mn, ...)
-  * Field map (duration 0:21, ...)
-  * T1-weighted MPRAGE sequence (duration 7:26 mn, ...)
-  * T2 susceptibility-weighted imaging (duration 4:54 mn, ....)
+  * B1+ field map (duration 0:21 min, voxel size = 6 mm isotropic)
+  * MP2RAGE 3D sequence (duration 7:26 min, TR = 4 s, TE = 1.51 ms, TI1 = 700 ms, TI2 = 1500 ms, voxel size = 1.2 mm isotropic, R=2 acceleration)
+  * Susceptibility-weighted 3D sequence (duration 4:54 min, TR = 27 ms, TE = 20 ms)
 
 ### Spinal cord anatomical sequences
 
