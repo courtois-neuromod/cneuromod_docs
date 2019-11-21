@@ -25,7 +25,9 @@ The output can be found in `derivatives/fmriprep`, each participant folder (`sub
   - `_boldref.nii.gz` : a BOLD single volume reference
   - `_desc-brain_mask.nii.gz` : the brain mask in fMRI space.
   - `_desc-preproc_bold.nii.gz` : the preprocessed BOLD timeseries.
-  - `_desc-confounds_regressors.tsv` : a tabular tsv file, containing a large set of confounds to use in analysis steps (eg. GLM). Note that regressors are likely correlated, and it is recommended to use a subset of that or a decomposition.
+  - `_desc-confounds_regressors.tsv` : a tabular tsv file, containing a large set of confounds to use in analysis steps (eg. GLM). Note that regressors are likely correlated, thus it is recommended to use a subset of these regressors or components of an orthogonal decomposition (eg. PCA) that explains a large share of the variance.
 
 
 ### HCPPipelines
+
+TODO: beta, try to use v4.0 (freesurfer6)

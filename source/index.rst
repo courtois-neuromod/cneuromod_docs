@@ -5,6 +5,6 @@
    :caption: Contents:
 
    DATASETS
-   ETHICS
+   ACCESS
    MRI
    DERIVATIVES
