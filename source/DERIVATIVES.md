@@ -4,17 +4,23 @@ This is the part of the data that you will likely be interested to feed in your 
 
 ## Anatomical preprocessing
 
-### HCPPipelines
+### HCP Pipelines 
 
-The HCPPipelines includes sophisticated combined preprocessing of the T1 and T2 anatomical images to perform accurate volume-based and surface-based segmentation of the participant's brain, using a combination of Ants, Freesurfer, FSL, and include gradient distortion using scanner specific coefficients using [gradunwarp](https://github.com/Washington-University/gradunwarp) (the coefficients cannot be shared due to Manufacturer policy).
+version x.x.
+
+The HCP Pipelines includes sophisticated combined preprocessing of the T1 and T2 anatomical images to perform accurate volume-based and surface-based segmentation of the participant's brain, using a combination of [ANTs](http://stnava.github.io/ANTs/),  [FreeSurfer](https://surfer.nmr.mgh.harvard.edu/fswiki/MultiModalTutorialV6.0/IndividualFMRI),[FSL](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki), and include gradient distortion using scanner specific coefficients using [gradunwarp](https://github.com/Washington-University/gradunwarp) (the coefficients cannot be shared due to manufacturer policy).
+
+For additional information on on instalation and prerequisites, please visit their [Documentation and Release Notes](https://github.com/Washington-University/HCPpipelines/wiki/Installation-and-Usage-Instructions).
 
 ## fMRI preprocessing
 
-We are developing a tool [fmriprep_confound_loader](https://github.com/SIMEXP/fmriprep_confound_loader) to load confounds from preprocessing pipeline outputs (fmriprep only for now).
+We are developing a tool [fmriprep_confound_loader](https://github.com/SIMEXP/fmriprep_confound_loader) to load confounds from preprocessing pipeline outputs ([fMRIPrep](https://fmriprep.readthedocs.io/en/stable/#) only for now).
 
 ### fMRIPrep
-
+ 
 Version: 1.5.0
+
+XXX Add brief description of fmriprepXX
 
 Options: slicetiming was skipped.
 
