@@ -1,6 +1,6 @@
 # Derivatives
 
-This is the part of the data that you will likely be interested to feed in your analyses. This page is still undercontruction, but should be completed soon.
+This is the part of the data that you will likely be interested to feed in your analyses. This page is still under construction, but should be completed soon.
 
 ## Anatomical preprocessing
 
