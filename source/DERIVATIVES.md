@@ -1,6 +1,6 @@
 # Derivatives
 
-This is the part of the data that you will likely be interested to feed in your analyses.
+This is the part of the data that you will likely be interested to feed in your analyses. This page is still undercontruction, but should be completed soon.
 
 ## Anatomical preprocessing
 
@@ -35,7 +35,8 @@ The output can be found in `derivatives/fmriprep`, each participant folder (`sub
   - `_desc-preproc_bold.nii.gz` : the preprocessed BOLD timeseries.
   - `_desc-confounds_regressors.tsv` : a tabular tsv file, containing a large set of confounds to use in analysis steps (eg. GLM). Note that regressors are likely correlated, thus it is recommended to use a subset of these regressors or components of an orthogonal decomposition (eg. PCA) that explains a large share of the variance.
 
-### HCPPipelines
+
+### HCP Pipelines
 
 WIP
 TODO: beta, try to use v4.0 (freesurfer6)
