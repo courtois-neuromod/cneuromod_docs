@@ -4,9 +4,9 @@ This is the part of the data that you will likely be interested to feed in your 
 
 ## Anatomical preprocessing
 
-### HCP Pipelines 
+### HCP Pipelines
 
-version x.x.
+version 3.17
 
 The HCP Pipelines includes sophisticated combined preprocessing of the T1 and T2 anatomical images to perform accurate volume-based and surface-based segmentation of the participant's brain, using a combination of [ANTs](http://stnava.github.io/ANTs/),  [FreeSurfer](https://surfer.nmr.mgh.harvard.edu/fswiki/MultiModalTutorialV6.0/IndividualFMRI),[FSL](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki), and include gradient distortion using scanner specific coefficients using [gradunwarp](https://github.com/Washington-University/gradunwarp) (the coefficients cannot be shared due to manufacturer policy).
 
@@ -17,10 +17,12 @@ For additional information on on instalation and prerequisites, please visit the
 We are developing a tool [fmriprep_confound_loader](https://github.com/SIMEXP/fmriprep_confound_loader) to load confounds from preprocessing pipeline outputs ([fMRIPrep](https://fmriprep.readthedocs.io/en/stable/#) only for now).
 
 ### fMRIPrep
- 
+
 Version: 1.5.0
 
-XXX Add brief description of fmriprepXX
+fmriprep is a functional magnetic resonance imaging (fMRI) data preprocessing pipeline that is designed to provide an easily accessible, state-of-the-art interface that is robust to variations in scan acquisition protocols and that requires minimal user input, while providing easily interpretable and comprehensive error and output reporting. It performs basic processing steps (coregistration, normalization, unwarping, noise component extraction, segmentation, skullstripping etc.) providing outputs that can be easily submitted to a variety of group level analyses, including task-based or resting-state fMRI, graph theory measures, surface or volume-based statistics, etc.
+
+The fmriprep pipeline uses a combination of tools from well-known software packages, including FSL, ANTs, FreeSurfer and AFNI. This pipeline was designed to provide the best software implementation for each state of preprocessing, and will be updated as newer and better neuroimaging software become available.
 
 Options: slicetiming was skipped.
 
@@ -33,7 +35,7 @@ The output can be found in `derivatives/fmriprep`, each participant folder (`sub
   - `_desc-preproc_bold.nii.gz` : the preprocessed BOLD timeseries.
   - `_desc-confounds_regressors.tsv` : a tabular tsv file, containing a large set of confounds to use in analysis steps (eg. GLM). Note that regressors are likely correlated, thus it is recommended to use a subset of these regressors or components of an orthogonal decomposition (eg. PCA) that explains a large share of the variance.
 
-
 ### HCPPipelines
 
+WIP
 TODO: beta, try to use v4.0 (freesurfer6)
