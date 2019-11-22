@@ -19,12 +19,13 @@ We are developing a tool [fmriprep_confound_loader](https://github.com/SIMEXP/fm
 ### fMRIPrep
 
 Version: 1.5.0
+Options: slicetiming and recon-all was skipped. (`fmriprep --fs-no-reconall --ignore slicetiming ...`)
 
 fmriprep is a functional magnetic resonance imaging (fMRI) data preprocessing pipeline that is designed to provide an easily accessible, state-of-the-art interface that is robust to variations in scan acquisition protocols and that requires minimal user input, while providing easily interpretable and comprehensive error and output reporting. It performs basic processing steps (coregistration, normalization, unwarping, noise component extraction, segmentation, skullstripping etc.) providing outputs that can be easily submitted to a variety of group level analyses, including task-based or resting-state fMRI, graph theory measures, surface or volume-based statistics, etc.
 
 The fmriprep pipeline uses a combination of tools from well-known software packages, including FSL, ANTs, FreeSurfer and AFNI. This pipeline was designed to provide the best software implementation for each state of preprocessing, and will be updated as newer and better neuroimaging software become available.
 
-Options: slicetiming was skipped.
+
 
 The output can be found in `derivatives/fmriprep`, each participant folder (`sub-*`) contains:
 
