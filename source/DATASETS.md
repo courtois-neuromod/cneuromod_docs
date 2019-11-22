@@ -35,7 +35,7 @@ Duration: 15 minutes. In every other session, one resting-state fMRI run was acq
 
 ## Movie-10
 
-This dataset includes about 10 hours of functional data for all 6 participants (`P01-P06`). The participants watched the following movies [cogatlas](https://www.cognitiveatlas.org/id/trm_4c898da401420/):
+This dataset includes about 10 hours of functional data for all 6 participants (`P01-P06`). The participants watched the following movies ([cogatlas](https://www.cognitiveatlas.org/id/trm_4c898da401420/)):
  * [The Bourne supremacy](https://en.wikipedia.org/wiki/The_Bourne_Supremacy_%28film%29). Duration ~100 minutes.
  * [The wolf of wall street](https://en.wikipedia.org/wiki/The_Wolf_of_Wall_Street_%282013_film%29). Duration ~170 minutes.
  * [Hidden figures](https://en.wikipedia.org/wiki/Hidden_Figures). Duration ~120 minutes. This movie was presented twice, for a total duration of ~240 minutes.
