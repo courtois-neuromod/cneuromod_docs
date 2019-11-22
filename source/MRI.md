@@ -32,12 +32,13 @@ The parameters of the functional MRI sequence relevant for data analysis can be 
 ### Spinal cord anatomical sequences
 
 The parameters of the spinal cord anatomical MRI sequences relevant for data analysis can be found in the BIDS dataset, and included metadata. The acquisition parameters are identical for all anatomical sessions, and follow a community [spinal cord standard imaging protocol](https://osf.io/tt4z9/). The Siemens pdf exam card of the anatomical sessions can be found [here](./_static/mri/spine_generic_Prisma_VE11C_ZOOMit.pdf), and is briefly recapitulated below. A standard (spinal cord) anatomical session starts with a 21 s localizer scan, and then includes the following sequences:
- * T2-weighted sequence (duration 4:02 mn, ...)
- * Gated diffusion-weighted sequence (duration 2:12 mn, ...)
- * gradient-echo magnetization-transfer MTI (duration 2:12 mn, ...)
- * gradient-echo magnetization-transfer MTO (duration 2:12 mn, ...)
- * gradient-echo T1-weighted sequence (duration 0:57 mn, ...)
- * gradient-echo ME (duration 4:45 mn, ...)
+ * T1-weighted sequence (duration 4:44 min, TR = 2 s, TE = 3.72 ms, voxel size = 1.0 mm isotropic, R=2 acceleration)
+ * T2-weighted sequence (duration 4:02 min, TR = 1.5 s, TE = 120 ms, voxel size = 0.8 mm isotropic, R=3 acceleration)
+ * Gated diffusion-weighted sequence (duration 2:06 min, TR = 620 ms, TE = 60 ms, voxel size = 0.9 x 0.9 x 0.5 mm, phase-encoding A-P, b-max = 800 s/mm^2)
+ * gradient-echo magnetization-transfer MTI (duration 2:12 min, TR = 35 ms, TE = 3.13 ms , voxel size = 0.9 x 0.9 x 0.5 mm, R=2 acceleration , MT pulse)
+ * gradient-echo magnetization-transfer MTO (duration 2:12 min, TR = 35 ms, TE = 3.13 ms , voxel size = 0.9 x 0.9 x 0.5 mm, R=2 acceleration , without MT pulse)
+ * gradient-echo T1-weighted sequence (duration 0:57 min, TR = 15 ms, TE = 3.13 ms , voxel size = 0.9 x 0.9 x 0.5 mm, R=2 acceleration)
+ * gradient-echo ME (duration 4:45 min, TR = 600 ms, TE = 14 ms , voxel size = 0.9 x 0.9 x 0.5 mm, R=2 acceleration)
 
 ## Stimuli
 
