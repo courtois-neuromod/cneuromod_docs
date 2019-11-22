@@ -18,7 +18,7 @@ We are developing a tool [fmriprep_confound_loader](https://github.com/SIMEXP/fm
 
 ### fMRIPrep
 
-Version: 1.5.0
+[Version: 1.5.0](https://fmriprep.readthedocs.io/en/stable/installation.html)
 
 FmriPrep is an fMRI data preprocessing pipeline that requires minimal user input, while providing error and output reporting. It performs basic processing steps (coregistration, normalization, unwarping, noise component extraction, segmentation, skullstripping etc.) and provides outputs that can be easily submitted to a variety of group level analyses, including task-based or resting-state fMRI, graph theory measures, surface or volume-based statistics, etc.
 
