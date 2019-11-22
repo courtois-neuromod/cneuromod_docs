@@ -1,12 +1,12 @@
 # Derivatives
 
-This is the part of the data that you will likely be interested to feed in your analyses.
+This is the part of the data that you will likely be interested to feed in your analyses. This page is still undercontruction, but should be completed soon.
 
 ## Anatomical preprocessing
 
 ### HCP Pipelines 
 
-version x.x.
+version 3.1 (WIP)
 
 The HCP Pipelines includes sophisticated combined preprocessing of the T1 and T2 anatomical images to perform accurate volume-based and surface-based segmentation of the participant's brain, using a combination of [ANTs](http://stnava.github.io/ANTs/),  [FreeSurfer](https://surfer.nmr.mgh.harvard.edu/fswiki/MultiModalTutorialV6.0/IndividualFMRI),[FSL](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki), and include gradient distortion using scanner specific coefficients using [gradunwarp](https://github.com/Washington-University/gradunwarp) (the coefficients cannot be shared due to manufacturer policy).
 
@@ -34,6 +34,6 @@ The output can be found in `derivatives/fmriprep`, each participant folder (`sub
   - `_desc-confounds_regressors.tsv` : a tabular tsv file, containing a large set of confounds to use in analysis steps (eg. GLM). Note that regressors are likely correlated, thus it is recommended to use a subset of these regressors or components of an orthogonal decomposition (eg. PCA) that explains a large share of the variance.
 
 
-### HCPPipelines
+### HCP Pipelines
 
 TODO: beta, try to use v4.0 (freesurfer6)
