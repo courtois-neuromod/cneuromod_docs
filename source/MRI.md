@@ -27,7 +27,7 @@
 
 ### Spinal cord anatomical sequences
 
-The parameters of the spinal cord anatomical MRI sequences relevant for data analysis can be found in the [BIDS dataset](https://git.unf-montreal.ca/neuromod/), and included metadata. The acquisition parameters are identical for all anatomical sessions, and follow a community [spinal cord standard imaging protocol](https://osf.io/tt4z9/). The Siemens pdf exam card of the anatomical sessions can be found [here](./_static/mri/anatomical_spinal_cord_protocol_2019-01-22.pdf), and is briefly recapitulated below. A standard (spinal cord) anatomical session starts with a 21 s localizer scan, and then includes the following sequences:
+The parameters of the spinal cord anatomical MRI sequences relevant for data analysis can be found in the [BIDS dataset](https://git.unf-montreal.ca/neuromod/), and included metadata. The acquisition parameters are identical for all anatomical sessions, and follow a community [spinal cord standard imaging protocol](https://osf.io/tt4z9/). The Siemens pdf exam card of the anatomical sessions can be found [here](./_static/mri/spine_generic_Prisma_VE11C_ZOOMit.pdf), and is briefly recapitulated below. A standard (spinal cord) anatomical session starts with a 21 s localizer scan, and then includes the following sequences:
  * T2-weighted sequence (duration 4:02 mn, ...)
  * Gated diffusion-weighted sequence (duration 2:12 mn, ...)
  * gradient-echo magnetization-transfer MTI (duration 2:12 mn, ...)
