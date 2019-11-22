@@ -32,13 +32,13 @@ The parameters of the functional MRI sequence relevant for data analysis can be 
 ### Spinal cord anatomical sequences
 
 The parameters of the spinal cord anatomical MRI sequences relevant for data analysis can be found in the BIDS dataset, and included metadata. The acquisition parameters are identical for all anatomical sessions, and follow a community [spinal cord standard imaging protocol](https://osf.io/tt4z9/). The Siemens pdf exam card of the anatomical sessions can be found [here](./_static/mri/spine_generic_Prisma_VE11C_ZOOMit.pdf), and is briefly recapitulated below. A standard (spinal cord) anatomical session starts with a 21 s localizer scan, and then includes the following sequences:
- * T1-weighted 3D sagittal sequence (duration 4:44 min, TR = 2 s, TE = 3.72 ms, voxel size = 1.0 mm isotropic, R=2 acceleration)
- * T2-weighted  3D sagittal sequence (duration 4:02 min, TR = 1.5 s, TE = 120 ms, voxel size = 0.8 mm isotropic, R=3 acceleration)
+ * T1-weighted 3D sagittal sequence (duration 4:44 min, TR = 2 s, TE = 3.72 ms, FA = 9 deg, voxel size = 1.0 mm isotropic, R=2 acceleration)
+ * T2-weighted  3D sagittal sequence (duration 4:02 min, TR = 1.5 s, TE = 120 ms, FA = 120 deg, voxel size = 0.8 mm isotropic, R=3 acceleration)
  * Diffusion-weighted 2D axial sequence (cardiac-gated with pulseOx, approximate duration 3 min, TR = 620 ms, TE = 60 ms, voxel size = 0.9 x 0.9 x 0.5 mm, phase-encoding A-P, b-max = 800 s/mm^2)
- * Gradient-echo magnetization-transfer 3D axial sequence (duration 2:12 min, TR = 35 ms, TE = 3.13 ms , voxel size = 0.9 x 0.9 x 0.5 mm, R=2 acceleration, with MT Gaussian pulse)
+ * Gradient-echo magnetization-transfer 3D axial sequence (duration 2:12 min, TR = 35 ms, TE = 3.13 ms, FA = 9 deg, voxel size = 0.9 x 0.9 x 0.5 mm, R=2 acceleration, with MT Gaussian pulse)
  * Gradient-echo proton-density weighted 3D axial sequence (same parameters as above, without the MT pulse).
- * Gradient-echo T1-weighted 3D axial sequence (same parameters as above, except: TR = 15 ms, flip angle = XX deg).
- * gradient-echo ME (duration 4:45 min, TR = 600 ms, effective TE = 14 ms (this is a multi-echo sequence), voxel size = 0.9 x 0.9 x 0.5 mm, R=2 acceleration)
+ * Gradient-echo T1-weighted 3D axial sequence (same parameters as above, except: TR = 15 ms, flip angle = 15 deg).
+ * gradient-echo ME (duration 4:45 min, TR = 600 ms, effective TE = 14 ms (this is a multi-echo sequence), FA = 30 deg, voxel size = 0.9 x 0.9 x 0.5 mm, R=2 acceleration)
 
 ## Stimuli
 
