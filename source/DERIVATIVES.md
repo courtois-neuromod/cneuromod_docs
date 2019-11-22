@@ -6,7 +6,7 @@ This is the part of the data that you will likely be interested to feed in your 
 
 ### HCP Pipelines 
 
-version 3.1 (WIP)
+version 3.1 
 
 The HCP Pipelines includes sophisticated combined preprocessing of the T1 and T2 anatomical images to perform accurate volume-based and surface-based segmentation of the participant's brain, using a combination of [ANTs](http://stnava.github.io/ANTs/),  [FreeSurfer](https://surfer.nmr.mgh.harvard.edu/fswiki/MultiModalTutorialV6.0/IndividualFMRI),[FSL](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki), and include gradient distortion using scanner specific coefficients using [gradunwarp](https://github.com/Washington-University/gradunwarp) (the coefficients cannot be shared due to manufacturer policy).
 
