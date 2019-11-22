@@ -4,13 +4,9 @@ This is the part of the data that you will likely be interested to feed in your 
 
 ## Anatomical preprocessing
 
-### HCP Pipelines
+ WIP
 
-Version: 3.17
-
-The HCP Pipelines includes sophisticated combined preprocessing of the T1 and T2 anatomical images to perform accurate volume-based and surface-based segmentation of the participant's brain, using a combination of [ANTs](http://stnava.github.io/ANTs/),  [FreeSurfer](https://surfer.nmr.mgh.harvard.edu/fswiki/MultiModalTutorialV6.0/IndividualFMRI),[FSL](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki), and include gradient distortion using scanner specific coefficients using [gradunwarp](https://github.com/Washington-University/gradunwarp) (the coefficients cannot be shared due to manufacturer policy).
-
-For additional information on on instalation and prerequisites, please visit their [Documentation and Release Notes](https://github.com/Washington-University/HCPpipelines/wiki/Installation-and-Usage-Instructions).
+ See fMRIPrep section below for the brain anatomical preprocessing.
 
 ## fMRI preprocessing
 
@@ -38,9 +34,3 @@ The output can be found in `derivatives/fmriprep`, each participant folder (`sub
   - `_desc-brain_mask.nii.gz` : the brain mask in fMRI space.
   - `_desc-preproc_bold.nii.gz` : the preprocessed BOLD timeseries.
   - `_desc-confounds_regressors.tsv` : a tabular tsv file, containing a large set of confounds to use in analysis steps (eg. GLM). Note that regressors are likely correlated, thus it is recommended to use a subset of these regressors or components of an orthogonal decomposition (eg. PCA) that explains a large share of the variance.
-
-
-### HCP Pipelines
-
-WIP
-TODO: beta, try to use v4.0 (freesurfer6)
