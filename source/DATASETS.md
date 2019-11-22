@@ -39,7 +39,7 @@ This dataset includes about 10 hours of functional data for all 6 participants (
  * [The Bourne supremacy](https://en.wikipedia.org/wiki/The_Bourne_Supremacy_%28film%29). Duration ~100 minutes.
  * [The wolf of wall street](https://en.wikipedia.org/wiki/The_Wolf_of_Wall_Street_%282013_film%29). Duration ~170 minutes.
  * [Hidden figures](https://en.wikipedia.org/wiki/Hidden_Figures). Duration ~120 minutes. This movie was presented twice, for a total duration of ~240 minutes.
- * [Life](https://en.wikipedia.org/wiki/Life_(British_TV_series)) episode 2: "Reptiles and Amphibians".  Duration ~XX minutes. This movie was presented twice, for a total duration of ~XX minutes.
+ * [Life](https://en.wikipedia.org/wiki/Life_(British_TV_series)) episode 2: "Reptiles and Amphibians".  Duration ~50 minutes. This movie was presented twice, for a total duration of ~100 minutes.
 
 Each movie was cut into a series of ~10 minutes clips. Exact cutting points were manually selected to not interrupt the narrative flow. Fade out to a black screen was added at the end of each clip, and with a few seconds overlap between the end of a clip and the beginning of the next clip. The number of clips presented in a given session varied, and some subjects took short breaks inside a session.
 
