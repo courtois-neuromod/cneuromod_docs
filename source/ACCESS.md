@@ -12,6 +12,7 @@ The Courtois NeuroMod project has been approved by the institutional research et
 
 This is a [datalad](https://www.datalad.org/) dataset.
 Quickly: datalad is a tool for versioning large data structure in a git repository using git-annex. The dataset can be explored without downloading the data, and it is easy to only download the subset of the data you need for your project.
+The [DataLad handbook](http://handbook.datalad.org/en/latest/), is a good resource for beginners, but also for advanced use-cases.
 
 To obtain the data, you must install a recent version of the [datalad software](https://www.datalad.org/get_datalad.html). You will also need to have access to the git hosting the dataset structure and to the S3 fileserver hosting the data.
 
