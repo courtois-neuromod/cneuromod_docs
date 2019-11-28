@@ -32,7 +32,7 @@ Stimuli and e-prime scripst were provided by the Human Connectome Project, U-Min
 
 ## movie10
 
-This dataset includes about 11 hours of functional data for all 6 participants. The python & psychopy scripts for preparation and presentation of the clips can be found in `src/tasks/video.py` of the following github [repository](https://github.com/courtois-neuromod/task_stimuli).
+This dataset includes about 10 hours of functional data for all 6 participants. The python & psychopy scripts for preparation and presentation of the clips can be found in `src/tasks/video.py` of the following github [repository](https://github.com/courtois-neuromod/task_stimuli).
 Session tags `<sess>` were `vid001`, `vid002` etc, and the number and composition of sessions varied from subject to subject. The `<task>` tags used in DataLad corresponded to each movie (`bournesupremacy`, `wolfofwallstreet`, `life`, `hiddenfigures`). Each movie was cut into roughly ten minutes segments (tags `<seg>` in `01`, `02`, etc) presented in a separate run.  Exact cutting points were manually selected to not interrupt the narrative flow. Fade out to a black screen was added at the end of each clip, and with a few seconds overlap between the end of a clip and the beginning of the next clip. The movie segments can be found under `movie10/stimuli/<movie>/<movie>_seg<seg>.mkv`, and the functional runs are named `func_sub-<participant>_ses-<sess>_task-<movie>_run-<seg>`, where the `<participant>` tag ranges from `sub-01` to `sub-06`. A companion file `_events.tsv` contains the timing and type of conditions presented to the subject.
 
 The participants watched the following movies ([cogatlas](https://www.cognitiveatlas.org/id/trm_4c898da401420/)):
