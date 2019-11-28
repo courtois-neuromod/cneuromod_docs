@@ -8,7 +8,7 @@ the [laboratory for brain simulation and exploration (SIMEXP)](<https://simexp-l
 
 ## Funding
 
-The Courtois NeuroMod project was made possible by a 6.3M CAD (2018-23, PI Bellec) donation from the Courtois foundation. These funds are administered by the [Fondation Institut Gériatrie Montréal (FIGM)](https://www.figm.ca/), part of [CIUSSS du Centre-Sud-de-l'île-de-Montréal](https://ciusss-centresudmtl.gouv.qc.ca/propos/services-en-anglais), as well as [University of Montréal](https://www.umontreal.ca/en/). Courtois NeuroMod also includes support for two separate consortia, called [CIMAQ](http://www.cima-q.ca/en/home/) (early identification of Alzheimer's disease), and PRISME (looking for brain correlates of the evolution of symptoms in individuals with psychosis) based at the [Institut Universitaire en Santé Mentale de Montréal (IUSMM)](https://ciusss-estmtl.gouv.qc.ca/).
+The Courtois NeuroMod project was made possible by a 6.3M CAD (2018-23, PI Bellec) donation from the Courtois foundation. These funds are administered by the [Fondation Institut Gériatrie Montréal (FIGM)](https://www.figm.ca/), part of [CIUSSS du Centre-Sud-de-l'île-de-Montréal](https://ciusss-centresudmtl.gouv.qc.ca/propos/services-en-anglais), as well as [University of Montreal](https://www.umontreal.ca/en/). Courtois NeuroMod also includes support for two separate consortia, called [CIMAQ](http://www.cima-q.ca/en/home/) (early identification of Alzheimer's disease), and PRISME (looking for brain correlates of the evolution of symptoms in individuals with psychosis) based at the [Institut Universitaire en Santé Mentale de Montréal (IUSMM)](https://ciusss-estmtl.gouv.qc.ca/).
 
 ## Team
 
