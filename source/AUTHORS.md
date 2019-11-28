@@ -4,11 +4,11 @@
 ## Overview
 
 The Courtois NeuroMod team originated from
-the [laboratory for brain simulation and exploration (SIMEXP)](<https://simexp-lab.org>) and collaborators located at the [Centre de Recherche de l'Institut de Gériatrie de Montréal (CRIUGM)](http://www.criugm.qc.ca/en.html),  [CIUSSS du Centre-Sud-de-l'île-de-Montréal](https://ciusss-centresudmtl.gouv.qc.ca/propos/services-en-anglais) as well as the [Psychology Departement](https://psy.umontreal.ca/english/home/) of [University of Montreal (UdeM)](https://www.umontreal.ca/en/). The team has grown to include individuals fromm various institutions, and in particular the [Computer Science and Operational Research (DIRO) Department](https://diro.umontreal.ca/english/home/) at UdeM an [MILA](https://mila.quebec/en/). 
+the [laboratory for brain simulation and exploration (SIMEXP)](<https://simexp-lab.org>), and collaborators are located at the [Centre de Recherche de l'Institut de Gériatrie de Montréal (CRIUGM)](http://www.criugm.qc.ca/en.html),  [CIUSSS du Centre-Sud-de-l'île-de-Montréal](https://ciusss-centresudmtl.gouv.qc.ca/propos/services-en-anglais), as well as the [Psychology Departement](https://psy.umontreal.ca/english/home/) of [University of Montreal (UdeM)](https://www.umontreal.ca/en/). The team has grown to include individuals from various institutions, and in particular the [Computer Science and Operational Research (DIRO) Department](https://diro.umontreal.ca/english/home/) at UdeM and the [MILA](https://mila.quebec/en/). 
 
 ## Funding
 
-The Courtois NeuroMod project was made possible by a 6.3M CAD (2018-23, PI Bellec) of the Courtois foundation. These funds are administered by the [Fondation Institut Gériatrie Montréal (FIGM)](https://www.figm.ca/), part of [CIUSSS du Centre-Sud-de-l'île-de-Montréal](https://ciusss-centresudmtl.gouv.qc.ca/propos/services-en-anglais), as well as [University of Montréal](https://www.umontreal.ca/en/). Courtois NeuroMod also includes support for two separate consortia, called [CIMAQ](http://www.cima-q.ca/en/home/) (early identification of Alzheimer's disease) and PRISME (looking for brain correlates of the evolution of symptoms in individuals with psychosis), based at the [Institut Universitaire en Santé Mentale de Montréal (IUSMM)](https://ciusss-estmtl.gouv.qc.ca/).
+The Courtois NeuroMod project was made possible by a 6.3M CAD (2018-23, PI Bellec) donation from the Courtois foundation. These funds are administered by the [Fondation Institut Gériatrie Montréal (FIGM)](https://www.figm.ca/), part of [CIUSSS du Centre-Sud-de-l'île-de-Montréal](https://ciusss-centresudmtl.gouv.qc.ca/propos/services-en-anglais), as well as [University of Montréal](https://www.umontreal.ca/en/). Courtois NeuroMod also includes support for two separate consortia, called [CIMAQ](http://www.cima-q.ca/en/home/) (early identification of Alzheimer's disease), and PRISME (looking for brain correlates of the evolution of symptoms in individuals with psychosis) based at the [Institut Universitaire en Santé Mentale de Montréal (IUSMM)](https://ciusss-estmtl.gouv.qc.ca/).
 
 ## Team
 
@@ -20,7 +20,7 @@ The Courtois NeuroMod project was made possible by a 6.3M CAD (2018-23, PI Belle
 ### Modelling
  * Guillaume Lajoie, Principal Investigator (Mathematics, UdeM & MILA)
  * François Paugam, PhD student (CRIUGM & DIRO, UdeM).
- * Pravish Sainaht, Master's student (DIRO, UdeM & MILA)
+ * Pravish Sainath, Master's student (DIRO, UdeM & MILA)
  * Yu Zhang, Post-Doctoral Fellow (CRIUGM, IVADO & Psychology, UdeM)
  * Amal Boukhdir, PhD student (CRIUGM & DIRO, UdeM)
 
