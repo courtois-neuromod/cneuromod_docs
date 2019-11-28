@@ -52,13 +52,13 @@ For functional sessions, participant wore MRI compatible  S15 [Sensimetric](http
 
 ### Stimuli presentation
 
-For the HCP-trt dataset, Eprime scripts provided by the Human Connectome project were adapted for our presentation system, and run using Eprime 2.0. For all other tasks, a custom overlay on top of Psychopy was used to present the different tasks and synchronize task with the scanner TTL.
-This software also allowed to trigger the start of the eyetracking system, and onset the stimuli presentation. TTL pulses were also recorded in the [AcqKnowledge software](https://www.biopac.com/product/acqknowledge-software/). All task stimuli scripts are available through [github](https://github.com/courtois-neuromod/task_stimuli).
+For the HCP-trt dataset, Eprime scripts provided by the Human Connectome project were adapted for our presentation system, and run using Eprime 2.0. For all other tasks, a custom overlay on top of Psychopy was used to present the different tasks and synchronize task with the scanner's trigger pulses.
+This software also allowed to trigger the start of the eyetracking system, and onset the stimuli presentation. Trigger pulses were also recorded in the [AcqKnowledge software](https://www.biopac.com/product/acqknowledge-software/). All task stimuli scripts are available through [github](https://github.com/courtois-neuromod/task_stimuli).
 
 ## Physiological measures
 
 ### Biopac
-During all sequences, electrophysiological signals were recorded using a Biopac M160  MRI compatible systems and amplifiers. Measurements were acquired at 1000 Hz. Recodings were synch to the scans via the TTL pulse. All measurements were recorded and monitored using Biopac's AcqKnowledge sofware.
+During all sequences, electrophysiological signals were recorded using a Biopac M160  MRI compatible systems and amplifiers. Measurements were acquired at 1000 Hz. Recodings were synch to the scans via the triggers pulses. All measurements were recorded and monitored using Biopac's AcqKnowledge sofware.
 
 ### Plethysmograph
  Participant’s pulse was measured using a MR-compatible plethysmograph.  A Biopac TSD200-MRI photoplethysmogram transducer was  placed on the foot or toe of the participants to obtain beat-by-beat estimates of heart rate.
