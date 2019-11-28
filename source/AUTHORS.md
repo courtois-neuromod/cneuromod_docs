@@ -3,7 +3,7 @@
 
 ## Overview
 
-The Courtois NeuroMod team originated from
+The Courtois NeuroMod project originated from
 the [laboratory for brain simulation and exploration (SIMEXP)](<https://simexp-lab.org>), and collaborators are located at the [Centre de Recherche de l'Institut de Gériatrie de Montréal (CRIUGM)](http://www.criugm.qc.ca/en.html),  [CIUSSS du Centre-Sud-de-l'île-de-Montréal](https://ciusss-centresudmtl.gouv.qc.ca/propos/services-en-anglais), as well as the [Psychology Departement](https://psy.umontreal.ca/english/home/) of [University of Montreal (UdeM)](https://www.umontreal.ca/en/). The team has grown to include individuals from various institutions, and in particular the [Computer Science and Operational Research (DIRO) Department](https://diro.umontreal.ca/english/home/) at UdeM and the [MILA](https://mila.quebec/en/). 
 
 ## Funding
