@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Ethics &mdash; Courtois NeuroMod 0.0 documentation</title>
+  <title>Access &mdash; Courtois NeuroMod 0.0 documentation</title>
   
 
   
@@ -88,9 +88,17 @@
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="DATASETS.html">Datasets</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Ethics</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Access</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#ethics">Ethics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#downloading-the-dataset">Downloading the dataset</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#dataset-updates">Dataset updates</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="MRI.html">MRI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="DERIVATIVES.html">Derivatives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AUTHORS.html">Authors</a></li>
 </ul>
 
             
@@ -136,13 +144,13 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Ethics</li>
+      <li>Access</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/ETHICS.md.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/ACCESS.md.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -155,8 +163,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="ethics">
-<h1>Ethics<a class="headerlink" href="#ethics" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="access">
+<h1>Access<a class="headerlink" href="#access" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="ethics">
+<h2>Ethics<a class="headerlink" href="#ethics" title="Permalink to this headline">¶</a></h2>
 <p>The Courtois NeuroMod project has been approved by the institutional research ethics board of the <a class="reference external" href="https://ciusss-centresudmtl.gouv.qc.ca/propos/services-en-anglais">CIUSSS du Centre-Sud-de-l’île-de-Montréal</a>. The CIUSSS is a large governmental health organization, and the core NeuroMod team is based at the Research Centre of the Montreal Geriatric Institute (<a class="reference external" href="http://www.criugm.qc.ca/en.html">CRIUGM</a>), which is a part of the CIUSSS, and affiliated with the <a class="reference external" href="https://www.umontreal.ca/">Université de Montréal</a>. The ethics documentation may be useful for research teams to receive ethics approval for secondary analysis by their local institutions, if required.</p>
 <ul class="simple">
 <li><p><a class="reference external" href="./_static/ethics/approval_irb_ciusss_french.pdf">approval_irb_ciusss_french.pdf</a>: letter of approval from the institutional review board for the Courtois NeuroMod project (in French).</p></li>
@@ -164,6 +174,46 @@
 <li><p><a class="reference external" href="./_static/ethics/consent_form_english.pdf">consent_form_english.pdf</a>: the informed consent form signed by participants (English version).</p></li>
 <li><p><a class="reference external" href="./_static/ethics/consent_form_french.pdf">consent_form_french.pdf</a>: the informed consent form signed by participants (French version).</p></li>
 </ul>
+</div>
+<div class="section" id="downloading-the-dataset">
+<h2>Downloading the dataset<a class="headerlink" href="#downloading-the-dataset" title="Permalink to this headline">¶</a></h2>
+<p>This is a <a class="reference external" href="https://www.datalad.org/">DataLad</a> dataset.
+Quickly: datalad is a tool for versioning large data structure in a git repository using git-annex. The dataset can be explored without downloading the data, and it is easy to only download the subset of the data you need for your project.
+The <a class="reference external" href="http://handbook.datalad.org/en/latest/">DataLad handbook</a>, is a good resource for beginners, but also for advanced use-cases.</p>
+<p>To obtain the data, you must install a recent version of the <a class="reference external" href="https://www.datalad.org/get_datalad.html">DataLad software</a>. You will also need to have access to the git hosting the dataset structure and to the S3 fileserver hosting the data.</p>
+<p>Once you have that you can proceed as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># install recursively the dataset and subdataset of the current project</span>
+<span class="c1"># if using ssh git clone as follow, you can set your public SSH key in the present git to ease future updates.</span>
+<span class="n">datalad</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">git</span><span class="nd">@git</span><span class="o">.</span><span class="n">unf</span><span class="o">-</span><span class="n">montreal</span><span class="o">.</span><span class="n">ca</span><span class="p">:</span><span class="n">cneuromod</span><span class="o">/</span><span class="n">cneuromod</span><span class="o">.</span><span class="n">git</span>
+<span class="c1"># if errors show up relative to .heudiconv subdataset/submodule, this is OK, they are not published (will be cleaned up in the future).</span>
+<span class="n">cd</span> <span class="n">cneuromod</span>
+
+
+<span class="c1"># We now set as environment variable the credentials to the file server.</span>
+<span class="c1"># the s3 access_key and secret_key will be provided upon request by the data manager.</span>
+<span class="c1"># This needs to be set in your `bash` everytime you want to download data.</span>
+<span class="n">export</span> <span class="n">AWS_ACCESS_KEY_ID</span><span class="o">=&lt;</span><span class="n">s3_access_key</span><span class="o">&gt;</span>  <span class="n">AWS_SECRET_ACCESS_KEY</span><span class="o">=&lt;</span><span class="n">s3_secret_key</span><span class="o">&gt;</span>
+
+<span class="c1"># now you can get data using</span>
+<span class="n">datalad</span> <span class="n">get</span> <span class="o">-</span><span class="n">r</span> <span class="o">&lt;</span><span class="nb">any</span><span class="o">/</span><span class="n">file</span><span class="o">/</span><span class="ow">in</span><span class="o">/</span><span class="n">the</span><span class="o">/</span><span class="n">dataset</span><span class="o">.</span><span class="n">example</span><span class="o">&gt;</span>
+
+<span class="c1"># You can also run reproductible analysis using</span>
+<span class="n">datalad</span> <span class="n">run</span> <span class="o">-</span><span class="n">i</span> <span class="o">&lt;</span><span class="n">the</span> <span class="n">files</span> <span class="n">needed</span> <span class="k">for</span> <span class="n">my</span> <span class="n">analysis</span><span class="o">&gt;</span> <span class="o">../</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">my</span><span class="o">/</span><span class="n">analysis</span><span class="o">.</span><span class="n">script</span>
+<span class="c1"># which will download the required files and store the command launched and the results in the datalad dataset.</span>
+</pre></div>
+</div>
+<div class="section" id="dataset-updates">
+<h3>Dataset updates<a class="headerlink" href="#dataset-updates" title="Permalink to this headline">¶</a></h3>
+<p>The dataset will be updated with new data, new preprocessing pipelines, fixes… so you might want to get these changes (unless you are running analyses, or trying to reproduce results).
+The master branch will evolve with the project, and can be unstable or messy.
+Thus, we recommend using specific release tags, unless critical fixes are provided after the release and could unvalidate your analyses.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># update the dataset recursively</span>
+<span class="n">datalad</span> <span class="n">update</span> <span class="o">-</span><span class="n">r</span> <span class="o">--</span><span class="n">merge</span>
+</pre></div>
+</div>
+<p>Once your local dataset clone is updated, you might need to pull new data, as some files could have been replace.</p>
+</div>
+</div>
 </div>
 
 

@@ -8,3 +8,4 @@
    ACCESS
    MRI
    DERIVATIVES
+   AUTHORS
