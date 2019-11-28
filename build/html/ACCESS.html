@@ -90,10 +90,8 @@
 <li class="toctree-l1"><a class="reference internal" href="DATASETS.html">Datasets</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Access</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#ethics">Ethics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#downloading-the-dataset">Downloading the dataset</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#dataset-updates">Dataset updates</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="#downloading-the-dataset">Downloading the dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#updates">Updates</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="MRI.html">MRI</a></li>
@@ -177,11 +175,8 @@
 </div>
 <div class="section" id="downloading-the-dataset">
 <h2>Downloading the dataset<a class="headerlink" href="#downloading-the-dataset" title="Permalink to this headline">¶</a></h2>
-<p>This is a <a class="reference external" href="https://www.datalad.org/">DataLad</a> dataset.
-Quickly: datalad is a tool for versioning large data structure in a git repository using git-annex. The dataset can be explored without downloading the data, and it is easy to only download the subset of the data you need for your project.
-The <a class="reference external" href="http://handbook.datalad.org/en/latest/">DataLad handbook</a>, is a good resource for beginners, but also for advanced use-cases.</p>
-<p>To obtain the data, you must install a recent version of the <a class="reference external" href="https://www.datalad.org/get_datalad.html">DataLad software</a>. You will also need to have access to the git hosting the dataset structure and to the S3 fileserver hosting the data.</p>
-<p>Once you have that you can proceed as follows:</p>
+<p>All data are made available as a <a class="reference external" href="https://git.unf-montreal.ca/cneuromod/cneuromod">DataLad collection (login required)</a> in the <a class="reference external" href="https://git.unf-montreal.ca">UNF git</a>. <a class="reference external" href="https://www.datalad.org/">DataLad</a> is a tool for versioning a large data structure in a git repository. The dataset can be explored without downloading the data, and it is easy to only download the subset of the data you need for your project.
+See the <a class="reference external" href="http://handbook.datalad.org/en/latest/">DataLad handbook</a> for further information. To obtain the data, you need to install a recent version of the <a class="reference external" href="https://www.datalad.org/get_datalad.html">DataLad software</a>. You will also need to have access to the git hosting the dataset structure and to the S3 fileserver hosting the data. Once you have that you can proceed as follows:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># install recursively the dataset and subdataset of the current project</span>
 <span class="c1"># if using ssh git clone as follow, you can set your public SSH key in the present git to ease future updates.</span>
 <span class="n">datalad</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">git</span><span class="nd">@git</span><span class="o">.</span><span class="n">unf</span><span class="o">-</span><span class="n">montreal</span><span class="o">.</span><span class="n">ca</span><span class="p">:</span><span class="n">cneuromod</span><span class="o">/</span><span class="n">cneuromod</span><span class="o">.</span><span class="n">git</span>
@@ -202,17 +197,16 @@ The <a class="reference external" href="http://handbook.datalad.org/en/latest/">
 <span class="c1"># which will download the required files and store the command launched and the results in the datalad dataset.</span>
 </pre></div>
 </div>
-<div class="section" id="dataset-updates">
-<h3>Dataset updates<a class="headerlink" href="#dataset-updates" title="Permalink to this headline">¶</a></h3>
-<p>The dataset will be updated with new data, new preprocessing pipelines, fixes… so you might want to get these changes (unless you are running analyses, or trying to reproduce results).
-The master branch will evolve with the project, and can be unstable or messy.
-Thus, we recommend using specific release tags, unless critical fixes are provided after the release and could unvalidate your analyses.</p>
+</div>
+<div class="section" id="updates">
+<h2>Updates<a class="headerlink" href="#updates" title="Permalink to this headline">¶</a></h2>
+<p>The dataset will be updated with new releases so you might want to get these changes (unless you are running analyses, or trying to reproduce results). The master branch will evolve with the project, and can be unstable or messy.
+Thus, we recommend using specific release tags. There is one stable release per year, e.g. <code class="docutils literal notranslate"><span class="pre">cneuromod-2020</span></code>, which is preceded by alpha (e.g. <code class="docutils literal notranslate"><span class="pre">cneuromod-2020-alpha</span></code>), beta (e.g. <code class="docutils literal notranslate"><span class="pre">cneuromod-2020-beta</span></code>) and release candidate (e.g. <code class="docutils literal notranslate"><span class="pre">cneuromod-2020-rc</span></code>). To update your dataset to the latest version, use:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># update the dataset recursively</span>
 <span class="n">datalad</span> <span class="n">update</span> <span class="o">-</span><span class="n">r</span> <span class="o">--</span><span class="n">merge</span>
 </pre></div>
 </div>
 <p>Once your local dataset clone is updated, you might need to pull new data, as some files could have been replace.</p>
-</div>
 </div>
 </div>
 

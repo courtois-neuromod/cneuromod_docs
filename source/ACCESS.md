@@ -35,7 +35,7 @@ datalad run -i <the files needed for my analysis> ../path/to/my/analysis.script
 
 ```
 
-### Dataset updates
+## Updates
 
 The dataset will be updated with new releases so you might want to get these changes (unless you are running analyses, or trying to reproduce results). The master branch will evolve with the project, and can be unstable or messy.
 Thus, we recommend using specific release tags. There is one stable release per year, e.g. `cneuromod-2020`, which is preceded by alpha (e.g. `cneuromod-2020-alpha`), beta (e.g. `cneuromod-2020-beta`) and release candidate (e.g. `cneuromod-2020-rc`). To update your dataset to the latest version, use:
@@ -45,5 +45,4 @@ Thus, we recommend using specific release tags. There is one stable release per 
 datalad update -r --merge
 
 ```
-
 Once your local dataset clone is updated, you might need to pull new data, as some files could have been replace.

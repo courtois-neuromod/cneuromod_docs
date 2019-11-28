@@ -91,11 +91,7 @@
 <li class="toctree-l1"><a class="reference internal" href="ACCESS.html">Access</a></li>
 <li class="toctree-l1"><a class="reference internal" href="MRI.html">MRI</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Derivatives</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#anatomical-preprocessing">Anatomical preprocessing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#fmri-preprocessing">fMRI preprocessing</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#fmriprep">fMRIPrep</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="#fmriprep">fMRIPrep</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="AUTHORS.html">Authors</a></li>
@@ -165,35 +161,23 @@
             
   <div class="section" id="derivatives">
 <h1>Derivatives<a class="headerlink" href="#derivatives" title="Permalink to this headline">¶</a></h1>
-<p>This is the part of the data that you will likely be interested to feed in your analyses. This page is still under construction, but should be completed soon.</p>
-<div class="section" id="anatomical-preprocessing">
-<h2>Anatomical preprocessing<a class="headerlink" href="#anatomical-preprocessing" title="Permalink to this headline">¶</a></h2>
-<p>WIP</p>
-<p>See fMRIPrep section below for the brain anatomical preprocessing.</p>
-</div>
-<div class="section" id="fmri-preprocessing">
-<h2>fMRI preprocessing<a class="headerlink" href="#fmri-preprocessing" title="Permalink to this headline">¶</a></h2>
-<p>We are developing a tool <a class="reference external" href="https://github.com/SIMEXP/fmriprep_confound_loader">fmriprep_confound_loader</a> to load confounds from preprocessing pipeline outputs (<a class="reference external" href="https://fmriprep.readthedocs.io/en/stable/#">fMRIPrep</a> only for now).</p>
+<p>The Courtois NeuroMod data release includes the output of standard analysis pipelines. Available imaging derivatives are listed below.</p>
 <div class="section" id="fmriprep">
-<h3>fMRIPrep<a class="headerlink" href="#fmriprep" title="Permalink to this headline">¶</a></h3>
-<p><a class="reference external" href="https://fmriprep.readthedocs.io/en/stable/installation.html">Version: 1.5.0</a>
-Options: slicetiming and recon-all was skipped. (<code class="docutils literal notranslate"><span class="pre">fmriprep</span> <span class="pre">--fs-no-reconall</span> <span class="pre">--ignore</span> <span class="pre">slicetiming</span> <span class="pre">...</span></code>)</p>
-<p>FmriPrep is an fMRI data preprocessing pipeline that requires minimal user input, while providing error and output reporting. It performs basic processing steps (coregistration, normalization, unwarping, noise component extraction, segmentation, skullstripping etc.) and provides outputs that can be easily submitted to a variety of group level analyses, including task-based or resting-state fMRI, graph theory measures, surface or volume-based statistics, etc.</p>
-<p>The fmriprep pipeline uses a combination of tools from well-known software packages, including FSL, ANTs, FreeSurfer and <a class="reference external" href="https://afni.nimh.nih.gov/">AFNI</a>. This pipeline was designed to provide the best software implementation for each state of preprocessing, and will be updated as newer and better neuroimaging software become available.</p>
-<p>For additional information fMRIPrep’s installion process, it’s pipeline, or it’s outputs, please visit it’s documentation pages [here]https://fmriprep.readthedocs.io/en/stable/installation.html.</p>
-<p>The output can be found in <code class="docutils literal notranslate"><span class="pre">derivatives/fmriprep</span></code>, each participant folder (<code class="docutils literal notranslate"><span class="pre">sub-*</span></code>) contains:</p>
+<h2>fMRIPrep<a class="headerlink" href="#fmriprep" title="Permalink to this headline">¶</a></h2>
+<p>The functional data was preprocessed using the fMRIprep pipeline <a class="reference external" href="https://fmriprep.readthedocs.io/en/stable/installation.html">version: 1.5.0</a>. FmriPrep is an fMRI data preprocessing pipeline that requires minimal user input, while providing error and output reporting. It performs basic processing steps (coregistration, normalization, unwarping, noise component extraction, segmentation, skullstripping etc.) and provides outputs that can be easily submitted to a variety of group level analyses, including task-based or resting-state fMRI, graph theory measures, surface or volume-based statistics, etc. The fmriprep pipeline uses a combination of tools from well-known software packages, including FSL, ANTs, FreeSurfer and <a class="reference external" href="https://afni.nimh.nih.gov/">AFNI</a>. This pipeline was designed to provide the best software implementation for each state of preprocessing, although NeuroMod data will be processed with the same fixed version of fMRIprep throughout the project. For additional information fMRIPrep’s installion process, it’s pipeline, or it’s outputs, please visit it’s documentation pages [here]https://fmriprep.readthedocs.io/en/stable/installation.html.
+Note that the <code class="docutils literal notranslate"><span class="pre">slicetiming</span></code> and <code class="docutils literal notranslate"><span class="pre">recon-all</span></code> options were disabled (i.e. fMRIprep was invoked with the flags <code class="docutils literal notranslate"><span class="pre">--fs-no-reconall</span> <span class="pre">--ignore</span> <span class="pre">slicetiming</span></code>).</p>
+<p>The outputs of fMRIprep can be found under the folder of each dataset (e.g. <code class="docutils literal notranslate"><span class="pre">movie10</span></code>) <code class="docutils literal notranslate"><span class="pre">derivatives/fmriprep</span></code> in the Courtois NeuroMod datalad. The description of participant, session, task and event tags can be found in the <a class="reference external" href="DATASETS.html">Datasets</a> section. Each participant folder (<code class="docutils literal notranslate"><span class="pre">sub-*</span></code>) contains:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">anat</span></code> folder with T1 preprocessed and segmented in native and MNI space, registration parameters</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ses-*/func</span></code> containing for each fMRI run of that session file prefixed with:</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">_boldref.nii.gz</span></code> : a BOLD single volume reference</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">_desc-brain_mask.nii.gz</span></code> : the brain mask in fMRI space.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">_desc-preproc_bold.nii.gz</span></code> : the preprocessed BOLD timeseries.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">_desc-confounds_regressors.tsv</span></code> : a tabular tsv file, containing a large set of confounds to use in analysis steps (eg. GLM). Note that regressors are likely correlated, thus it is recommended to use a subset of these regressors or components of an orthogonal decomposition (eg. PCA) that explains a large share of the variance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">_boldref.nii.gz</span></code> : a BOLD single volume reference.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">_*-brain_mask.nii.gz</span></code> : the brain mask in fMRI space.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">_*-preproc_bold.nii.gz</span></code> : the preprocessed BOLD timeseries.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">_*-confounds_regressors.tsv</span></code> : a tabular tsv file, containing a large set of confounds to use in analysis steps (eg. GLM). Note that regressors are likely correlated, thus it is recommended to use a subset of these regressors. Also note that preprocessed time series have not been corrected for any confounds, but simply realigned in space, and it is therefore critical to regress some of the available confounds prior to analysis.For python users, we recommend using this tool <a class="reference external" href="https://github.com/SIMEXP/fmriprep_confound_loader">fmriprep_confound_loader</a> to load confounds from the fMRIprep outputs, using with the <code class="docutils literal notranslate"><span class="pre">minimal</span></code> strategy. In particular, as the NeuroMod data consistently exhibits low levels of motion, we recommend against removing time points with excessive motion (aka scrubbing).</p></li>
 </ul>
 </li>
 </ul>
-</div>
 </div>
 </div>
 

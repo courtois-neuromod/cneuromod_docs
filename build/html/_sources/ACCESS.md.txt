@@ -10,13 +10,8 @@ The Courtois NeuroMod project has been approved by the institutional research et
 
 ## Downloading the dataset
 
-This is a [DataLad](https://www.datalad.org/) dataset.
-Quickly: datalad is a tool for versioning large data structure in a git repository using git-annex. The dataset can be explored without downloading the data, and it is easy to only download the subset of the data you need for your project.
-The [DataLad handbook](http://handbook.datalad.org/en/latest/), is a good resource for beginners, but also for advanced use-cases.
-
-To obtain the data, you must install a recent version of the [DataLad software](https://www.datalad.org/get_datalad.html). You will also need to have access to the git hosting the dataset structure and to the S3 fileserver hosting the data.
-
-Once you have that you can proceed as follows:
+All data are made available as a [DataLad collection (login required)](https://git.unf-montreal.ca/cneuromod/cneuromod) in the [UNF git](https://git.unf-montreal.ca). [DataLad](https://www.datalad.org/) is a tool for versioning a large data structure in a git repository. The dataset can be explored without downloading the data, and it is easy to only download the subset of the data you need for your project.
+See the [DataLad handbook](http://handbook.datalad.org/en/latest/) for further information. To obtain the data, you need to install a recent version of the [DataLad software](https://www.datalad.org/get_datalad.html). You will also need to have access to the git hosting the dataset structure and to the S3 fileserver hosting the data. Once you have that you can proceed as follows:
 
 ```
 # install recursively the dataset and subdataset of the current project
@@ -40,16 +35,14 @@ datalad run -i <the files needed for my analysis> ../path/to/my/analysis.script
 
 ```
 
-### Dataset updates
+## Updates
 
-The dataset will be updated with new data, new preprocessing pipelines, fixes... so you might want to get these changes (unless you are running analyses, or trying to reproduce results).
-The master branch will evolve with the project, and can be unstable or messy.
-Thus, we recommend using specific release tags, unless critical fixes are provided after the release and could unvalidate your analyses.
+The dataset will be updated with new releases so you might want to get these changes (unless you are running analyses, or trying to reproduce results). The master branch will evolve with the project, and can be unstable or messy.
+Thus, we recommend using specific release tags. There is one stable release per year, e.g. `cneuromod-2020`, which is preceded by alpha (e.g. `cneuromod-2020-alpha`), beta (e.g. `cneuromod-2020-beta`) and release candidate (e.g. `cneuromod-2020-rc`). To update your dataset to the latest version, use:
 
 ```
 # update the dataset recursively
 datalad update -r --merge
 
 ```
-
 Once your local dataset clone is updated, you might need to pull new data, as some files could have been replace.
