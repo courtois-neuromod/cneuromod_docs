@@ -4,7 +4,7 @@ The Courtois NeuroMod data release includes the output of standard analysis pipe
 
 ## fMRIPrep
 
-The functional data was preprocessed using the fMRIprep pipeline [version: 1.5.0](https://fmriprep.readthedocs.io/en/stable/installation.html). FmriPrep is an fMRI data preprocessing pipeline that requires minimal user input, while providing error and output reporting. It performs basic processing steps (coregistration, normalization, unwarping, noise component extraction, segmentation, skullstripping etc.) and provides outputs that can be easily submitted to a variety of group level analyses, including task-based or resting-state fMRI, graph theory measures, surface or volume-based statistics, etc. The fmriprep pipeline uses a combination of tools from well-known software packages, including FSL, ANTs, FreeSurfer and [AFNI](https://afni.nimh.nih.gov/). This pipeline was designed to provide the best software implementation for each state of preprocessing, although NeuroMod data will be processed with the same fixed version of fMRIprep throughout the project. For additional information fMRIPrep's installion process, it's pipeline, or it's outputs, please visit it's documentation pages [here]https://fmriprep.readthedocs.io/en/stable/installation.html.
+The functional data was preprocessed using the fMRIprep pipeline [version: 1.5.0](https://fmriprep.readthedocs.io/en/stable/installation.html). FmriPrep is an fMRI data preprocessing pipeline that requires minimal user input, while providing error and output reporting. It performs basic processing steps (coregistration, normalization, unwarping, noise component extraction, segmentation, skullstripping etc.) and provides outputs that can be easily submitted to a variety of group level analyses, including task-based or resting-state fMRI, graph theory measures, surface or volume-based statistics, etc. The fmriprep pipeline uses a combination of tools from well-known software packages, including FSL, ANTs, FreeSurfer and [AFNI](https://afni.nimh.nih.gov/). This pipeline was designed to provide the best software implementation for each state of preprocessing, although NeuroMod data will be processed with the same fixed version of fMRIprep throughout the project. For additional information fMRIPrep's installion process, it's pipeline, or it's outputs, please visit it's documentation pages [here](https://fmriprep.readthedocs.io/en/stable/installation.html).
  Note that the `slicetiming` and `recon-all` options were disabled (i.e. fMRIprep was invoked with the flags `--fs-no-reconall --ignore slicetiming`).
 
 The outputs of fMRIprep can be found under the folder of each dataset (e.g. `movie10`) `derivatives/fmriprep` in the Courtois NeuroMod datalad. The description of participant, session, task and event tags can be found in the [Datasets](DATASETS.html) section. Each participant folder (`sub-*`) contains:
@@ -17,8 +17,8 @@ The outputs of fMRIprep can be found under the folder of each dataset (e.g. `mov
 
 ### ** BUG **
 
-The following run's preprocessing are missing because of fMRIPrep issues at the time of the alpha release.
-This will be fixed shortly.
+The following run's preprocessing are missing because of fMRIPrep issues at the time of the `cneuromod-2020-alpha` release.
+This will be fixed for the `cneuromod-2020-beta` release, scheduled in April 2020.
 
 #### Movie-10:
 
