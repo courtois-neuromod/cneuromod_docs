@@ -60,4 +60,4 @@ The Courtois NeuroMod project was made possible by a 6.3M CAD (2018-23, PI Belle
  * Yann Harel, PhD Student (Psychology, UdeM).
 
 ### Computing
- * Tristan Glatard, Collaborator (Computer Science Engineering, Concordia University).
+ * Tristan Glatard, Collaborator (Computer Science and Software Engineering, Concordia University).
