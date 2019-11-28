@@ -18,19 +18,24 @@ For detailed instruction on how to [install on Linux/Mac/Windows](http://handboo
 You will also need to have access to the git hosting the dataset structure and to the S3 fileserver hosting the data. Once you have that you can proceed as follows:
 
 ```
-# install recursively the dataset and subdataset of the current project
-# if using ssh git clone as follow, you can set your public SSH key in the present git to ease future updates.
+# Install recursively the dataset and subdataset of the current project.
+# If using ssh git clone as follow, you can set your public SSH key in the present git to ease future updates.
 datalad install -r git@git.unf-montreal.ca:cneuromod/cneuromod.git
-# if errors show up relative to .heudiconv subdataset/submodule, this is OK, they are not published (will be cleaned up in the future).
+# If errors show up relative to .heudiconv subdataset/submodule, this is OK, they are not published (will be cleaned up in the future).
 cd cneuromod
 
+# You will most likely want to checkout a stable release tag for your analysis.
+# You can do this while creating a new branch with the name you like.s
+# In this branch you can run you analysis and commit your work.
+# For instance (but this tag doesn't exist yet):
+git checkout -b <myanalysisbranch> cneuromod-2020
 
 # We now set as environment variable the credentials to the file server.
-# the s3 access_key and secret_key will be provided upon request by the data manager.
+# The s3 access_key and secret_key will be provided upon request by the data manager.
 # This needs to be set in your `bash` everytime you want to download data.
 export AWS_ACCESS_KEY_ID=<s3_access_key>  AWS_SECRET_ACCESS_KEY=<s3_secret_key>
 
-# now you can get data using
+# Now you can get data using:
 datalad get -r <any/file/in/the/dataset.example>
 
 # You can also run reproductible analysis using
