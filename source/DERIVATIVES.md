@@ -17,8 +17,8 @@ The outputs of fMRIprep can be found under the folder of each dataset (e.g. `mov
 
 ### ** BUG **
 
-The following run's preprocessing are missing because of fMRIPrep issues at the time of the alpha release.
-This will be fixed shortly.
+The following run's preprocessing are missing because of fMRIPrep issues at the time of the `cneuromod-2020-alpha` release.
+This will be fixed for the `cneuromod-2020-beta` release, scheduled in April 2020.
 
 #### Movie-10:
 
