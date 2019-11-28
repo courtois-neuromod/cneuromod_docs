@@ -20,7 +20,7 @@ The Courtois NeuroMod project was made possible by a 6.3M CAD (2018-23, PI Belle
 ### Modelling
  * Guillaume Lajoie, Principal Investigator (Mathematics, UdeM & MILA)
  * François Paugam, PhD student (CRIUGM & DIRO, UdeM).
- * Pravish Sainaht, Master's student (DIRO, UdeM & MILA)
+ * Pravish Sainath, Master's student (DIRO, UdeM & MILA)
  * Yu Zhang, Post-Doctoral Fellow (CRIUGM, IVADO & Psychology, UdeM)
  * Amal Boukhdir, PhD student (CRIUGM & DIRO, UdeM)
 
