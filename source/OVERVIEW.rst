@@ -5,7 +5,7 @@ Courtois NeuroMod
 
 The Courtois project on Neural Modelling (Courtois NeuroMod) aims at training artificial neural networks using extensive experimental data on individual human brain activity and behaviour.
 
-Six subjects (three women) are getting scanned weekly for five years, for a total of 500 hours of functional data per subject, covering several cognitive domains:
+Six subjects (three women, three men) are getting scanned weekly for five years, for a total of 500 hours of functional data per subject, covering several cognitive domains:
 
 * functional localizers, including vision, language and memory tasks,
 * movies,
