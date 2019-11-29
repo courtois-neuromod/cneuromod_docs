@@ -12,7 +12,7 @@ The Courtois NeuroMod project was made possible by a 6.3M CAD (2018-23, PI Belle
 
 ## Team
 
-### Platform
+### Core
  * Pierre Bellec, scientific director (CRIUGM, Psychology, UdeM).
  * Julie A Boyle, project manager (CRIUGM).
  * Basile Pinsard, data manager (CRIUGM).
