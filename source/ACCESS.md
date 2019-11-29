@@ -13,10 +13,7 @@ The Courtois NeuroMod project has been approved by the institutional research et
 All data are made available as a [DataLad collection (login required)](https://git.unf-montreal.ca/cneuromod/cneuromod) in the [UNF git](https://git.unf-montreal.ca). [DataLad](https://www.datalad.org/) is a tool for versioning a large data structure in a git repository. The dataset can be explored without downloading the data, and it is easy to only download the subset of the data you need for your project.
 See the [DataLad handbook](http://handbook.datalad.org/en/latest/) for further information.
 
-To obtain the data, you need to install a recent version of the [DataLad software](https://www.datalad.org/get_datalad.html).
-For detailed instruction on how to [install on Linux/Mac/Windows](http://handbook.datalad.org/en/latest/intro/installation.html).
-You will also need to have access to the git hosting the dataset structure and to the S3 fileserver hosting the data. Once you have that you can proceed as follows:
-
+To obtain the data, you need to install a recent version of the [DataLad software](http://handbook.datalad.org/en/latest/intro/installation.html), available for Linux, OSX and Windows. You will also need to have login credentials to access the NeuroMod git as well as the NeuroMod [Amazon S3](https://aws.amazon.com/s3) fileserver. Once you have obtained these credentials, you can proceed as follows in a terminal:
 ```
 # Install recursively the dataset and subdataset of the current project.
 # If using ssh git clone as follow, you can set your public SSH key in the present git to ease future updates.
