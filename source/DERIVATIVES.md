@@ -134,7 +134,7 @@ It is released under the [CC0](https://creativecommons.org/publicdomain/zero/1.0
 
 ### Missing outputs
 
-The following run's preprocessing are missing because of fMRIPrep issues at the time of the `cneuromod-2020-alpha` release.
+The following outputs of the fMRIprep pipeline are missing because of issues with the computing server at the time of the `cneuromod-2020-alpha` release.
 This will be fixed for the `cneuromod-2020-beta` release, scheduled in April 2020.
 
 #### Movie-10
