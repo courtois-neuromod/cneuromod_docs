@@ -1,7 +1,3 @@
----
-bibliography: CITATION.bib
----
-
 # Derivatives
 
 ## fMRIPrep
