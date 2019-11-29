@@ -2,9 +2,11 @@
 
 ## fMRIPrep
 
-The functional data was preprocessed using the fMRIprep pipeline [version: 1.5.0](https://fmriprep.readthedocs.io/en/stable/installation.html). FmriPrep is an fMRI data preprocessing pipeline that requires minimal user input, while providing error and output reporting. It performs basic processing steps (coregistration, normalization, unwarping, noise component extraction, segmentation, skullstripping etc.) and provides outputs that can be easily submitted to a variety of group level analyses, including task-based or resting-state fMRI, graph theory measures, surface or volume-based statistics, etc. The fmriprep pipeline uses a combination of tools from well-known software packages, including FSL, ANTs, FreeSurfer and [AFNI](https://afni.nimh.nih.gov/). This pipeline was designed to provide the best software implementation for each state of preprocessing, although NeuroMod data will be processed with the same fixed version of fMRIprep throughout the project. For additional information fMRIPrep's installion process, it's pipeline, or it's outputs, please visit it's documentation pages [here](https://fmriprep.readthedocs.io/en/stable/installation.html).
+### Overview
+The functional data was preprocessed using the fMRIprep pipeline [version: 1.5.0](https://fmriprep.readthedocs.io/en/stable/installation.html). FmriPrep is an fMRI data preprocessing pipeline that requires minimal user input, while providing error and output reporting. It performs basic processing steps (coregistration, normalization, unwarping, noise component extraction, segmentation, skullstripping etc.) and provides outputs that can be easily submitted to a variety of group level analyses, including task-based or resting-state fMRI, graph theory measures, surface or volume-based statistics, etc. The fmriprep pipeline uses a combination of tools from well-known software packages, including FSL, ANTs, FreeSurfer and [AFNI](https://afni.nimh.nih.gov/). For additional information regarding fMRIPrep installion, worflow and outputs, please visit the [documentation page](https://fmriprep.readthedocs.io/en/stable/installation.html).
  Note that the `slicetiming` and `recon-all` options were disabled (i.e. fMRIprep was invoked with the flags `--fs-no-reconall --ignore slicetiming`).
 
+### Outputs
 The outputs of fMRIprep can be found under the folder of each dataset (e.g. `movie10`) `derivatives/fmriprep` in the Courtois NeuroMod datalad. The description of participant, session, task and event tags can be found in the [Datasets](DATASETS.html) section. Each participant folder (`sub-*`) contains:
 - `anat` folder with T1 preprocessed and segmented in native and MNI space, registration parameters
 - `ses-*/func` containing for each fMRI run of that session file prefixed with:
@@ -13,17 +15,16 @@ The outputs of fMRIprep can be found under the folder of each dataset (e.g. `mov
   - `_*-preproc_bold.nii.gz` : the preprocessed BOLD timeseries.
   - `_*-confounds_regressors.tsv` : a tabular tsv file, containing a large set of confounds to use in analysis steps (eg. GLM). Note that regressors are likely correlated, thus it is recommended to use a subset of these regressors. Also note that preprocessed time series have not been corrected for any confounds, but simply realigned in space, and it is therefore critical to regress some of the available confounds prior to analysis.For python users, we recommend using this tool [fmriprep_confound_loader](https://github.com/SIMEXP/fmriprep_confound_loader) to load confounds from the fMRIprep outputs, using with the `minimal` strategy. In particular, as the NeuroMod data consistently exhibits low levels of motion, we recommend against removing time points with excessive motion (aka scrubbing).
 
-### Preprocessing courtois_neuromod_project_description
-
+### Description
 Results included in this manuscript come from preprocessing
 performed using *fMRIPrep* 0+unknown
 (@fmriprep1; @fmriprep2; RRID:SCR_016216),
 which is based on *Nipype* 1.2.2
 (@nipype1; @nipype2; RRID:SCR_002502).
 
-Anatomical data preprocessing
+#### Anatomical data preprocessing
 
-: The T1-weighted (T1w) image was corrected for intensity non-uniformity (INU)
+The T1-weighted (T1w) image was corrected for intensity non-uniformity (INU)
 with `N4BiasFieldCorrection` [@n4], distributed with ANTs 2.2.0 [@ants, RRID:SCR_004757], and used as T1w-reference throughout the workflow.
 The T1w-reference was then skull-stripped with a *Nipype* implementation of
 the `antsBrainExtraction.sh` workflow (from ANTs), using OASIS30ANTs
@@ -38,9 +39,9 @@ using brain-extracted versions of both T1w reference and the T1w template.
 The following template was selected for spatial normalization:
 *ICBM 152 Nonlinear Asymmetrical template version 2009c* [@mni152nlin2009casym, RRID:SCR_008796; TemplateFlow ID: MNI152NLin2009cAsym].
 
-Functional data preprocessing
+#### Functional data preprocessing
 
-: For each of the BOLD runs found per subject (across all
+For each of the BOLD runs found per subject (across all
 tasks and sessions), the following preprocessing was performed.
 First, a reference volume and its skull-stripped version were generated
 using a custom methodology of *fMRIPrep*.
@@ -121,14 +122,14 @@ For more details of the pipeline, see [the section corresponding
 to workflows in *fMRIPrep*'s documentation](https://fmriprep.readthedocs.io/en/latest/workflows.html "FMRIPrep's documentation").
 
 
-### Copyright Waiver
+#### Copyright Waiver
 
 The above boilerplate text was automatically generated by fMRIPrep
 with the express intention that users should copy and paste this
 text into their manuscripts *unchanged*.
 It is released under the [CC0](https://creativecommons.org/publicdomain/zero/1.0/) license.
 
-### References
+#### References
 
 
 ### ** BUG **
