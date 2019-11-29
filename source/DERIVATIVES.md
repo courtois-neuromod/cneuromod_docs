@@ -280,6 +280,3 @@ sub-05/ses-010/func/sub-05_ses-010_task-gambling_run-01_bold.nii.gz
 sub-05/ses-010/func/sub-05_ses-010_task-language_run-01_bold.nii.gz
 sub-05/ses-010/func/sub-05_ses-010_task-relational_run-02_bold.nii.gz
 ```
-
-
-.. bibliography:: CITATION.bib
