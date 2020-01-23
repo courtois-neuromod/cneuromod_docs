@@ -25,7 +25,6 @@ The parameters of the functional MRI sequence relevant for data analysis can be 
   * gradient-echo magnetization-transfer 3D sequence (duration 3:34 min, 28 = ms, TE = 3.3 ms, flip angle = 6 deg, voxel size = 1.5 mm isotropic, R=2 in-plane GRAPPA, MT pulse Gaussian shape centered at 1.2 kHz offset).
   * gradient-echo proton density 3D sequence (same parameters as above, without the MT pulse).
   * gradient-echo T1-weighted 3D sequence (same parameters as above, except: TR = 18 ms, flip angle = 20 deg).
-  * B1+ field map (duration 0:21 min, voxel size = 6 mm isotropic)
   * MP2RAGE 3D sequence (duration 7:26 min, TR = 4 s, TE = 1.51 ms, TI1 = 700 ms, TI2 = 1500 ms, voxel size = 1.2 mm isotropic, R=2 acceleration)
   * Susceptibility-weighted 3D sequence (duration 4:54 min, TR = 27 ms, TE = 20 ms)
 
