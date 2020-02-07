@@ -22,7 +22,7 @@ The Courtois NeuroMod project was made possible by a 6.3M CAD (2018-23, PI Belle
  * François Paugam, PhD student (CRIUGM & DIRO, UdeM, Québec, CA).
  * Pravish Sainath, Master's student (DIRO, UdeM & MILA, Québec, CA)
  * Yu Zhang, Post-Doctoral Fellow (CRIUGM, IVADO & Psychology, UdeM, Québec, CA)
- * Amal Boukhdir, PhD student (CRIUGM & DIRO, UdeM, Québec, CA)
+ * Amal Boukhdhir, PhD student (CRIUGM & DIRO, UdeM, Québec, CA)
 
 ### Vision
  * Sana Ahmadi, Student (CRIUGM & Concordia, Québec, CA).
