@@ -8,9 +8,7 @@
 ### Personalized head cases
 <img src="./_static/mri/headcase.png" alt="head case" width="200" align="right" hspace="10"/> In order to minimize movement, each participant wears a custom-designed, personalized headcase during scanning, built by [Caseforge](https://caseforge.co). The headcases are milled based on a head scan of each participant generated using a handheld 3D scanner, and the shape of the MRI coil. Caseforge mills the personalized headcases in polystyrene foam blocks.
 
-## BIDS formating
-
-All functional and anatomical data has been formated in [BIDS](https://bids.neuroimaging.io/), for more information visit the Brain Imaging Data Structure documentation [site](https://bids-specification.readthedocs.io/en/stable/).
+## Sequences
 
 ### Functional sequences
 
