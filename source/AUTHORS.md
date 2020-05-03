@@ -38,7 +38,8 @@ The Courtois NeuroMod project was made possible by a 6.3M CAD (2018-23, PI Belle
  * François Lespinasse, Master's Student (Psychology, UdeM, Québec, CA).
 
 ### Language
- * Simona Brambatti, Principal Investigator (CRIUGM & Psychology, UdeM, Québec, CA).
+ * Simona Brambati, Principal Investigator (CRIUGM & Psychology, UdeM, Québec, CA).
+ * Valentina Borghesani, Post-Doctoral Fellow (CRIUGM, IVADO & Psychology, UdeM, Québec, CA)
  * Jonathan Armoza, Research Associate (CRIUGM, Québec, CA & NYU, US).
  * James Martin Floreani, Summer Intern 2019 (École Polytechnique, France).
 
