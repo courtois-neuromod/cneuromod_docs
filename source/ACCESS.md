@@ -10,39 +10,32 @@ The Courtois NeuroMod project has been approved by the institutional research et
 
 ## Downloading the dataset
 
-All data are made available as a [DataLad collection (login required)](https://git.unf-montreal.ca/cneuromod/cneuromod) in the [UNF git](https://git.unf-montreal.ca).
+All data are made available as a [DataLad collection (currently requires to be part of the cneuromod team)](https://github.com/courtois-neuromod/cneuromod) on github.
 [DataLad](https://www.datalad.org/) is a tool for versioning a large data structure in a git repository. The dataset can be explored without downloading the data, and it is easy to only download the subset of the data you need for your project.
 See the [DataLad handbook](http://handbook.datalad.org/en/latest/) for further information.
 
-We recommend creating an SSH key (if not already present) on the machine on which the dataset will be installed using `ssh-keygen` and following the instructions.
-Then you can go to the [SSH key settings](https://git.unf-montreal.ca/user/settings/keys) of your account an add the SSH key, by pasting you public keys contained in the file `~/.ssh/id_rsa.pub`.
+We recommend creating an SSH key (if not already present) on the machine on which the dataset will be installed and adding it to github. See the official [github instructions](https://help.github.com/en/enterprise/2.15/user/articles/adding-a-new-ssh-key-to-your-github-account) on how to create and add a key to your account.
 
 To obtain the data, you need to install a recent version of the [DataLad software](http://handbook.datalad.org/en/latest/intro/installation.html), available for Linux, OSX and Windows. Note that you need to have valid login credentials to access the NeuroMod git as well as the NeuroMod [Amazon S3](https://aws.amazon.com/s3) fileserver. Once you have obtained these credentials, you can proceed as follows in a terminal:
 ```
 # Install recursively the dataset and subdataset of the current project.
 # If using ssh git clone as follow, you can set your public SSH key in the present git to ease future updates.
-datalad install -r git@git.unf-montreal.ca:cneuromod/cneuromod.git
+datalad install -r git@github.com:courtois-neuromod/cneuromod.git
 # If errors show up relative to .heudiconv subdataset/submodule, this is OK, they are not published (will be cleaned up in the future).
 cd cneuromod
-
-# You will most likely want to checkout a stable release tag for your analysis.
-# You can do this while creating a new branch with the name you like.s
-# In this branch you can run you analysis and commit your work.
-# For instance (but this tag doesn't exist yet):
-git checkout -b <myanalysisbranch> cneuromod-2020
-
-# We now set as environment variable the credentials to the file server.
-# The s3 access_key and secret_key will be provided upon request by the data manager.
+```
+You will most likely want to checkout a stable release tag for your analyses. For instance:
+```
+git checkout cneuromod-2020
+```
+We now set as environment variable the credentials to the file server. The s3 access_key and secret_key will be provided by the data manager after being granted access to cneuromod by the user access committee.
+```
 # This needs to be set in your `bash` everytime you want to download data.
 export AWS_ACCESS_KEY_ID=<s3_access_key>  AWS_SECRET_ACCESS_KEY=<s3_secret_key>
-
-# Now you can get data using:
+```
+You can now get data using:
+```
 datalad get -r <any/file/in/the/dataset.example>
-
-# You can also run reproductible analysis using
-datalad run -i <the files needed for my analysis> ../path/to/my/analysis.script
-# which will download the required files and store the command launched and the results in the datalad dataset.
-
 ```
 
 ## Updates
@@ -51,7 +44,7 @@ The dataset will be updated with new releases so you might want to get these cha
 Thus, we recommend using specific release tags.
 
 ```
-git checkout 2020-alpha # checkout the dataset tag 
+git checkout 2020-alpha # checkout the dataset tag
 git submodule update --init # checkout the subdatasets corresponding commits
 ```
 
@@ -62,4 +55,4 @@ There is one stable release per year, e.g. `cneuromod-2020`, which is preceded b
 datalad update -r --merge
 
 ```
-Once your local dataset clone is updated, you might need to pull new data, as some files could have been replace.
+Once your local dataset clone is updated, you might need to pull new data, as some files could have been added or changed.
