@@ -26,6 +26,7 @@ The Courtois NeuroMod project was made possible by a 6.3M CAD (2018-23, PI Belle
 
 ### Vision
  * Sana Ahmadi, Student (CRIUGM & Concordia, Québec, CA).
+ * Shima Rastegarnia, student (CRIUGM & DIRO, UdM, Québec, CA) 
  * Norman Kong, Bachelor Student (McGill, Québec, CA).
 
 ### Memory
@@ -54,7 +55,7 @@ The Courtois NeuroMod project was made possible by a 6.3M CAD (2018-23, PI Belle
 
 ### MRI
  * Julien Cohen-Adad, Principal Investigator (CRIUGM & Polytechnique Montréal).
- * Eva Alonso, Post-Doctoral Fellow (Polytechnique Montréal).
+ * Eva Alonso Ortiz, Post-Doctoral Fellow (Polytechnique Montréal).
 
 ### MEG
  * Karim Jerbi, Principal Investigator (CRIUGM & Psychology, UdeM, Québec, CA).
@@ -63,7 +64,10 @@ The Courtois NeuroMod project was made possible by a 6.3M CAD (2018-23, PI Belle
 ### Computing
  * Tristan Glatard, Collaborator (Computer Science and Software Engineering, Concordia University, Québec, CA).
  
-## Collaborators
+### Collaborators
  * Tamara Vanderwal (University of British Columbia, Vancouver, CA).
  * Christopher Steele (Concordia University, Québec, CA).
  * Jean-Baptiste Poline (McGill University, Québec, CA).
+ 
+ ### Engineering
+  * André Cyr, Engineer (UNF & CRIUGM, Québec, CA)
