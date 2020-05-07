@@ -25,7 +25,7 @@ The Courtois NeuroMod project was made possible by a 6.3M CAD (2018-23, PI Belle
  * Amal Boukhdhir, PhD student (CRIUGM & DIRO, UdeM, Québec, CA)
 
 ### Vision
- * Sana Ahmadi, Student (CRIUGM & Concordia, Québec, CA).
+ * Sana Ahmadi, PhDS tudent (CRIUGM & Concordia, Québec, CA).
  * Shima Rastegarnia, Master's student (CRIUGM & DIRO, UdM, Québec, CA) 
  * Norman Kong, Bachelor Student (McGill, Québec, CA).
 
