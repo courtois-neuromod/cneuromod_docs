@@ -56,6 +56,7 @@ The Courtois NeuroMod project was made possible by a 6.3M CAD (2018-23, PI Belle
 ### MRI
  * Julien Cohen-Adad, Principal Investigator (CRIUGM & Polytechnique Montréal).
  * Eva Alonso Ortiz, Post-Doctoral Fellow (Polytechnique Montréal).
+ * Arnaud Boré, Data Scientist (CRIUGM, Québec, CA).
 
 ### MEG
  * Karim Jerbi, Principal Investigator (CRIUGM & Psychology, UdeM, Québec, CA).
