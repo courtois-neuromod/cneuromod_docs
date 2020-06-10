@@ -8,6 +8,14 @@ The Courtois NeuroMod project has been approved by the institutional research et
   * [consent_form_english.pdf](./_static/ethics/consent_form_english.pdf): the informed consent form signed by participants (English version).
   * [consent_form_french.pdf](./_static/ethics/consent_form_french.pdf): the informed consent form signed by participants (French version).
 
+## Data Transfer Agreement (DTA)
+
+Coming soon
+
+## How to acknowledge
+
+Coming soon
+
 ## Downloading the dataset
 
 All data are made available as a [DataLad collection (currently requires to be part of the cneuromod team)](https://github.com/courtois-neuromod/cneuromod) on github.
