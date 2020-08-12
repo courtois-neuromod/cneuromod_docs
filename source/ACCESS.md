@@ -1,5 +1,16 @@
 # Access
 
+## Data Transfer Agreement (DTA)
+
+To access the cneuromod dataset, it is required to complete a form with a brief description of planned analyses, and complete an inter-institutional data transfer agreement. The DTA must be signed by the researcher responsible for the project as well as a representant of the main acadamic institution where the research team is affiliated. The application will be evaluated by a data access committee and, if approved, a transfer key will be shared with the research team in order to transfer the data (see [Downloading the dataset](#Downloading-the-dataset) section below). The operations of the data access committee are still being established. We anticipate that the committee will be open for request in the fall 2020. 
+
+## How to acknowledge
+
+We require that all publications using the cneuromod data include the following language in the acknowledgement section:
+> The Courtois project on neural modelling (cneuromod) was made possible by a generous donation from the Courtois foundation, administered by the Fondation Institut Gériatrie Montréal (FIGM), part of CIUSSS du Centre-Sud-de-l’île-de-Montréal, as well as University of Montreal (UdeM). Please refer to the authors section of the cneuromod documentation for an up-to-date list of contributors and institutions (https://docs.cneuromod.ca). 
+
+In addition, we encourage you to include the name of the cneuromod data release used in the analysis (e.g. cneuromod-2020), as well as any relevant excerpt from this documentation. Although some journals flag reproductions of technical documentation as plagiarism, using a standardized wording help consistency and reproducibility in the literature. Please reproduce this documentation verbatim to the greatest extent possible, and justify to the editor that this practice does not fall under plagiarism. Note that mulitple versions of the documentation exist, one for each cneuromod release, so please make sure to use excerpts from the correct version of the documentation, matching the data release used in the analysis. 
+
 ## Ethics
 
 The Courtois NeuroMod project has been approved by the institutional research ethics board of the [CIUSSS du Centre-Sud-de-l'île-de-Montréal](https://ciusss-centresudmtl.gouv.qc.ca/propos/services-en-anglais). The CIUSSS is a large governmental health organization, and the core NeuroMod team is based at the Research Centre of the Montreal Geriatric Institute ([CRIUGM](http://www.criugm.qc.ca/en.html)), which is a part of the CIUSSS, and affiliated with the [University of Montreal](https://www.umontreal.ca/). The ethics documentation may be useful for research teams to receive ethics approval for secondary analysis by their local institutions, if required.
@@ -7,14 +18,6 @@ The Courtois NeuroMod project has been approved by the institutional research et
   * [courtois_neuromod_project_description.pdf](./_static/ethics/courtois_neuromod_project_description.pdf): scientific overview of the Courtois NeuroMod project (in English).
   * [consent_form_english.pdf](./_static/ethics/consent_form_english.pdf): the informed consent form signed by participants (English version).
   * [consent_form_french.pdf](./_static/ethics/consent_form_french.pdf): the informed consent form signed by participants (French version).
-
-## Data Transfer Agreement (DTA)
-
-Coming soon
-
-## How to acknowledge
-
-Coming soon
 
 ## Downloading the dataset
 
