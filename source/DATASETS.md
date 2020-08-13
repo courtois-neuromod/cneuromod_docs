@@ -51,7 +51,7 @@ The participants watched the following movies ([cogatlas](https://www.cognitivea
 
 It should be noted that although three of the participants are not native anglophones, all particioants watched the movies in English. The three native francophone participants are fluent in English and report regularly watching movies in English.
 
-# Friends
+## Friends
 
 This dataset contains functional data acquired while showing participants episodes of the Friends TV show in English. It includes, for now, the season 1 and almost all of season 2.
 Each episode is cut in half to allow more flexible scanning and give participants opportunities for breaks. There is a small overlap between the segment to allow participants to catch up with the story-line. Both segments of an episode were always shown in the same scanning session to avoid participant forgetting the story-line of the episode. As most TV show, each episode is self-contained enough that delays between session should have no influence of the understanding of the story.
