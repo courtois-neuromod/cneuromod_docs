@@ -49,7 +49,7 @@ The participants watched the following movies ([cogatlas](https://www.cognitivea
  * `<task>` name `figures`: [Hidden figures](https://en.wikipedia.org/wiki/Hidden_Figures). Duration ~120 minutes. This movie was presented twice, for a total duration of ~240 minutes.
  * `<task>` name `life`: [Life](https://en.wikipedia.org/wiki/Life_(British_TV_series)) Disc one of four: "Challenges of life, reptiles and amphibian mammals". DVD set was narrated by David Attenborough Duration, and lasted ~50 minutes. This movie was presented twice, for a total duration of ~100 minutes.
 
-It should be noted that although three of the participants are not native anglophones, all particioants watched the movies in English. The three native francophone participants are fluent in English and report regularly watching movies in English.
+It should be noted that although three of the participants are not native anglophones, all participants watched the movies in English. The three native francophone participants are fluent in English and report regularly watching movies in English.
 
 ## Friends
 
