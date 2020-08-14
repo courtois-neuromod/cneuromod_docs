@@ -55,11 +55,11 @@ The dataset will be updated with new releases so you might want to get these cha
 Thus, we recommend using specific release tags.
 
 ```
-git checkout 2020-alpha # checkout the dataset tag
+git checkout 2020-alpha2 # checkout the dataset tag
 git submodule update --init # checkout the subdatasets corresponding commits
 ```
 
-There is one stable release per year, e.g. `cneuromod-2020`, which is preceded by alpha (e.g. `cneuromod-2020-alpha`), beta (e.g. `cneuromod-2020-beta`) and release candidate (e.g. `cneuromod-2020-rc`). To update your dataset to the latest version, use:
+There is one stable release per year, e.g. `cneuromod-2020`, which is preceded by one or multiple alpha release (e.g. `cneuromod-2020-alpha`), beta release (e.g. `cneuromod-2020-beta`) and release candidate (e.g. `cneuromod-2020-rc`). To update your dataset to the latest version, use:
 
 ```
 # update the dataset recursively
