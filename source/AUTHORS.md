@@ -22,12 +22,13 @@ The Courtois NeuroMod project was made possible by a 6.3M CAD (2018-23, PI Belle
  * François Paugam, PhD student (CRIUGM & DIRO, UdeM, Québec, CA).
  * Pravish Sainath, Master's student (DIRO, UdeM & MILA, Québec, CA)
  * Yu Zhang, Post-Doctoral Fellow (CRIUGM, IVADO & Psychology, UdeM, Québec, CA)
- * Amal Boukhdhir, PhD student (CRIUGM & DIRO, UdeM, Québec, CA)
 
 ### Vision
  * Sana Ahmadi, PhDS tudent (CRIUGM & Concordia, Québec, CA).
  * Shima Rastegarnia, Master's student (CRIUGM & DIRO, UdM, Québec, CA) 
  * Norman Kong, Bachelor Student (McGill, Québec, CA).
+ * Martin Habert, Collaborator (Max Planck Institute for Human Cognitive and Brain Sciences, Germany).
+ * Katja Seeliger, Collaborator (Max Planck Institute for Human Cognitive and Brain Sciences, Germany).  
 
 ### Memory
  * Sylvie Belleville, Principal Investigator (CRIUGM & Psychology, UdeM, Québec, CA).
@@ -41,8 +42,8 @@ The Courtois NeuroMod project was made possible by a 6.3M CAD (2018-23, PI Belle
 ### Language
  * Simona Brambati, Principal Investigator (CRIUGM & Psychology, UdeM, Québec, CA).
  * Valentina Borghesani, Post-Doctoral Fellow (CRIUGM, IVADO & Psychology, UdeM, Québec, CA)
- * Jonathan Armoza, Research Associate (CRIUGM, Québec, CA & NYU, US).
- * James Martin Floreani, Summer Intern 2019 (École Polytechnique, France).
+ * Leila Whebe, Collaborator (Carnegie Mellon University, USA). 
+ * Mariya Toneva, Collaborator (Carnegie Mellon University, USA). 
 
 ### Audition
  * Adrian Fuente, Collaborator (CRIUGM & Audiology, UdeM, Québec, CA).
@@ -50,12 +51,13 @@ The Courtois NeuroMod project was made possible by a 6.3M CAD (2018-23, PI Belle
  * Maëlle Freteault, PhD student (IMT Atlantique, France & Psychology, UdeM, Québec, CA).
 
 ### Video games
- * Paul-Henri Mignot, Research Associate 2018-19 (CRIUGM & IMT Atlantique, France).
  * Maximilien Le Clei, Master's Student (CRIUGM & DIRO, UdeM & MILA, Québec, CA).
+ * Anirudha Kemtur, Master's Student (CRIUGM & DIRO, UdeM & MILA, Québec, CA). 
 
 ### MRI
  * Julien Cohen-Adad, Principal Investigator (CRIUGM & Polytechnique Montréal).
  * Eva Alonso Ortiz, Post-Doctoral Fellow (Polytechnique Montréal).
+ * Agâh Karakuzu, PhD student (Polytechnique Montréal).
  * Arnaud Boré, Data Scientist (CRIUGM, Québec, CA).
 
 ### MEG
@@ -64,11 +66,18 @@ The Courtois NeuroMod project was made possible by a 6.3M CAD (2018-23, PI Belle
 
 ### Computing
  * Tristan Glatard, Collaborator (Computer Science and Software Engineering, Concordia University, Québec, CA).
+ * Loic Tetrel, Data Scientist (CRIUGM, Quebec, CA). 
  
-### Collaborators
+### Other collaborators
  * Tamara Vanderwal (University of British Columbia, Vancouver, CA).
  * Christopher Steele (Concordia University, Québec, CA).
  * Jean-Baptiste Poline (McGill University, Québec, CA).
  
  ### Engineering
   * André Cyr, Engineer (UNF & CRIUGM, Québec, CA)
+
+## Alumni
+ * Jonathan Armoza, Research Associate (CRIUGM, Québec, CA & NYU, US).
+ * James Martin Floreani, Summer Intern 2019 (École Polytechnique, France).
+ * Paul-Henri Mignot, Research Associate 2018-19 (CRIUGM & IMT Atlantique, France).
+ * Amal Boukhdhir, PhD student (CRIUGM & DIRO, UdeM, Québec, CA)
