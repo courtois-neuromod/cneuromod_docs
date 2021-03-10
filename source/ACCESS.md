@@ -2,7 +2,7 @@
 
 ## Data Transfer Agreement (DTA)
 
-To access the cneuromod dataset, it is required to complete a form with a brief description of planned analyses, and complete an inter-institutional data transfer agreement. The DTA must be signed by the researcher responsible for the project as well as a representant of the main acadamic institution where the research team is affiliated. The application will be evaluated by a data access committee and, if approved, a transfer key will be shared with the research team in order to transfer the data (see [Downloading the dataset](#Downloading-the-dataset) section below). The operations of the data access committee are still being established. We anticipate that the committee will be open for request in the fall 2020. 
+To access the cneuromod dataset, it is required to complete a form with a brief description of planned analyses, and complete an inter-institutional data transfer agreement. The DTA must be signed by the researcher responsible for the project as well as a representant of the main acadamic institution where the research team is affiliated. The application will be evaluated by a data access committee and, if approved, a transfer key will be shared with the research team in order to transfer the data (see [Downloading the dataset](#Downloading-the-dataset) section below). The operations of the data access committee are still being established. We anticipate that the committee will be open for request in 2021. 
 
 ## How to acknowledge
 
