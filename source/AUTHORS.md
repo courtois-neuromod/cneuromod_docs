@@ -42,7 +42,7 @@ The Courtois NeuroMod project was made possible by a 6.3M CAD (2018-23, PI Belle
 ### Language
  * Simona Brambati, Principal Investigator (CRIUGM & Psychology, UdeM, Québec, CA).
  * Valentina Borghesani, Post-Doctoral Fellow (CRIUGM, IVADO & Psychology, UdeM, Québec, CA)
- * Leila Whebe, Collaborator (Carnegie Mellon University, USA). 
+ * [Leila Wehbe](http://www.cs.cmu.edu/~lwehbe/), Collaborator (Carnegie Mellon University, USA). 
  * Mariya Toneva, Collaborator (Carnegie Mellon University, USA). 
 
 ### Audition
