@@ -16,25 +16,30 @@ The Courtois NeuroMod project was made possible by a 6.3M CAD (2018-23, PI Belle
  * [Pierre Bellec](http://www.criugm.qc.ca/en/researchers/laboratory-directors/81-pierre-bellec.html), scientific director (CRIUGM, Psychology, UdeM, Québec, CA).
  * Julie A Boyle, project manager (CRIUGM, Québec, CA).
  * Basile Pinsard, data manager (CRIUGM, Québec, CA).
+ * André Cyr, Engineer (UNF & CRIUGM, Québec, CA)
 
 ### Modelling
- * [Guillaume Lajoie](https://www.guillaumelajoie.com), Principal Investigator (Mathematics, UdeM & MILA, Québec, CA)
+ * [Guillaume Lajoie](https://www.guillaumelajoie.com), Principal Investigator (Mathematics, UdeM & MILA, Québec, CA).
  * François Paugam, PhD student (CRIUGM & DIRO, UdeM, Québec, CA).
- * Pravish Sainath, Master's student (DIRO, UdeM & MILA, Québec, CA)
- * Yu Zhang, Post-Doctoral Fellow (CRIUGM, IVADO & Psychology, UdeM, Québec, CA)
-
+ * Yu Zhang, Post-Doctoral Fellow (CRIUGM, IVADO & Psychology, UdeM, Québec, CA).
+ * Amal Boukhdhir, PhD student (CRIUGM & DIRO, UdeM, Québec, CA).
+ * [Tristan Glatard](https://users.encs.concordia.ca/~tglatard/), Collaborator (Computer Science and Software Engineering, Concordia University, Québec, CA).
+ * Loic Tetrel, Data Scientist (CRIUGM, Quebec, CA). 
+ * [Elizabeth DuPre](https://elizabeth-dupre.com), PhD student & collaborator (McGill University, Québec, CA).
+ 
 ### Vision
- * Sana Ahmadi, PhDS tudent (CRIUGM & Concordia, Québec, CA).
+ * Sana Ahmadi, PhD Student (CRIUGM & Concordia, Québec, CA).
  * Shima Rastegarnia, Master's student (CRIUGM & DIRO, UdM, Québec, CA) 
  * Norman Kong, Bachelor Student (McGill, Québec, CA).
  * [Martin Hebart](http://martin-hebart.de), Collaborator (Max Planck Institute for Human Cognitive and Brain Sciences, Germany).
- * Katja Seeliger, Collaborator (Max Planck Institute for Human Cognitive and Brain Sciences, Germany).  
+ * [Katja Seeliger](http://seeliger.space/), post-doctoral fellow, collaborator (Max Planck Institute for Human Cognitive and Brain Sciences, Germany).  
 
 ### Memory
  * [Sylvie Belleville](http://www.criugm.qc.ca/en/researchers/laboratory-directors/28-sylvie-belleville.html), Principal Investigator (CRIUGM & Psychology, UdeM, Québec, CA).
  * Samie-Jade Allard, Bachelor Student (Psychology, UdeM, Québec, CA).
  * François Nadeau, Bachelor Student (Psychology, UdeM, Québec, CA).
-
+ * Pravish Sainath, Master's student (DIRO, UdeM & MILA, Québec, CA)
+ 
 ### Emotions
  * [Pierre Rainville](http://www.criugm.qc.ca/en/researchers/laboratory-directors/57-pierre-rainville.html), Principal Investigator (CRIUGM & Stomatology, UdeM, Québec, CA).
  * François Lespinasse, Master's Student (Psychology, UdeM, Québec, CA).
@@ -49,35 +54,28 @@ The Courtois NeuroMod project was made possible by a 6.3M CAD (2018-23, PI Belle
  * [Adrian Fuente](http://www.criugm.qc.ca/en/researchers/laboratory-directors/225-adrian-fuente.html), Collaborator (CRIUGM & Audiology, UdeM, Québec, CA).
  * [Nicolas Farrugia](https://nicofarr.github.io/), Collaborator (IMT Atlantique, France).
  * Maëlle Freteault, PhD student (IMT Atlantique, France & Psychology, UdeM, Québec, CA).
-
+ * [Peer Herholz](https://peerherholz.github.io/), post-doctoral fellow & collaborator (McGill University, Québec, CA). 
+ * Eddy Fortier, Msc student (Psychology, UdeM, Québec, CA). 
+  
 ### Video games
  * Maximilien Le Clei, Master's Student (CRIUGM & DIRO, UdeM & MILA, Québec, CA).
  * Anirudha Kemtur, Master's Student (CRIUGM & DIRO, UdeM & MILA, Québec, CA). 
+ * [Karim Jerbi](http://www.karimjerbi.com/), Principal Investigator (CRIUGM & Psychology, UdeM, Québec, CA).
+ * Yann Harel, PhD Student (Psychology, UdeM).
 
 ### MRI
  * [Julien Cohen-Adad](https://www.neuro.polymtl.ca/people/julien_cohenadad), Principal Investigator (CRIUGM & Polytechnique Montréal).
  * [Eva Alonso Ortiz](https://www.evaalonsoortiz.com/), Post-Doctoral Fellow (Polytechnique Montréal).
  * [Agâh Karakuzu](https://agahkarakuzu.github.io/), PhD student (Polytechnique Montréal).
  * Arnaud Boré, Data Scientist (CRIUGM, Québec, CA).
-
-### MEG
- * [Karim Jerbi](http://www.karimjerbi.com/), Principal Investigator (CRIUGM & Psychology, UdeM, Québec, CA).
- * Yann Harel, PhD Student (Psychology, UdeM).
-
-### Computing
- * [Tristan Glatard](https://users.encs.concordia.ca/~tglatard/), Collaborator (Computer Science and Software Engineering, Concordia University, Québec, CA).
- * Loic Tetrel, Data Scientist (CRIUGM, Quebec, CA). 
- 
+  
 ### Other collaborators
  * [Tamara Vanderwal](https://www.bcchr.ca/tvanderwal) (University of British Columbia, Vancouver, CA).
  * Christopher Steele (Concordia University, Québec, CA).
  * [Jean-Baptiste Poline](https://www.mcgill.ca/neuro/jean-baptiste-poline-phd) (McGill University, Québec, CA).
  
- ### Engineering
-  * André Cyr, Engineer (UNF & CRIUGM, Québec, CA)
-
 ## Alumni
  * Jonathan Armoza, Research Associate (CRIUGM, Québec, CA & NYU, US).
  * James Martin Floreani, Summer Intern 2019 (École Polytechnique, France).
  * Paul-Henri Mignot, Research Associate 2018-19 (CRIUGM & IMT Atlantique, France).
- * Amal Boukhdhir, PhD student (CRIUGM & DIRO, UdeM, Québec, CA)
+ 
