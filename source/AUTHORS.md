@@ -47,7 +47,7 @@ The Courtois NeuroMod project was made possible by a 6.3M CAD (2018-23, PI Belle
  * [Simona Brambati](http://www.criugm.qc.ca/en/researchers/laboratory-directors/57-pierre-rainville.html), Principal Investigator (CRIUGM & Psychology, UdeM, Québec, CA).
  * [Valentina Borghesani](https://valentina.borghesani.org/), Post-Doctoral Fellow (CRIUGM, IVADO & Psychology, UdeM, Québec, CA)
  * [Leila Wehbe](http://www.cs.cmu.edu/~lwehbe/), Collaborator (Carnegie Mellon University, USA).
- * Mariya Toneva, Collaborator (Carnegie Mellon University, USA).
+ * [Mariya Toneva](http://mtoneva.com/), Collaborator (Carnegie Mellon University, USA).
 
 ### Audition
  * [Adrian Fuente](http://www.criugm.qc.ca/en/researchers/laboratory-directors/225-adrian-fuente.html), Collaborator (CRIUGM & Audiology, UdeM, Québec, CA).
