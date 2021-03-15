@@ -18,11 +18,11 @@
 # -- Project information -----------------------------------------------------
 
 project = 'Courtois NeuroMod'
-copyright = '2019, Courtois NeuroMod team'
+copyright = '2021, Courtois NeuroMod team'
 author = 'Courtois NeuroMod team'
 
 # The full version, including alpha/beta/rc tags
-release = '0.0'
+release = '2020-beta'
 master_doc = 'index'
 
 # -- General configuration ---------------------------------------------------
