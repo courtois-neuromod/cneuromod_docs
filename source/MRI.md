@@ -17,25 +17,25 @@ The parameters of the functional MRI sequence relevant for data analysis can be 
 ### Brain anatomical sequences
 
  The parameters of the brain anatomical MRI sequences relevant for data analysis can be found in the NeuroMod DataLad. The acquisition parameters are identical for all anatomical sessions. The Siemens pdf exam card of the anatomical sessions can be found [here](./_static/mri/anatomical_protocol_2019-01-22.pdf), and is briefly recapitulated below. A standard (brain) anatomical session started with a 21 s localizer scan, and then included the following sequences:
-  * T1-weighted MPRAGE 3D sagittal sequence (duration 6:38 min, TR = 2.4 s, TE = 2.2 ms, voxel size = 0.8 mm isotropic, R=2 acceleration)
+  * T1-weighted MPRAGE 3D sagittal sequence (duration 6:38 min, TR = 2.4 s, TE = 2.2 ms, flip angle = 8 deg, voxel size = 0.8 mm isotropic, R=2 acceleration)
   * T2-weighted FSE (SPACE) 3D sagittal sequence (duration 5:57 min, TR = 3.2 s, TE = 563 ms, voxel size = 0.8 mm isotropic, R=2 acceleration)
-  * Diffusion-weighted 2D axial sequence (duration 4:04 min, TR = 2.3 s, TE = 82 ms, 57 slices, voxel size = 2 mm isotropic,  phase-encoding P-A, SMS=3 through-plane acceleration, b-max = 3000 s/mm2). The same sequence was run with phase-encoding A-P to correct for susceptibility distortions. 
+  * Diffusion-weighted 2D axial sequence (duration 4:04 min, TR = 2.3 s, TE = 82 ms, 57 slices, flip angle = 78 deg, voxel size = 2 mm isotropic,  phase-encoding P-A, SMS=3 through-plane acceleration, b-max = 3000 s/mm2). The same sequence was run with phase-encoding A-P to correct for susceptibility distortions. 
   * gradient-echo magnetization-transfer 3D sequence (duration 3:34 min, 28 = ms, TE = 3.3 ms, flip angle = 6 deg, voxel size = 1.5 mm isotropic, R=2 in-plane GRAPPA, MT pulse Gaussian shape centered at 1.2 kHz offset).
   * gradient-echo proton density 3D sequence (same parameters as above, without the MT pulse).
   * gradient-echo T1-weighted 3D sequence (same parameters as above, except: TR = 18 ms, flip angle = 20 deg).
-  * MP2RAGE 3D sequence (duration 7:26 min, TR = 4 s, TE = 1.51 ms, TI1 = 700 ms, TI2 = 1500 ms, voxel size = 1.2 mm isotropic, R=2 acceleration)
-  * Susceptibility-weighted 3D sequence (duration 4:54 min, TR = 27 ms, TE = 20 ms)
+  * MP2RAGE 3D sequence (duration 7:26 min, TR = 4 s, TE = 1.51 ms, TI1 = 700 ms, TI2 = 1500 ms, flip angle 1 = 7 deg, flip angle 2 = 5 deg, voxel size = 1.2 mm isotropic, R=2 acceleration)
+  * Susceptibility-weighted 3D sequence (duration 4:54 min, TR = 27 ms, TE = 20 ms, flip angle = 15 deg)
 
 ### Spinal cord anatomical sequences
 
 The parameters of the spinal cord anatomical MRI sequences relevant for data analysis can be found in the BIDS dataset, and included metadata. The acquisition parameters are identical for all anatomical sessions, and follow a community [spinal cord standard imaging protocol](https://osf.io/tt4z9/). The Siemens pdf exam card of the anatomical sessions can be found [here](./_static/mri/spine_generic_Prisma_VE11C_ZOOMit.pdf), and is briefly recapitulated below. A standard (spinal cord) anatomical session starts with a 21 s localizer scan, and then includes the following sequences:
- * T1-weighted 3D sagittal sequence (duration 4:44 min, TR = 2 s, TE = 3.72 ms, FA = 9 deg, voxel size = 1.0 mm isotropic, R=2 acceleration)
- * T2-weighted  3D sagittal sequence (duration 4:02 min, TR = 1.5 s, TE = 120 ms, FA = 120 deg, voxel size = 0.8 mm isotropic, R=3 acceleration)
+ * T1-weighted 3D sagittal sequence (duration 4:44 min, TR = 2 s, TE = 3.72 ms, flip angle = 9 deg, voxel size = 1.0 mm isotropic, R=2 acceleration)
+ * T2-weighted  3D sagittal sequence (duration 4:02 min, TR = 1.5 s, TE = 120 ms, flip angle = 120 deg, voxel size = 0.8 mm isotropic, R=3 acceleration)
  * Diffusion-weighted 2D axial sequence (cardiac-gated with pulseOx, approximate duration 3 min, TR = 620 ms, TE = 60 ms, voxel size = 0.9 x 0.9 x 0.5 mm, phase-encoding A-P, b-max = 800 s/mm2)
- * Gradient-echo magnetization-transfer 3D axial sequence (duration 2:12 min, TR = 35 ms, TE = 3.13 ms, FA = 9 deg, voxel size = 0.9 x 0.9 x 0.5 mm, R=2 acceleration, with MT Gaussian pulse)
+ * Gradient-echo magnetization-transfer 3D axial sequence (duration 2:12 min, TR = 35 ms, TE = 3.13 ms, flip angle = 9 deg, voxel size = 0.9 x 0.9 x 0.5 mm, R=2 acceleration, with MT Gaussian pulse)
  * Gradient-echo proton-density weighted 3D axial sequence (same parameters as above, without the MT pulse).
  * Gradient-echo T1-weighted 3D axial sequence (same parameters as above, except: TR = 15 ms, flip angle = 15 deg).
- * gradient-echo ME (duration 4:45 min, TR = 600 ms, effective TE = 14 ms (this is a multi-echo sequence), FA = 30 deg, voxel size = 0.9 x 0.9 x 0.5 mm, R=2 acceleration)
+ * gradient-echo ME (duration 4:45 min, TR = 600 ms, effective TE = 14 ms (this is a multi-echo sequence), flip angle = 30 deg, voxel size = 0.9 x 0.9 x 0.5 mm, R=2 acceleration)
 
 ## Stimuli
 
