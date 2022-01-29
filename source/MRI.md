@@ -19,7 +19,7 @@ The parameters of the functional MRI sequence relevant for data analysis can be 
  The parameters of the brain anatomical MRI sequences relevant for data analysis can be found in the NeuroMod DataLad. The acquisition parameters are identical for all anatomical sessions. The Siemens pdf exam card of the anatomical sessions can be found [here](./_static/mri/anatomical_protocol_2019-01-22.pdf), and is briefly recapitulated below. A standard (brain) anatomical session started with a 21 s localizer scan, and then included the following sequences:
   * T1-weighted MPRAGE 3D sagittal sequence (duration 6:38 min, TR = 2.4 s, TE = 2.2 ms, flip angle = 8 deg, voxel size = 0.8 mm isotropic, R=2 acceleration)
   * T2-weighted FSE (SPACE) 3D sagittal sequence (duration 5:57 min, TR = 3.2 s, TE = 563 ms, voxel size = 0.8 mm isotropic, R=2 acceleration)
-  * Diffusion-weighted 2D axial sequence (duration 4:04 min, TR = 2.3 s, TE = 82 ms, 57 slices, flip angle = 78 deg, voxel size = 2 mm isotropic,  phase-encoding P-A, SMS=3 through-plane acceleration, b-max = 3000 s/mm2). The same sequence was run with phase-encoding A-P to correct for susceptibility distortions. 
+  * Diffusion-weighted 2D axial sequence (duration 4:04 min, TR = 2.3 s, TE = 82 ms, 57 slices, flip angle = 78 deg, voxel size = 2 mm isotropic,  phase-encoding P-A, SMS=3 through-plane acceleration, b-max = 3000 s/mm2). The same sequence was run with phase-encoding A-P to correct for susceptibility distortions.
   * gradient-echo magnetization-transfer 3D sequence (duration 3:34 min, 28 = ms, TE = 3.3 ms, flip angle = 6 deg, voxel size = 1.5 mm isotropic, R=2 in-plane GRAPPA, MT pulse Gaussian shape centered at 1.2 kHz offset).
   * gradient-echo proton density 3D sequence (same parameters as above, without the MT pulse).
   * gradient-echo T1-weighted 3D sequence (same parameters as above, except: TR = 18 ms, flip angle = 20 deg).
@@ -41,7 +41,7 @@ The parameters of the spinal cord anatomical MRI sequences relevant for data ana
 
 ### Visual presentation
 
-All visual stimuli were projected onto a blank screen located in the MRI room, through a waveguide.
+All visual stimuli were projected using a Epson Powerlite L615U projector. The images were casted through a waveguide onto a blank screen located in the MRI room.
 
 ### Auditory system
 
@@ -68,3 +68,6 @@ An electrocardiogram (ECG) was used to  measure the electrical activity generate
 
 ### Respiration
 Participant’s respiration was measured using a custom MRI compatible respiration belt.  The respiration system consisted of: a pressure cuff taken from a blood pressure monitor (PhysioLogic blood), a pressure sensor (MPXV5004GC7U, NXP USA Inc), and flexible tubing. The cuff was attached to the participant upper abdomen using Velcro strap, and then connected to the pressure sensor, located outside the scanner room, using tubing passed through a waveguide. The pressure signal was recorded using an analog input on the Biopac system, and monitored using AcqKnowledge software.
+
+## Mock scanner
+Some of our datasets required a comparison between genuine in-scanner conditions and "mock" conditions, where the subject was installed in a fake scanner that reproduced the comfort and aspect of an MRI scanner. This mock setup is also located at [UNF](https://unf-montreal.ca/), and is equipped with a monitor screen for stimulus presentation as well as audio headphones and response devices (keyboard and video game controller).
