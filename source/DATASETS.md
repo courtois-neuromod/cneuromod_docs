@@ -50,7 +50,7 @@ The participants watched the following movies ([cogatlas](https://www.cognitivea
 
 It should be noted that although three of the participants are not native anglophones, all participants watched the movies in English. The three native francophone participants are fluent in English and report regularly watching movies in English.
 
-.. warning:: The duration of BOLD series are slightly varying across participants and repetitions. If consistent length is required by analysis, series can be trimmed at the end to match duration, movie segments being aligned to the first TR.
+.. warning:: The duration of BOLD series are slightly varying across participants and repetitions. If consistent length is required for analysis, series can be trimmed at the end to match duration, movie segments being aligned to the first TR.
 
 .. warning:: There are instances of re-scanned segments (due to scan QC fail), these re-scans will be in separate sessions. These should be handled or excluded in analysis requiring continuity of the presentation of the story.
 
