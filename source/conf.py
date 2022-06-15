@@ -18,7 +18,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'Courtois NeuroMod'
-copyright = '2021, Courtois NeuroMod team'
+copyright = '2022, Courtois NeuroMod team'
 author = 'Courtois NeuroMod team'
 
 # The full version, including alpha/beta/rc tags
