@@ -30,7 +30,11 @@ datalad install -r git@github.com:courtois-neuromod/cneuromod.git
 cd cneuromod
 ```
 
-By default, this will install the latest stable release of the dataset.
+By default, this will install the latest stable release of the dataset, which is the recommended version to get for a new analysis.
+If you are need to work on a specific version (for instance to reproduce a result), you can change to the appropriate tag with.
+``
+git checkout cneuromod-2020
+```
 
 We now set as environment variable the credentials to the file server. The s3 access_key and secret_key will be provided by the data manager after being granted access to cneuromod by the user access committee.
 ```
