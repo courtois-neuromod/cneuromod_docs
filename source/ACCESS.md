@@ -29,18 +29,38 @@ datalad install -r git@github.com:courtois-neuromod/cneuromod.git
 # If errors show up relative to .heudiconv subdataset/submodule, this is OK, they are not published (will be cleaned up in the future).
 cd cneuromod
 ```
-You will most likely want to checkout a stable release tag for your analyses. For instance:
-```
-git checkout cneuromod-2020
-```
+
+By default, this will install the latest stable release of the dataset.
+
 We now set as environment variable the credentials to the file server. The s3 access_key and secret_key will be provided by the data manager after being granted access to cneuromod by the user access committee.
 ```
 # This needs to be set in your `bash` everytime you want to download data.
 export AWS_ACCESS_KEY_ID=<s3_access_key>  AWS_SECRET_ACCESS_KEY=<s3_secret_key>
 ```
-You can now get data using:
+
+One will likely prefer to directly get the preprocessed data (smriprep and fmriprep for now).
+
 ```
-datalad get -r <any/file/in/the/dataset.example>
+datalad install git@github.com:courtois-neuromod/cneuromod.processed.git
+cd cneuromod.processed
+```
+
+You can the installing the datasets you are interested in (instead of installing all of them) using for instance:
+```
+datalad get -n smriprep fmriprep/movie10
+```
+and then get only the files you need (for instance MNI space output):
+```
+datalad get smriprep/sub-*/anat/*space-MNI152NLin2009cAsym_* # get all anatomical output in MNI space
+datalad get fmriprep/movie10/sub-*/ses-*/func/*space-MNI152NLin2009cAsym_* # get all functional output in MNI space
+```
+
+The source data used for preprocessing (including raw data) are referenced in the preprocessed dataset following [Yoda](https://handbook.datalad.org/en/latest/basics/101-127-yoda.html), so as to track provenance.
+
+One might want to get the events files and stimuli for their analysis with:
+
+```
+datalad get fmriprep/movie10/sourcedata/movie10/stimuli fmriprep/movie10/sourcedata/movie10/*_events.tsv
 ```
 
 ## Updates
