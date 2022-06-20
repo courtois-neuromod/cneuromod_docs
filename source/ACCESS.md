@@ -75,7 +75,7 @@ The dataset will be updated with new releases so you might want to get these cha
 
 ```
 # update the dataset recursively
-datalad update -r --merge
+datalad update -r --merge --reobtain-data
 
 ```
-Once your local dataset clone is updated, you might need to pull new data, as some files could have been added or modified.
+Once your local dataset clone is updated, you might need to pull new data, as some files could have been added or modified. The `--reobtain-data` flag should automatically pull files that you had already downloaded in case these were modified.
