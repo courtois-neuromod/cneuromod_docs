@@ -30,9 +30,11 @@ datalad install -r git@github.com:courtois-neuromod/cneuromod.git
 cd cneuromod
 ```
 
+### Versioning
+
 By default, this will install the latest stable release of the dataset, which is the recommended version to get for a new analysis.
 If you are need to work on a specific version (for instance to reproduce a result), you can change to the appropriate tag with.
-``
+```
 git checkout cneuromod-2020
 ```
 
@@ -41,6 +43,8 @@ We now set as environment variable the credentials to the file server. The s3 ac
 # This needs to be set in your `bash` everytime you want to download data.
 export AWS_ACCESS_KEY_ID=<s3_access_key>  AWS_SECRET_ACCESS_KEY=<s3_secret_key>
 ```
+
+### Preprocessed data
 
 For analysis of fMRI data, it is prefererable to directly get the preprocessed data (smriprep and fmriprep for now).
 
@@ -58,10 +62,13 @@ and then get only the files you need (for instance MNI space output):
 datalad get smriprep/sub-*/anat/*space-MNI152NLin2009cAsym_* # get all anatomical output in MNI space
 datalad get fmriprep/movie10/sub-*/ses-*/func/*space-MNI152NLin2009cAsym_* # get all functional output in MNI space
 ```
-You can add the flag `-J n` to download files in parallel.
+You can add the flag `-J n` to download files in parallel with `n` being the number of threads to use.
 
-The source data used for preprocessing (including raw data) are referenced in the preprocessed dataset following [Yoda](https://handbook.datalad.org/en/latest/basics/101-127-yoda.html), so as to track provenance.
-You can also track the version of the cneuromod dataset you used by installing it in a datalad dataset created for your project.
+The source data used for preprocessing (including raw data) are referenced as sources in the preprocessed dataset following [Yoda](https://handbook.datalad.org/en/latest/basics/101-127-yoda.html), so as to track provenance.
+You can also track the version of the cneuromod dataset you are using by installing it in a datalad dataset created for your project.
+
+
+### Stimuli and event files
 
 You will likely need the events files and stimuli for your analysis which can be obtained from the sourcedata, for example:
 ```
