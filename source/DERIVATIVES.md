@@ -1,8 +1,32 @@
 # Derivatives
 
-## fMRIPrep
+## [sMRIPrep](https://github.com/courtois-neuromod/anat.smriprep)
+
+The anatomical data was preprocessed using [sMRIPrep pipeline](https://github.com/nipreps/smriprep).
+It took as input the T1w and T2w of the first 2 sessions of all participants, which were averaged after coregistration.
+
+## [fMRIPrep](https://github.com/courtois-neuromod/cneuromod.fmriprep)
 
 ### Overview
+The functional data was preprocessed using the [fMRIprep pipeline](https://fmriprep.readthedocs.io/en/stable/installation.html). FmriPrep is an fMRI data preprocessing pipeline that requires minimal user input, while providing error and output reporting. It performs basic processing steps (coregistration, normalization, unwarping, noise component extraction, segmentation, skullstripping etc.) and provides outputs that can be easily submitted to a variety of group level analyses, including task-based or resting-state fMRI, graph theory measures, surface or volume-based statistics, etc. The fMRIprep pipeline uses a combination of tools from well-known software packages, including FSL, ANTs, FreeSurfer and [AFNI](https://afni.nimh.nih.gov/). For additional information regarding fMRIPrep installation, workflow and outputs, please visit the [documentation page](https://fmriprep.readthedocs.io/en/stable/installation.html).
+Note that the `slicetiming` option was disabled (i.e. fMRIprep was invoked with the flag `--ignore slicetiming`).
+
+### Outputs
+The outputs of fMRIprep can be found as sub-datasets of the [cneuromod.processed](https://github.com/courtois-neuromod/cneuromod.processed) super-dataset.
+fMRIPrep functional preprocessing was run using the anatomical "fast-track" (flag `--anat-derivatives`) with sMRIPrep output described above, so as to use the same anatomical basis for all functional dataset.
+The output was generated in `T1w`, `MNI152NLin2009cAsym` and `fsLR-den-91k` spaces as defined by [templateflow](https://www.templateflow.org/) to respectively enable native space and volumetric or surface-based analyses.
+
+The description of participant, session, task and event tags can be found in the [Datasets](DATASETS.html) section. Each participant folder (`sub-*`) contains:
+- `ses-*/func` containing for each fMRI run of that session file prefixed with:
+  - `*_boldref.nii.gz` : a BOLD single volume reference.
+  - `*_desc-brain_mask.nii.gz` : the brain mask in fMRI space.
+  - `*_desc-preproc_bold.nii.gz` : the preprocessed BOLD timeseries.
+  - `*_desc-confounds_timeseries.tsv` : a tabular tsv file, containing a large set of confounds to use in analysis steps (eg. GLM).
+
+### Recommended preprocessing strategy
+The confounding regressors are correlated, thus it is recommended to use a subset of these regressors. Also note that preprocessed time series have not been corrected for any confounds, but simply realigned in space, and it is therefore critical to regress some of the available confounds prior to analysis. For python users, we recommend using [nilearn](https://nilearn.github.io) [load_confounds](https://nilearn.github.io/dev/modules/generated/nilearn.interfaces.fmriprep.load_confounds.html) to load confounds from the fMRIprep outputs, using the `Params24` strategy. As the NeuroMod data consistently exhibits low levels of motion, we recommend against removing time points with excessive motion (aka scrubbing). Because of the 2 mm spatial resolution of the fMRI scan, there is substantial impact of thermal noise, and some amount of spatial smoothing is advisable, the extent of it being determined by your hypotheses and analysis.
+
+### Pipeline description
 
 Results included in this manuscript come from preprocessing
 performed using *fMRIPrep* 20.2.5
