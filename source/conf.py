@@ -18,7 +18,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'Courtois NeuroMod'
-copyright = '2021, Courtois NeuroMod team'
+copyright = '2022, Courtois NeuroMod team'
 author = 'Courtois NeuroMod team'
 
 # The full version, including alpha/beta/rc tags
@@ -30,8 +30,9 @@ master_doc = 'index'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['recommonmark',
-              'sphinx.ext.autosectionlabel'
+extensions = [
+              'sphinx.ext.autosectionlabel',
+              'myst_parser'
              ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -63,3 +64,7 @@ html_favicon = 'img/logo_neuromod_small.png'
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+
+myst_enable_extensions = [
+    "colon_fence"
+]
