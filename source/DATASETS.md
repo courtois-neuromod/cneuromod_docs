@@ -11,7 +11,9 @@ Note that BIDS session names have no meaning apart from being data acquired in t
 
 This `cneuromod` dataset is called HCP test-retest (`hcptrt`), because participants repeated 15 times the functional localizers developed by the Human Connectome Project, for a total of approximately 10 hours of functional data per subject. The protocol consisted of seven tasks, described below (text adapted from the [HCP protocol](http://protocols.humanconnectome.org/HCP/3T/task-fMRI-protocol-details.html)). Before each task, participants were given detailed instructions and examples, as well as a practice run. A session was typically composed either of two repetitions of the HCP localizers, or one resting-state run and one HCP localizer. The eprime scripts for preparation and presentation of the stimuli can be found in the [HCP database](https://db.humanconnectome.org/app/action/ChooseDownloadResources?project=HCP_Resources&resource=Scripts&filePath=HCP_TFMRI_scripts.zip). Stimuli and e-prime scripst were provided by the Human Connectome Project, U-Minn Consortium (Principal Investigators: David Van Essen and Kamil Ugurbil; 1U54MH091657) funded by the 16 NIH Institutes and Centers that support the NIH Blueprint for Neuroscience Research, and by the McDonnell Center for Systems Neuroscience at Washington University. Note that in the `cneuromod` DataLad, functional runs are named `func_sub-<participant>_ses-<sess>_task-<task>_run-<run>`, where the `<participant>` tag includes `sub-01` to `sub-06`. For each functional run, a companion file `_events.tsv` contains the timing and type of events presented to the subject. Session tags `<sess>` are `001`, `002` etc, and the number and composition of sessions vary from subject to subject. The `<task>` tags are `restingstate`, `gambling`, `motor`, `social`, `wm`, `emotion`, `language` and `relational`, as described below. Tasks that were repeated twice have separate `<run>` tags (`01`, `02`).
 
-.. warning:: The duration of BOLD series are slightly varying across participants and repetitions. If consistent length is required by analysis, series can be trimmed at the end to match duration, task being aligned to the first TR.
+:::{important}
+The duration of BOLD series are slightly varying across participants and repetitions. If consistent length is required by analysis, series can be trimmed at the end to match duration, task being aligned to the first TR.
+:::
 
 ### [Gambling](http://www.cognitiveatlas.org/task/id/trm_550b5c1a7f4db/)
 `gambling` duration: approximately 3 minutes. Participants were asked to guess whether a hidden number (represented by a “?” during 1500ms) was above or below 5 [(Delgado et al. 2000)](https://doi.org/10.1016/j.neuroimage.2004.10.002). They indicated their choice using a button press, and were then shown the actual number. If they guessed correctly they were told they won money (+$1.00, `win` trial), if they guessed incorrectly they were told they lost money (-$0.50, `loss` trial), and if the number was exactly 5 they were told that they neither won or lost money ($0, `neutral` trial). Note that no money was actually given to the participants and, as such, this task may not be an accurate reproduction of the HCP protocol. The conditions were presented in blocks of 8 trials of type `reward` (6 `win` trials pseudo randomly interleaved with either 1 `neutral` and 1 `loss` trial, 2 `neutral` trials, or 2 `loss` trials) or of type `punishment` (6 `loss` trials pseudo-randomly interleaved with either 1 `neutral` and 1 `win` trial, 2 `neutral` trials, or 2 `win` trials). There were four blocks per run (2 `reward` and 2 `punishment`), and two runs in total.
@@ -50,12 +52,21 @@ The participants watched the following movies ([cogatlas](https://www.cognitivea
 
 It should be noted that although three of the participants are not native anglophones, all participants watched the movies in English. The three native francophone participants are fluent in English and report regularly watching movies in English.
 
-.. warning:: The duration of BOLD series are slightly varying across participants and repetitions. If consistent length is required for analysis, series can be trimmed at the end to match duration, movie segments being aligned to the first TR.
 
-.. warning:: There are instances of re-scanned segments (due to scan QC fail), these re-scans will be in separate sessions. These should be handled or excluded in analysis requiring continuity of the presentation of the story.
+
+:::{important}
+The duration of BOLD series are slightly varying across participants and repetitions. If consistent length is required for analysis, series can be trimmed at the end to match duration, movie segments being aligned to the first TR.
+:::
+
+
+:::{important}
+There are instances of re-scanned segments (due to scan QC fail), these re-scans will be in separate sessions. These should be handled or excluded in analysis requiring continuity of the presentation of the story.
+:::
 
 ## Friends
 
 This dataset contains functional data acquired while showing participants episodes of the Friends TV show in English. It includes seasons 1 and 2 for all subjects. Each episode is cut in two segments (a/b) to allow more flexible scanning and give participants opportunities for breaks. There is a small overlap between the segment to allow participants to catch up with the storyline. Both segments of an episode were always shown in the same scanning session to avoid participant forgetting the storyline of the episode. Each episode has a mostly self-contained narrative, such that delays between session should have limited influence of the understanding of the story. The task BIDS entity identifies the season, episode and segments (a/b) as such `task-s<eason>e<pisode>[ab]`.
 
-.. warning:: A mistake happened when ripping the first season, causing s01e01 and s01e06 being swapped in name and order of presentation. Files were renamed afterward to match external data such as annotations. However the order of presentation remains, slighly disrupting the storyline presented to the participant.
+:::{important}
+A mistake happened when ripping the first season, causing `s01e01` and `s01e06` to be swapped in name and order of presentation. Files were renamed afterward to match external data such as annotations. However the order of presentation remains, slighly disrupting the storyline presented to the participant.
+:::
