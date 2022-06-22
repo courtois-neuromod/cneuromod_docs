@@ -1,7 +1,6 @@
 # Authors
-------
 
-## Overview
+## Team overview
 
 The Courtois NeuroMod project originated from
 the [laboratory for brain simulation and exploration (SIMEXP)](<https://simexp-lab.org>), and collaborators are located at the [Centre de Recherche de l'Institut de Gériatrie de Montréal (CRIUGM)](http://www.criugm.qc.ca/en.html),  [CIUSSS du Centre-Sud-de-l'île-de-Montréal](https://ciusss-centresudmtl.gouv.qc.ca/propos/services-en-anglais), as well as the [Psychology Departement](https://psy.umontreal.ca/english/home/) of [University of Montreal (UdeM)](https://www.umontreal.ca/en/). The team has grown to include individuals from various institutions, and in particular the [Computer Science and Operational Research (DIRO) Department](https://diro.umontreal.ca/english/home/) at UdeM and the [MILA](https://mila.quebec/en/).
@@ -18,20 +17,20 @@ The Courtois NeuroMod project was made possible by a 6.3M CAD (2018-23, PI Belle
  * Arnaud Boré, Data manager (CRIUGM, Québec, CA).
  * André Cyr, Engineer (UNF & CRIUGM, Québec, CA).
  * Basile Pinsard, Data Manager (CRIUGM, Québec, CA).
- 
+
 ### Modelling
  * [Guillaume Lajoie](https://www.guillaumelajoie.com), Principal Investigator (Mathematics, UdeM & MILA, Québec, CA).
  * François Paugam, PhD Student (CRIUGM & DIRO, UdeM, Québec, CA).
  * Yu Zhang, Post-Doctoral Fellow (CRIUGM, IVADO & Psychology, UdeM, Québec, CA).
  * Amal Boukhdhir, PhD Student (CRIUGM & DIRO, UdeM, Québec, CA).
  * [Tristan Glatard](https://users.encs.concordia.ca/~tglatard/), Principal Investigator, Collaborator (Computer Science and Software Engineering, Concordia University, Québec, CA).
- * Shima Rastegarnia, Master's Student (CRIUGM & DIRO, UdM, Québec, CA) 
- * Loic Tetrel, Data Scientist (CRIUGM, Quebec, CA). 
+ * Shima Rastegarnia, Master's Student (CRIUGM & DIRO, UdM, Québec, CA)
+ * Loic Tetrel, Data Scientist (CRIUGM, Quebec, CA).
  * [Elizabeth DuPre](https://elizabeth-dupre.com), PhD Student, Collaborator (McGill University, Québec, CA).
- 
+
 ### Vision
  * Sana Ahmadi, PhD Student (CRIUGM & Concordia, Québec, CA).
- * Marie Saint-Laurent, Research Professional (CRIUGM, Québec, CA). 
+ * Marie Saint-Laurent, Research Professional (CRIUGM, Québec, CA).
  * [Martin Hebart](http://martin-hebart.de), Principal Investigator, Collaborator (Max Planck Institute for Human Cognitive and Brain Sciences, Germany).
  * [Katja Seeliger](http://seeliger.space/),  Post-Doctoral Fellow, Collaborator (Max Planck Institute for Human Cognitive and Brain Sciences, Germany).  
 
@@ -47,15 +46,15 @@ The Courtois NeuroMod project was made possible by a 6.3M CAD (2018-23, PI Belle
 ### Language
  * [Simona Brambati](http://www.criugm.qc.ca/en/researchers/laboratory-directors/57-pierre-rainville.html), Principal Investigator (CRIUGM & Psychology, UdeM, Québec, CA).
  * [Valentina Borghesani](https://valentina.borghesani.org/), Post-Doctoral Fellow (CRIUGM, IVADO & Psychology, UdeM, Québec, CA)
- * [Leila Wehbe](http://www.cs.cmu.edu/~lwehbe/), Principal Investigator, Collaborator (Carnegie Mellon University, USA). 
- * [Mariya Toneva](http://www.cs.cmu.edu/~mktoneva/), PhD student, Collaborator (Carnegie Mellon University, USA). 
+ * [Leila Wehbe](http://www.cs.cmu.edu/~lwehbe/), Principal Investigator, Collaborator (Carnegie Mellon University, USA).
+ * [Mariya Toneva](http://www.cs.cmu.edu/~mktoneva/), PhD student, Collaborator (Carnegie Mellon University, USA).
 
 ### Audition
  * [Adrian Fuente](http://www.criugm.qc.ca/en/researchers/laboratory-directors/225-adrian-fuente.html), Collaborator (CRIUGM & Audiology, UdeM, Québec, CA).
  * [Nicolas Farrugia](https://nicofarr.github.io/), Collaborator (IMT Atlantique, France).
  * Maëlle Freteault, PhD student (IMT Atlantique, France & Psychology, UdeM, Québec, CA).
- * [Peer Herholz](https://peerherholz.github.io/), Post-Doctoral Fellow, Collaborator (McGill University, Québec, CA). 
- * Eddy Fortier, Msc student (Psychology, UdeM, Québec, CA). 
+ * [Peer Herholz](https://peerherholz.github.io/), Post-Doctoral Fellow, Collaborator (McGill University, Québec, CA).
+ * Eddy Fortier, Msc student (Psychology, UdeM, Québec, CA).
 
 ### Video games
  * Maximilien Le Clei, Research Professional (CRIUGM & DIRO, UdeM & MILA, Québec, CA).
@@ -63,10 +62,10 @@ The Courtois NeuroMod project was made possible by a 6.3M CAD (2018-23, PI Belle
  * [Karim Jerbi](http://www.karimjerbi.com/), Principal Investigator (CRIUGM & Psychology, UdeM, Québec, CA).
  * Yann Harel, PhD Student (Psychology, UdeM).
 
-### MRI
+### MRI sequences
  * [Julien Cohen-Adad](https://www.neuro.polymtl.ca/people/julien_cohenadad), Principal Investigator (CRIUGM & Polytechnique Montréal).
  * [Agâh Karakuzu](https://agahkarakuzu.github.io/), PhD Student (Polytechnique Montréal).
- 
+
 ### Other collaborators
  * [Tamara Vanderwal](https://www.bcchr.ca/tvanderwal) (University of British Columbia, Vancouver, CA).
  * Christopher Steele (Concordia University, Québec, CA).

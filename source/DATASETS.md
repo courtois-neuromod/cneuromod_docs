@@ -61,11 +61,12 @@ The duration of BOLD series are slightly varying across participants and repetit
 
 :::{important}
 There are instances of re-scanned segments (due to scan QC fail), these re-scans will be in separate sessions. These should be handled or excluded in analysis requiring continuity of the presentation of the story.
-
 :::
 
 ## Friends
 
 This dataset contains functional data acquired while showing participants episodes of the Friends TV show in English. It includes seasons 1 and 2 for all subjects. Each episode is cut in two segments (a/b) to allow more flexible scanning and give participants opportunities for breaks. There is a small overlap between the segment to allow participants to catch up with the storyline. Both segments of an episode were always shown in the same scanning session to avoid participant forgetting the storyline of the episode. Each episode has a mostly self-contained narrative, such that delays between session should have limited influence of the understanding of the story. The task BIDS entity identifies the season, episode and segments (a/b) as such `task-s<eason>e<pisode>[ab]`.
 
-.. warning:: A mistake happened when ripping the first season, causing s01e01 and s01e06 being swapped in name and order of presentation. Files were renamed afterward to match external data such as annotations. However the order of presentation remains, slighly disrupting the storyline presented to the participant.
+:::{important}
+A mistake happened when ripping the first season, causing `s01e01` and `s01e06` to be swapped in name and order of presentation. Files were renamed afterward to match external data such as annotations. However the order of presentation remains, slighly disrupting the storyline presented to the participant.
+:::
