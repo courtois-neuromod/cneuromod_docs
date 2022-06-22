@@ -2,7 +2,7 @@
 
 ## Data Transfer Agreement (DTA)
 
-To access the cneuromod dataset, it is required to complete a form with a brief description of planned analyses, and complete an inter-institutional data transfer agreement. Links to relevant forms can be found on the [access request page](https://www.cneuromod.ca/access/access/).The data transfer agreement must be signed by the researcher responsible for the project as well as a representant of the main acadamic institution where the research team is affiliated. The application will be evaluated by a data access committee and, if approved, a transfer key will be shared with the research team in order to transfer the data (see [Downloading the dataset](#Downloading-the-dataset) section below). 
+To access the cneuromod dataset, it is required to complete a form with a brief description of planned analyses, and complete an inter-institutional data transfer agreement. Links to relevant forms can be found on the [access request page](https://www.cneuromod.ca/access/access/).The data transfer agreement must be signed by the researcher responsible for the project as well as a representant of the main acadamic institution where the research team is affiliated. The application will be evaluated by a data access committee and, if approved, a transfer key will be shared with the research team in order to transfer the data (see [Downloading the dataset](downloading) section below).
 
 
 ## Ethics
@@ -12,8 +12,8 @@ The Courtois NeuroMod project has been approved by the institutional research et
   * [consent_form_english.pdf](./_static/ethics/consent_form_english.pdf): the informed consent form signed by participants (English version).
   * [consent_form_french.pdf](./_static/ethics/consent_form_french.pdf): the informed consent form signed by participants (French version).
 
+(downloading)=
 ## Downloading the dataset
-
 All data are made available as a [DataLad collection (currently requires to be part of the cneuromod team)](https://github.com/courtois-neuromod/cneuromod) on github.
 [DataLad](https://www.datalad.org/) is a tool for versioning a large data structure in a git repository. The dataset can be explored without downloading the data, and it is easy to only download the subset of the data you need for your project.
 See the [DataLad handbook](http://handbook.datalad.org/en/latest/) for further information.
