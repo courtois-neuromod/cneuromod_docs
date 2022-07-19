@@ -16,7 +16,7 @@ Six healthy participants (aged 31 to 47 at the time of recruitment in 2018), 3 w
 
 The anatomical dataset includes longitudinal anatomical images of the brain and upper spinal cord at an approximate rate of 4 sessions a year. The primary intended use of this dataset is to monitor the structural stability of the brain of participants for the duration of the study. Many quantitative measures of brain structure can also be derived and included in analyses, such as gray matter morphometry, tractography or measures of myelination.
 
-The MRI sequences are described in more detailed in :ref:`Brain anatomical sequences` :ref:`Spinal cord anatomical sequences`, including pdfs of the Siemens exam cards.
+The MRI sequences are described in more detailed in [](Brain anatomical sequences) and [](Spinal cord anatomical sequences), including pdfs of the Siemens exam cards.
 
 Brain T1w, T2w and DWI were copied from the HCP aging and development protocol for Prisma MRI scanner.
 Other sequences were selected and optimized by the Courtois NeuroMod team.
