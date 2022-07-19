@@ -7,6 +7,7 @@
    COC
    DATASETS
    ACCESS
+   USAGE
    MRI
    DERIVATIVES
    AUTHORS
