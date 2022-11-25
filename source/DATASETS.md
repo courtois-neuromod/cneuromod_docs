@@ -81,8 +81,28 @@ There are instances of re-scanned segments (due to scan QC fail), these re-scans
 
 ## Friends
 
-This dataset contains functional data acquired while showing participants episodes of the Friends TV show in English. It includes seasons 1 and 2 for all subjects. Each episode is cut in two segments (a/b) to allow more flexible scanning and give participants opportunities for breaks. There is a small overlap between the segment to allow participants to catch up with the storyline. Both segments of an episode were always shown in the same scanning session to avoid participant forgetting the storyline of the episode. Each episode has a mostly self-contained narrative, such that delays between session should have limited influence of the understanding of the story. The task BIDS entity identifies the season, episode and segments (a/b) as such `task-s<eason>e<pisode>[ab]`.
+This dataset contains functional data acquired while showing participants episodes of the Friends TV show in English. It includes seasons 1 to 5 for all subjects. Each episode is cut in two segments (a/b) to allow more flexible scanning and give participants opportunities for breaks. There is a small overlap between the segments to allow participants to catch up with the storyline. The task BIDS entity identifies the season, episode and segments (a/b) as such `task-s<eason>e<pisode>[ab]`.
 
 :::{important}
 A mistake happened when ripping the first season, causing `s01e01` and `s01e06` to be swapped in name and order of presentation. Files were renamed afterward to match external data such as annotations. However the order of presentation remains, slighly disrupting the storyline presented to the participant.
+:::
+
+
+## harrypotter
+
+This dataset contains a single session per participants when they read chapter ?? from Harry Potter ?? book, word by word, at a 2Hz pace (each word presented for .5s). This chapter was split over 7 runs of approximate equal length.
+
+## shinobi_training
+
+This is a behavioral-only dataset containing data acquired while participant trained at-home on the videogame Shinobi III The Return of the Ninja Master.
+No training regimen was imposed to the participant making that dataset highly heterogeneous. It consists of sessions of gameplay as collections of bk2 files recorded by the [gym-retro](https://github.com/openai/retro) API.
+A subset of 3 levels of the game was selected for their difference in terms of game mechanics, requiring to acquire different skills in each.
+This dataset can be used to analyze learning or individual game-play styles, and can be investigated in conjunction with the fMRI dataset.
+
+## shinobi
+
+This dataset contains about 10h of gameplay on the videogame Shinobi III The Return of the Ninja Master, for 4 of the 6 cneuromod participants. It is the first dataset to showcase the [custom-built fully fiber-optic MRI controller](). In each run, the participant played the 3 levels in cycles, moving to the next level if completing or loosing all lives unless 10 minutes had elapsed from the start of the run. Due to the duration of the levels, Level-1 was repeated more often.
+
+:::{important}
+Due to a programming error a certain number of game recording files were lost during acquisition, these repetitions are still listed in the events file but have a `stim_file` is left blank. Choice is left to the user whether to exclude the corresponding fMRI volumes or not.
 :::
