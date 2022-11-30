@@ -64,7 +64,7 @@ The participants watched the following movies ([cogatlas](https://www.cognitivea
  * `<task>` name `bourne`: [The Bourne supremacy](https://en.wikipedia.org/wiki/The_Bourne_Supremacy_%28film%29). Duration ~100 minutes.
  * `<task>` name `wolf`: [The wolf of wall street](https://en.wikipedia.org/wiki/The_Wolf_of_Wall_Street_%282013_film%29). Duration ~170 minutes.
  * `<task>` name `figures`: [Hidden figures](https://en.wikipedia.org/wiki/Hidden_Figures). Duration ~120 minutes. This movie was presented twice, for a total duration of ~240 minutes.
- * `<task>` name `life`: [Life](https://en.wikipedia.org/wiki/Life_(British_TV_series)) Disc one of four: "Challenges of life, reptiles and amphibian mammals". DVD set was narrated by David Attenborough Duration, and lasted ~50 minutes. This movie was presented twice, for a total duration of ~100 minutes.
+ * `<task>` name `life`: [Life](https://en.wikipedia.org/wiki/Life_(British_TV_series)) Disc one of four: "Challenges of life, reptiles and amphibian mammals". DVD set was narrated by David Attenborough. Duration, and lasted ~50 minutes. This movie was presented twice, for a total duration of ~100 minutes.
 
 It should be noted that although three of the participants are not native anglophones, all participants watched the movies in English. The three native francophone participants are fluent in English and report regularly watching movies in English.
 
@@ -84,7 +84,7 @@ There are instances of re-scanned segments (due to scan QC fail), these re-scans
 This dataset contains functional data acquired while showing participants episodes of the Friends TV show in English. It includes seasons 1 to 5 for all subjects. Each episode is cut in two segments (a/b) to allow more flexible scanning and give participants opportunities for breaks. There is a small overlap between the segments to allow participants to catch up with the storyline. The task BIDS entity identifies the season, episode and segments (a/b) as such `task-s<eason>e<pisode>[ab]`.
 
 :::{important}
-A mistake happened when ripping the first season, causing `s01e01` and `s01e06` to be swapped in name and order of presentation. Files were renamed afterward to match external data such as annotations. However the order of presentation remains, slighly disrupting the storyline presented to the participant.
+A mistake happened when ripping the first season, causing `s01e01` and `s01e06` to be swapped in name and order of presentation. Files were renamed afterward to match external data such as annotations. However the order of presentation remains, slightly disrupting the storyline presented to the participant.
 :::
 
 
@@ -104,5 +104,5 @@ This dataset can be used to analyze learning or individual game-play styles, and
 This dataset contains about 10h of gameplay on the videogame Shinobi III The Return of the Ninja Master, for 4 of the 6 cneuromod participants. It is the first dataset to showcase the [custom-built fully fiber-optic MRI controller](). In each run, the participant played the 3 levels in cycles, moving to the next level if completing or loosing all lives unless 10 minutes had elapsed from the start of the run. Due to the duration of the levels, Level-1 was repeated more often.
 
 :::{important}
-Due to a programming error a certain number of game recording files were lost during acquisition, these repetitions are still listed in the events file but have a `stim_file` is left blank. Choice is left to the user whether to exclude the corresponding fMRI volumes or not.
+Due to a programming error a certain number of game recording files were lost during acquisition, these repetitions are still listed in the events file but have a `stim_file` is left blank. Choice is left to the user whether to exclude the corresponding fMRI volumes or not for their analysis
 :::
