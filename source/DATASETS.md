@@ -81,7 +81,7 @@ There are instances of re-scanned segments (due to scan QC fail), these re-scans
 
 ## Friends
 
-This dataset contains functional data acquired while showing participants episodes of the Friends TV show in English. It includes seasons 1 to 5 for all subjects. Each episode is cut in two segments (a/b) to allow more flexible scanning and give participants opportunities for breaks. There is a small overlap between the segments to allow participants to catch up with the storyline. The task BIDS entity identifies the season, episode and segments (a/b) as such `task-s<eason>e<pisode>[ab]`.
+This dataset contains functional data acquired while showing participants episodes of the Friends TV show in English. It includes seasons 1-6 for all subjects, except `sub-04` who only completed seasons 1-4 (and a few segments of season 5). Each episode is cut in two segments (a/b) to allow more flexible scanning and give participants opportunities for breaks. There is a small overlap between the segments to allow participants to catch up with the storyline. The task BIDS entity identifies the season, episode and segments (a/b) as such `task-s<eason>e<pisode>[ab]`.
 
 :::{important}
 A mistake happened when ripping the first season, causing `s01e01` and `s01e06` to be swapped in name and order of presentation. Files were renamed afterward to match external data such as annotations. However the order of presentation remains, slightly disrupting the storyline presented to the participant.
@@ -90,18 +90,23 @@ A mistake happened when ripping the first season, causing `s01e01` and `s01e06` 
 
 ## harrypotter
 
-This dataset contains a single session per participants when they read chapter ?? from Harry Potter ?? book, word by word, at a 2Hz pace (each word presented for .5s). This chapter was split over 7 runs of approximate equal length.
+This dataset contains a single session per participant (N=5) when they read chapter 9 from chapter 9 of Harry Potter and the Sorcerer’s Stone. The text was presented word by word, at a 2Hz pace (each word presented for .5s). This chapter was split over 7 runs of approximate equal length. The stimuli used in this dataset are taken from the experiment reported by [Wehbe et al. (2014)](https://www.biorxiv.org/content/10.1101/2020.09.28.316935v4.full.pdf#cite.wehbe2014) for which a separate fMRI dataset (N=9) has been collected and shared. 
 
 ## shinobi_training
 
-This is a behavioral-only dataset containing data acquired while participant trained at-home on the videogame Shinobi III The Return of the Ninja Master.
+This is a pure behavioral dataset collected while participants trained at home on the videogame Shinobi III The Return of the Ninja Master.
 No training regimen was imposed to the participant making that dataset highly heterogeneous. It consists of sessions of gameplay as collections of bk2 files recorded by the [gym-retro](https://github.com/openai/retro) API.
 A subset of 3 levels of the game was selected for their difference in terms of game mechanics, requiring to acquire different skills in each.
 This dataset can be used to analyze learning or individual game-play styles, and can be investigated in conjunction with the fMRI dataset.
 
 ## shinobi
 
-This dataset contains about 10h of gameplay on the videogame Shinobi III The Return of the Ninja Master, for 4 of the 6 cneuromod participants. It is the first dataset to showcase the [custom-built fully fiber-optic MRI controller](). In each run, the participant played the 3 levels in cycles, moving to the next level if completing or loosing all lives unless 10 minutes had elapsed from the start of the run. Due to the duration of the levels, Level-1 was repeated more often.
+This dataset contains about 10h of gameplay on the videogame Shinobi III The Return of the Ninja Master, for N=4 participants (`sub-01`, `sub-02`, `sub-04` and `sub-06`). Participants used a custom-built fully fiber-optic MRI controller, designed by the team and described in [Harel et al. (2022)](https://psyarxiv.com/m2x6y/). In each run, participants played 3 levels in cycles and always in the same order. These levels were selected in the game to have fairly homogeneous game mechanics (see the [Sega documentation](https://sega.fandom.com/wiki/Shinobi_III:_Return_of_the_Ninja_Master) for more details on game structure):
+ * `Level-1` corresponded to round 1of the original game, "Zeed's Resurrection". It included one mini-boss and one boss fight.
+ * `Level-2` corresponded to the beginning of round 4 of the original game, "Destruction". It included no mini-boss or boss fight.
+ * `Level-3` corresponded to the beginning of round 5 of the original game, "Electric demon". It included one mini-boss fight and no boss fight.
+
+Participants moved to the next level if they successfully completed a level, or lost three lives. A new level was then initiated unless 10 minutes had elapsed from the start of the run, at which point the run ended. The duration of each run is thus variable to a degree, with a minimum of ten minutes. Due to the fixed order in the cycle, `Level-1` was repeated more often than `Level-2` and `Level-3`.
 
 :::{important}
 Due to a programming error a certain number of game recording files were lost during acquisition, these repetitions are still listed in the events file but have a `stim_file` is left blank. Choice is left to the user whether to exclude the corresponding fMRI volumes or not for their analysis
