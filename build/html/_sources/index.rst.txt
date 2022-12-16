@@ -4,10 +4,11 @@
    :maxdepth: 1
    :caption: Contents:
 
-   COC
    DATASETS
    ACCESS
    MRI
    DERIVATIVES
+   RELEASES
+   COC
    AUTHORS
    ACKNOWLEDGMENT
