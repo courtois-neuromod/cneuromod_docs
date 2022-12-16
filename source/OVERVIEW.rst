@@ -1,7 +1,7 @@
 Courtois NeuroMod
 =================
 
-.. warning:: This documentation corresponds to the cneuromod-2020-beta release. 
+.. warning:: This documentation corresponds to the cneuromod-2022 release. 
 
 The Courtois project on Neural Modelling (cneuromod) aims at training artificial neural networks using extensive experimental data on individual human brain activity and behaviour. Six subjects (three women, three men) are getting scanned weekly for five years, for a total of 500 hours of functional data per subject, including functional localizers (vision, language, memory, emotion), movies and video game play. Functional neuroimaging data are collected with both functional magnetic resonance imaging, magnetoencephalography and a variety of sensors (including electrodermal activity and occulometry).
 
