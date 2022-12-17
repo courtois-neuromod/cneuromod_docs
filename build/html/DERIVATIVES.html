@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Derivatives &mdash; Courtois NeuroMod 2020-beta documentation</title>
@@ -17,10 +17,11 @@
         <script src="_static/underscore.js"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Authors" href="AUTHORS.html" />
+    <link rel="next" title="Releases" href="RELEASES.html" />
     <link rel="prev" title="MRI" href="MRI.html" /> 
 </head>
 
@@ -42,7 +43,6 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="COC.html">Code of Conduct</a></li>
 <li class="toctree-l1"><a class="reference internal" href="DATASETS.html">Datasets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ACCESS.html">Access</a></li>
 <li class="toctree-l1"><a class="reference internal" href="MRI.html">MRI</a></li>
@@ -60,6 +60,8 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="RELEASES.html">Releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="COC.html">Contributing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="AUTHORS.html">Authors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ACKNOWLEDGMENT.html">How to acknowledge</a></li>
 </ul>
@@ -77,8 +79,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Derivatives</li>
+      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Derivatives</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/DERIVATIVES.md.txt" rel="nofollow"> View page source</a>
       </li>
@@ -106,15 +108,15 @@ Note that the <code class="docutils literal notranslate"><span class="pre">slice
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">_boldref.nii.gz</span></code> : a BOLD single volume reference.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">_*-brain_mask.nii.gz</span></code> : the brain mask in fMRI space.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">_*-preproc_bold.nii.gz</span></code> : the preprocessed BOLD timeseries.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">_*-confounds_regressors.tsv</span></code> : a tabular tsv file, containing a large set of confounds to use in analysis steps (eg. GLM).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">_*-preproc_bold.nii.gz</span></code> : the preprocessed BOLD time series.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">_*-confounds_regressors.tsv</span></code> : a tabular tsv file, containing a large set of confounds to use in analysis steps (e.g. GLM).</p></li>
 </ul>
 </li>
 </ul>
 </section>
 <section id="recommended-preprocessing-strategy">
 <h3>Recommended preprocessing strategy<a class="headerlink" href="#recommended-preprocessing-strategy" title="Permalink to this heading"></a></h3>
-<p>The confounding regressors are correlated, thus it is recommended to use a subset of these regressors. Also note that preprocessed time series have not been corrected for any confounds, but simply realigned in space, and it is therefore critical to regress some of the available confounds prior to analysis. For python users, we recommend using <a class="reference external" href="https://nilearn.github.io">nilearn</a> and the tool <a class="reference external" href="https://github.com/SIMEXP/load_confounds">load_confounds</a> to load confounds from the fMRIprep outputs, using with the <code class="docutils literal notranslate"><span class="pre">Params24</span></code> strategy. As the NeuroMod data consistently exhibits low levels of motion, we recommend against removing time points with excessive motion (aka scrubbing). Because of the 2 mm spatial resolution of the fMRI scan, there is substantial impact of thermal noise, and some amount of spatial smoothing is advisable. Our preliminary analyses suggest thah <code class="docutils literal notranslate"><span class="pre">smoothing_fwhm=8</span></code> in nilearn nifti maskers to work well.</p>
+<p>The confounding regressors are correlated, thus it is critical to only use a subset of these regressors. Also note that preprocessed time series have not been corrected for any confounds, but simply realigned in space, and it is therefore also critical to regress some of the available confounds prior to analysis. See the <a class="reference external" href="https://fmriprep.org/en/stable/outputs.html#confounds">fMRIprep documentation</a> for details on available confound regressors. For python users, we recommend using <a class="reference external" href="https://nilearn.github.io">nilearn</a> and the tool <a class="reference external" href="https://nilearn.github.io/stable/modules/generated/nilearn.interfaces.fmriprep.load_confounds_strategy.html">load_confounds_strategy</a> to load confounds from the fMRIprep outputs, using with a standardized strategy. As the NeuroMod data consistently exhibits low levels of motion, we recommend against removing time points with excessive motion (aka scrubbing), and the <code class="docutils literal notranslate"><span class="pre">minimal</span></code> strategy available in nilearn is a reasonable choice. Because of the 2 mm spatial resolution of the fMRI scan, there is substantial impact of thermal noise, and some amount of spatial smoothing is advisable. Our preliminary analyses suggest that <code class="docutils literal notranslate"><span class="pre">smoothing_fwhm=8</span></code> in nilearn nifti maskers to work well.</p>
 </section>
 <section id="pipeline-description">
 <h3>Pipeline description<a class="headerlink" href="#pipeline-description" title="Permalink to this heading"></a></h3>
@@ -226,7 +228,7 @@ to workflows in <em>fMRIPrep</em>’s documentation</a>.</p>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="MRI.html" class="btn btn-neutral float-left" title="MRI" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="AUTHORS.html" class="btn btn-neutral float-right" title="Authors" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="RELEASES.html" class="btn btn-neutral float-right" title="Releases" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

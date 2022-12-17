@@ -1,5 +1,7 @@
 # Datasets
 
+## BIDS
+
 All functional and anatomical data has been formated in [BIDS](https://bids.neuroimaging.io/), for more information visit the Brain Imaging Data Structure documentation [site](https://bids-specification.readthedocs.io/en/stable/).
 Some of the files do not follow the main BIDS convention:
 - Anatomical sequences with multiple contrasts are following [BEP001](https://bids.neuroimaging.io/bep001).
@@ -8,7 +10,20 @@ Some of the files do not follow the main BIDS convention:
 Note that BIDS session names have no meaning apart from being data acquired in the same session. The number of runs, the tasks and their order within each session will not match from one participant to another. Note that a few session indices are skipped if the whole session was discarded for various scanning issues.
 
 ## Participants
-Six healthy participants (aged 31 to 47 at the time of recruitment in 2018), 3 women (`sub-03`, `sub-04` and `sub-06`) and 3 men (`sub-01`, `sub-02` and `sub-05`) consented to participate in the Courtois Neuromod Project for at least 5 years. Three of the participants reported being native francophone speakers (`sub-01`, `sub-02` and `sub-04`), one as being a native anglophone (`sub-06`) and two as bilingual native speakers (`sub-03` and `sub-05`). All participants reported being in good general health, all had normal hearing and vision for their age, and all were MRI and MEG compatible.
+Six healthy participants (aged 31 to 47 at the time of recruitment in 2018), 3 women (`sub-03`, `sub-04` and `sub-06`) and 3 men (`sub-01`, `sub-02` and `sub-05`) consented to participate in the Courtois Neuromod Project for at least 5 years. Three of the participants reported being native francophone speakers (`sub-01`, `sub-02` and `sub-04`), one as being a native anglophone (`sub-06`) and two as bilingual native speakers (`sub-03` and `sub-05`).   All participants reported the right hand as being their dominant hand and reported being in good general health. 
+
+Exclusion criteria included visual or auditory impairments that would prevent participants from seeing and/or hearing stimuli in the scanner and major psychiatric or neurological problems. Standard exclusion criteria for MRI and MEG were also applied. Lastly, given that all stimuli and instructions are presented in English, all participants had to report having an advanced comprehension of the English language for inclusion. 
+
+## anat
+
+The anatomical dataset includes longitudinal anatomical images of the brain and upper spinal cord at an approximate rate of 4 sessions a year. The primary intended use of this dataset is to monitor the structural stability of the brain of participants for the duration of the study. Many quantitative measures of brain structure can also be derived and included in analyses, such as gray matter morphometry, tractography or measures of myelination.
+
+The MRI sequences are described in more detailed in [](Brain anatomical sequences) and [](Spinal cord anatomical sequences), including pdfs of the Siemens exam cards.
+
+Brain T1w, T2w and DWI were copied from the HCP aging and development protocol for Prisma MRI scanner.
+Other sequences were selected and optimized by the Courtois NeuroMod team.
+
+All images covering the face were anonymized by zeroing the data in the face, teeth and ears regions with a custom mask warped from the MNI space based on a linear registration of the T1w brain MRI series. This defacing script is available [here](https://github.com/courtois-neuromod/ds_prep/blob/main/mri/prepare/deface_anat.py)
 
 ## hcptrt
 
@@ -51,7 +66,7 @@ The participants watched the following movies ([cogatlas](https://www.cognitivea
  * `<task>` name `bourne`: [The Bourne supremacy](https://en.wikipedia.org/wiki/The_Bourne_Supremacy_%28film%29). Duration ~100 minutes.
  * `<task>` name `wolf`: [The wolf of wall street](https://en.wikipedia.org/wiki/The_Wolf_of_Wall_Street_%282013_film%29). Duration ~170 minutes.
  * `<task>` name `figures`: [Hidden figures](https://en.wikipedia.org/wiki/Hidden_Figures). Duration ~120 minutes. This movie was presented twice, for a total duration of ~240 minutes.
- * `<task>` name `life`: [Life](https://en.wikipedia.org/wiki/Life_(British_TV_series)) Disc one of four: "Challenges of life, reptiles and amphibian mammals". DVD set was narrated by David Attenborough Duration, and lasted ~50 minutes. This movie was presented twice, for a total duration of ~100 minutes.
+ * `<task>` name `life`: [Life](https://en.wikipedia.org/wiki/Life_(British_TV_series)) Disc one of four: "Challenges of life, reptiles and amphibian mammals". DVD set was narrated by David Attenborough. Duration, and lasted ~50 minutes. This movie was presented twice, for a total duration of ~100 minutes.
 
 It should be noted that although three of the participants are not native anglophones, all participants watched the movies in English. The three native francophone participants are fluent in English and report regularly watching movies in English.
 
@@ -68,8 +83,33 @@ There are instances of re-scanned segments (due to scan QC fail), these re-scans
 
 ## Friends
 
-This dataset contains functional data acquired while showing participants episodes of the Friends TV show in English. It includes seasons 1 and 2 for all subjects. Each episode is cut in two segments (a/b) to allow more flexible scanning and give participants opportunities for breaks. There is a small overlap between the segment to allow participants to catch up with the storyline. Both segments of an episode were always shown in the same scanning session to avoid participant forgetting the storyline of the episode. Each episode has a mostly self-contained narrative, such that delays between session should have limited influence of the understanding of the story. The task BIDS entity identifies the season, episode and segments (a/b) as such `task-s<eason>e<pisode>[ab]`.
+This dataset contains functional data acquired while showing participants episodes of the Friends TV show in English. It includes seasons 1-6 for all subjects, except `sub-04` who only completed seasons 1-4 (and a few segments of season 5). Each episode is cut in two segments (a/b) to allow more flexible scanning and give participants opportunities for breaks. There is a small overlap between the segments to allow participants to catch up with the storyline. The task BIDS entity identifies the season, episode and segments (a/b) as such `task-s<eason>e<pisode>[ab]`.
 
 :::{important}
-A mistake happened when ripping the first season, causing `s01e01` and `s01e06` to be swapped in name and order of presentation. Files were renamed afterward to match external data such as annotations. However the order of presentation remains, slighly disrupting the storyline presented to the participant.
+A mistake happened when ripping the first season, causing `s01e01` and `s01e06` to be swapped in name and order of presentation. Files were renamed afterward to match external data such as annotations. However the order of presentation remains, slightly disrupting the storyline presented to the participant.
+:::
+
+
+## harrypotter
+
+This dataset contains a single session per participant (N=5) when they read chapter 9 from chapter 9 of Harry Potter and the Sorcerer’s Stone. The text was presented word by word, at a 2Hz pace (each word presented for .5s). This chapter was split over 7 runs of approximate equal length. The stimuli used in this dataset are taken from the experiment reported by [Wehbe et al. (2014)](https://www.biorxiv.org/content/10.1101/2020.09.28.316935v4.full.pdf#cite.wehbe2014) for which a separate fMRI dataset (N=9) has been collected and shared. 
+
+## shinobi_training
+
+This is a pure behavioral dataset collected while participants trained at home on the videogame Shinobi III The Return of the Ninja Master.
+No training regimen was imposed to the participant making that dataset highly heterogeneous. It consists of sessions of gameplay as collections of bk2 files recorded by the [gym-retro](https://github.com/openai/retro) API.
+A subset of 3 levels of the game was selected for their difference in terms of game mechanics, requiring to acquire different skills in each.
+This dataset can be used to analyze learning or individual game-play styles, and can be investigated in conjunction with the fMRI dataset.
+
+## shinobi
+
+This dataset contains about 10h of gameplay on the videogame Shinobi III The Return of the Ninja Master, for N=4 participants (`sub-01`, `sub-02`, `sub-04` and `sub-06`). Participants used a custom-built fully fiber-optic MRI controller, designed by the team and described in [Harel et al. (2022)](https://psyarxiv.com/m2x6y/). In each run, participants played 3 levels in cycles and always in the same order. These levels were selected in the game to have fairly homogeneous game mechanics (see the [Sega documentation](https://sega.fandom.com/wiki/Shinobi_III:_Return_of_the_Ninja_Master) for more details on game structure):
+ * `Level-1` corresponded to round 1of the original game, "Zeed's Resurrection". It included one mini-boss and one boss fight.
+ * `Level-4` corresponded to the beginning of round 4 of the original game, "Destruction". It included no mini-boss or boss fight.
+ * `Level-5` corresponded to the beginning of round 5 of the original game, "Electric demon". It included one mini-boss fight and no boss fight.
+
+Participants moved to the next level if they successfully completed a level, or lost three lives. A new level was then initiated unless 10 minutes had elapsed from the start of the run, at which point the run ended. The duration of each run is thus variable to a degree, with a minimum of ten minutes. Due to the fixed order in the cycle, `Level-1` was repeated more often than `Level-2` and `Level-3`.
+
+:::{important}
+Due to a programming error a certain number of game recording files were lost during acquisition, these repetitions are still listed in the events file but have a `stim_file` is left blank. Choice is left to the user whether to exclude the corresponding fMRI volumes or not for their analysis
 :::
