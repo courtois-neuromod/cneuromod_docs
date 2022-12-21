@@ -14,6 +14,7 @@
 
 The parameters of the functional MRI sequence relevant for data analysis can be found in the NeuroMod DataLad. The functional acquisition parameters are all identical to the one used in the `hcptrt` dataset. The Siemens exam card can be found [here](./_static/mri/functional_protocol_HCP-trt.pdf), and is briefly recapitulated below. Functional MRI data was acquired using an accelerated simultaneous multi-slice, gradient echo-planar imaging sequence [(Xu et al., 2013)](http://www.ncbi.nlm.nih.gov/pubmed/23899722) developed at the Center for Magnetic Resonance Research (CMRR) University of Minnesota, as part of the Human Connectome Project [(Glasser et al., 2016)](https://www.nature.com/articles/nn.4361). The sequence is available on the Siemens PRISMA scanner at UNF through a concept to production (C2P) agreement, and was used with the following parameters: slice acceleration factor = 4, TR = 1.49 s, TE = 37 ms, flip angle = 52 degrees, voxel size = 2 mm x 2 mm x 2 mm, 60 slices, acquisition matrix 96x96. In each session, a short acquisition (3 volumes) with reversed phase encoding direction was run to allow retrospective correction of B0 field inhomogeneity-induced distortion.
 
+(Brain_anatomical_sequences)=
 ### Brain anatomical sequences
 
  The parameters of the brain anatomical MRI sequences relevant for data analysis can be found in the NeuroMod DataLad. The acquisition parameters are identical for all anatomical sessions. The Siemens pdf exam card of the anatomical sessions can be found [here](./_static/mri/anatomical_protocol_2019-01-22.pdf), and is briefly recapitulated below. A standard (brain) anatomical session started with a 21 s localizer scan, and then included the following sequences:
@@ -28,6 +29,7 @@ The parameters of the functional MRI sequence relevant for data analysis can be 
 
 .. warning::  T1w, T2w and DWI (from HCP development/aging protocol for Siemens Prisma) and SWI do not have gradient non-linearity correction applied on the scanner. Offline correction can be applied using tools such as [gradunwarp](https://github.com/Washington-University/gradunwarp), but is not included yet in fMRIPrep pipeline.
 
+(Spinal_cord_anatomical_sequences)=
 ### Spinal cord anatomical sequences
 
 The parameters of the spinal cord anatomical MRI sequences relevant for data analysis can be found in the BIDS dataset, and included metadata. The acquisition parameters are identical for all anatomical sessions, and follow a community [spinal cord standard imaging protocol](https://osf.io/tt4z9/). The Siemens pdf exam card of the anatomical sessions can be found [here](./_static/mri/spine_generic_Prisma_VE11C_ZOOMit.pdf), and is briefly recapitulated below. A standard (spinal cord) anatomical session starts with a 21 s localizer scan, and then includes the following sequences:
