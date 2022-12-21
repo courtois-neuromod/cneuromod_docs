@@ -93,11 +93,11 @@ A mistake happened when ripping the first season, causing `s01e01` and `s01e06` 
 
 ## harrypotter
 
-This dataset contains a single session per participant (N=5) when they read chapter 9 from chapter 9 of Harry Potter and the Sorcerer’s Stone. The text was presented word by word, at a 2Hz pace (each word presented for .5s). This chapter was split over 7 runs of approximate equal length. The stimuli used in this dataset are taken from the experiment reported by [Wehbe et al. (2014)](https://www.biorxiv.org/content/10.1101/2020.09.28.316935v4.full.pdf#cite.wehbe2014) for which a separate fMRI dataset (N=9) has been collected and shared.
+This dataset contains a single session per participant (N=5; `sub-01`, `sub-02`,`sub-03`,`sub-05` and `sub-06`) when they read chapter 9 from chapter 9 of Harry Potter and the Sorcerer’s Stone. The text was presented word by word, at a 2Hz pace (each word presented for .5s). This chapter was split over 7 runs of approximate equal length. The stimuli used in this dataset are taken from the experiment reported by [Wehbe et al. (2014)](https://www.biorxiv.org/content/10.1101/2020.09.28.316935v4.full.pdf#cite.wehbe2014) for which a separate fMRI dataset (N=9) has been collected and shared.
 
 ## shinobi_training
 
-This is a pure behavioral dataset collected while participants trained at home on the videogame Shinobi III The Return of the Ninja Master.
+This is a pure behavioral dataset collected while participants trained at home on the videogame Shinobi III The Return of the Ninja Master,  for N=4 participants (`sub-01`, `sub-02`, `sub-04` and `sub-06`).
 A subset of 3 levels of the game was selected for their similarity in terms of core gameplay although some mechanics were specific to each level. These levels were the same than those used in the `shinobi` dataset.
 
 The participants were first introduced to the game by playing the Level-1 at least once. This level introduces the basic game mechanics (moving from left to right, avoid or kill enemies) at an abordable difficulty level for most players. Then, the participants were able to freely choose the level on which they played as well as the training sessions frequency. No training regimen was imposed to the participants making that dataset highly heterogeneous. The dataset consists of sessions of gameplay as collections of `.bk2` files recorded by the [gym-retro](https://github.com/openai/retro) API.
