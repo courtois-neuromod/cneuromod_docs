@@ -7,6 +7,13 @@ It took as input the T1w and T2w of the first 2 sessions of all participants, wh
 
 ## [fMRIPrep](https://github.com/courtois-neuromod/cneuromod.fmriprep)
 
+
+Results included in this manuscript come from preprocessing
+performed using *fMRIPrep* 20.2.x LTS series
+(@fmriprep1; @fmriprep2; RRID:SCR_016216),
+which is based on *Nipype* 1.6.1
+(@nipype1; @nipype2; RRID:SCR_002502).
+
 ### Overview
 The functional data was preprocessed using the [fMRIprep pipeline](https://fmriprep.readthedocs.io/en/stable/installation.html). FmriPrep is an fMRI data preprocessing pipeline that requires minimal user input, while providing error and output reporting. It performs basic processing steps (coregistration, normalization, unwarping, noise component extraction, segmentation, skullstripping etc.) and provides outputs that can be easily submitted to a variety of group level analyses, including task-based or resting-state fMRI, graph theory measures, surface or volume-based statistics, etc. The fMRIprep pipeline uses a combination of tools from well-known software packages, including FSL, ANTs, FreeSurfer and [AFNI](https://afni.nimh.nih.gov/). For additional information regarding fMRIPrep installation, workflow and outputs, please visit the [documentation page](https://fmriprep.readthedocs.io/en/stable/installation.html).
 Note that the `slicetiming` option was disabled (i.e. fMRIprep was invoked with the flag `--ignore slicetiming`).
@@ -26,24 +33,39 @@ The description of participant, session, task and event tags can be found in the
 ### Recommended preprocessing strategy
 The confounding regressors are correlated, thus it is critical to only use a subset of these regressors. Also note that preprocessed time series have not been corrected for any confounds, but simply realigned in space, and it is therefore also critical to regress some of the available confounds prior to analysis. See the [fMRIprep documentation](https://fmriprep.org/en/stable/outputs.html#confounds) for details on available confound regressors. For python users, we recommend using [nilearn](https://nilearn.github.io) and the tool [load_confounds_strategy](https://nilearn.github.io/stable/modules/generated/nilearn.interfaces.fmriprep.load_confounds_strategy.html) to load confounds from the fMRIprep outputs, using with a standardized strategy. As the NeuroMod data consistently exhibits low levels of motion, we recommend against removing time points with excessive motion (aka scrubbing), and the `minimal` strategy available in nilearn is a reasonable choice. Because of the 2 mm spatial resolution of the fMRI scan, there is substantial impact of thermal noise, and some amount of spatial smoothing is advisable, the extent of it being determined by your hypotheses and analysis.
 
-### Pipeline description
+### Anatomical data preprocessing pipeline description
 
-Results included in this manuscript come from preprocessing
-performed using *fMRIPrep* 20.2.5
-(@fmriprep1; @fmriprep2; RRID:SCR_016216),
-which is based on *Nipype* 1.6.1
-(@nipype1; @nipype2; RRID:SCR_002502).
-
-Anatomical data preprocessing
-
-: A total of 0 T1-weighted (T1w) images were found within the input
+A total of 2 T1-weighted (T1w) images per subject were found within the input
 BIDS dataset.
+All of them were corrected for intensity non-uniformity (INU)
+with `N4BiasFieldCorrection` (@n4), distributed with ANTs 2.3.3 (@ants, RRID:SCR_004757).
+The T1w-reference was then skull-stripped with a *Nipype* implementation of
+the `antsBrainExtraction.sh` workflow (from ANTs), using OASIS30ANTs
+as target template.
+Brain tissue segmentation of cerebrospinal fluid (CSF),
+white-matter (WM) and gray-matter (GM) was performed on
+the brain-extracted T1w using `fast` (FSL 5.0.9, RRID:SCR_002823,
+@fsl_fast).
+A T1w-reference map was computed after registration of
+2 T1w images (after INU-correction) using
+`mri_robust_template` (FreeSurfer 6.0.1, @fs_template).
+Brain surfaces were reconstructed using `recon-all` (FreeSurfer 6.0.1,
+RRID:SCR_001847, @fs_reconall), and the brain mask estimated
+previously was refined with a custom variation of the method to reconcile
+ANTs-derived and FreeSurfer-derived segmentations of the cortical
+gray-matter of Mindboggle (RRID:SCR_002438, @mindboggle).
+Volume-based spatial normalization to two standard spaces (MNI152NLin2009cAsym, MNI152NLin6Asym) was performed through
+nonlinear registration with `antsRegistration` (ANTs 2.3.3),
+using brain-extracted versions of both T1w reference and the T1w template.
+The following templates were selected for spatial normalization:
+*ICBM 152 Nonlinear Asymmetrical template version 2009c* (@mni152nlin2009casym, RRID:SCR_008796; TemplateFlow ID: MNI152NLin2009cAsym), *FSL's MNI ICBM 152 non-linear 6th Generation Asymmetric Average Brain Stereotaxic Registration Model* (@mni152nlin6asym, RRID:SCR_002823; TemplateFlow ID: MNI152NLin6Asym),
+
+
+### Functional data preprocessing pipeline description
+
 Anatomical preprocessing was reused from previously existing derivative objects.
 
-
-Functional data preprocessing
-
-: For each of the 2 BOLD runs found per subject (across all
+: For each of the BOLD runs found per subject (across all
 tasks and sessions), the following preprocessing was performed.
 First, a reference volume and its skull-stripped version were generated
 by aligning and averaging
