@@ -122,3 +122,10 @@ The companion `.bk2` files can be found in the `<participant>/<sess>/gamelogs` f
 :::{important}
 Due to a programming error a certain number of game recording files were lost during acquisition, these repetitions are still listed in the events file but their `stim_file` field is left blank. Choice is left to the user whether to exclude the corresponding fMRI volumes or not for their analysis.
 :::
+
+## Hearing safety protocol
+
+This dataset contains behavioral and physiological data acquired through a variety of clinical audiology tests (see the [CNeuroMod docs](https://docs.cneuromod.ca/en/latest/MRI.html) and [Fortier et al. (2023)](https://doi.org/10.31234/osf.io/7xkng) for details on the dataset's context and acquisition).
+Participants underwent multiple test sessions (minimum = 4, maximum = 18, mean = 12, SD = 4.858) composed of different combinations of tests (experimental-condition dependant).
+
+For each of the participants, a `_sessions.tsv` file lists the available test data for each of the sessions.

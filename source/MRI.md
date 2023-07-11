@@ -83,3 +83,36 @@ Participant’s respiration was measured using a custom MRI compatible respirati
 
 ## Mock scanner
 Some of our datasets required a comparison between genuine in-scanner conditions and "mock" conditions, where the subject was installed in a fake scanner that reproduced the comfort and aspect of an MRI scanner. This mock setup was also located at [UNF](https://unf-montreal.ca/), and was equipped with a monitor screen for stimulus presentation as well as audio headphones and response devices (keyboard and video game controller).
+
+## Auditory health monitoring
+
+In order to make sure no harm was caused to the participants' hearing, an auditory health monitoring protocol using a variety of commonly used clinical audiology tests.
+Baselines were acquired for each of the tests when the participants joined CNeuroMod (November 2018 - July 2019) and also at the beginning of this monitoring protocol (January - February 2021).
+
+### Auditory tests
+
+The tests used during this monitoring protocol included:
+ - Otoscopic examination
+ - Tympanometry test
+ - Stapedial reflex test
+ - Pure-tone audiometry test
+    - Standard/Clinical frequency range (250 Hz - 8 kHz)
+    - Extended/Ultra-high frequency range (9 kHz - 20 kHz)
+ - Matrix speech-in-noise perception test
+    - First language (English or French)
+    - Second language (French or English)
+ - Transient-evoked otoacoustic emissions (TEOAE)
+ - Distorsion product otoacoustic emissions (DPOAE)
+ - Distorsion product otoacoustic emissions' growth function
+    - for F2 = 2 kHz
+    - for F2 = 4 kHz
+    - for F2 = 6 kHz
+
+### Experimental conditions
+
+Two types of experimental conditions were developped to assess the potential short- and long-term impacts of the exposure to noise during scanning sessions.
+The first one comprised two separate sessions: one immediately before a scan and one immediately after that same scan.
+The second one comprised a single auditory test session scheduled between 48 hours and 7 days after a scan.
+The results acquired during the delayed sessions were then compared to the data acquired at baseline.
+
+For more details regarding the tests, the experimental conditions or the results, see [Fortier et al. (2023)](https://doi.org/10.31234/osf.io/7xkng).
