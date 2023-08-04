@@ -178,15 +178,15 @@ NeuroKit2, and Systole.
 ### Outputs
 The description of participant, session, task and event tags can be found in the Datasets section.
 
-Each participant folder (sub-*) contains the following outputs alongside the fMRI data:
-ses-*/func
-*_physio.tsv.gz : raw segmented biosignals.
-*_physio.json : contains tsv columns names, start time, and signal sampling frequency information. 
+Each participant folder (`sub-*`) contains the following outputs alongside the fMRI data:
+- `ses-*/func`
+  - `*_physio.tsv.gz` : raw segmented biosignals.
+  - `*_physio.json` : contains tsv columns names, start time, and signal sampling frequency information. 
 
-ses_*/derivatives
-*_physio.tsv.gz : processed time series.
-*_physio.json : extracted features.
-*_physio.html : report of the biosignals quality.
+- `ses_*/derivatives`
+  - `*_physio.tsv.gz` : processed time series.
+  - `*_physio.json` : extracted features.
+  - `*_physio.html` : report of the biosignals quality.
 
 ### Preprocessing pipeline description
 The workflow developed to process the physiological data is based on Phys2Bids 2.8.3; Scipy 1.9.0; Neurokit2 0.2.3; 
