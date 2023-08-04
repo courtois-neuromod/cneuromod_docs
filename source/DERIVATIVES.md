@@ -194,40 +194,57 @@ Systole 0.2.4.
 
 The following section details the post-acquisition filtering procedure used for each physiological modality.
 
+
 Photoplethysmography
 
 : The PPG filtering procedure follows recommandations given by [Elgendi et al. 2013](https://doi.org/10.1371/journal.pone.0076585). 
 The artefacts were removed using a bidirectional butterworth bandpass filter (low cutoff: 0.5 Hz; high cutoff: 8 Hz; order: 3). 
-The signal was than downsampled to 1000 Hz.
+The signal was than downsampled to 1000 Hz. Systolic peaks were then detected using the method described in 
+[Elgendi et al. (2013)](https://doi.org/10.1371/journal.pone.0076585), and implemented in NeuroKit2 (see 
+[`ppg_findpeaks`](https://neuropsychology.github.io/NeuroKit/functions/ppg.html#ppg-findpeaks) documentation). Systolic peaks corrected
+using two different methods are available. In the  first method, peak placements were corrected using the peak-to-peak differences from the 
+NeuroKit2 package: intervals between peaks outside of the 0.5-1.5 seconds range were identified as outliers, and were corrected 
+(see [`signal_fixpeaks`](https://neuropsychology.github.io/NeuroKit/functions/signal.html#signal-fixpeaks) documentation). The second method 
+is based on [Lipponen & Tarvainen (2019)](https://doi.org/10.1080/03091902.2019.1640306) and consists of detecting the type of erroneous beats 
+and correcting themaccordingly.
+
 
 Electrocardiography
 
 : The ECG filtering procedure was implemented as per the [manufacturer application notes](https://www.biopac.com/wp-content/uploads/app242x.pdf). 
-Those recommandations were adapted for multiband sequences ([Bottenhorn et al., 2021](https://doi.org/10.1101/2021.04.01.437293)). Namely, 
-a bidirectional butterworth highpass filter (cutoff: 2 Hz; order: 2) was first apply to remove low frequency artefacts such as respiration and 
-baseline wander. A bidirectional IIR notch filter (order: 2; Q: 100; W0: calculated based on the adjusted slice frequency (i.e., number of slices / MB factor / TR) 
-and the Nyquist Frequency) was than computed to filter the fundamental frequency and specific harmonics. A bidirectional butterworth lowpass filter 
-(cutoff: 40 Hz; order: 2) was finally applied before downsampling the signal to 1000 Hz.
+Namely, a bidirectional butterworth highpass filter (cutoff: 2 Hz; order: 2) was first apply to remove low frequency artefacts such as respiration 
+and baseline wander. Unlike Biopac's recommandations, we did not performed a comb filter given the computational cost, and the limited benefit of 
+that step on the quality of the ECG signal (see [Bottenhorn et al., 2021](https://doi.org/10.1101/2021.04.01.437293)). A bidirectional butterworth 
+lowpass filter (cutoff: 40 Hz; order: 2) was finally applied before downsampling the signal to 1000 Hz. The R-peaks were detected using a probabilistic 
+approach as implemented in the [NeuroKit2 ProMAC method](https://neuropsychology.github.io/NeuroKit/functions/ecg.html#ecg-peaks). R-peaks were corrected
+using the same procedure as described above for the systolic peak detection.
+
 
 Electrodermal activity
 
 : The EDA filtering procedure was implemented as per [NeuroKit2 default EDA cleaning method](https://neuropsychology.github.io/NeuroKit/functions/eda.html#preprocessing). 
 Since EDA signal is characterised by low-frequency components and MRI gradients introduce high-frequency artefacts, a bidirectional butterworth lowpass filter 
-(cutoff: 3 Hz; order: 4) was employed to clean the signal, as suggested by [Privratsky et al. (2020)](https://doi.org/10.1016/j.ijpsycho.2020.09.015). However, unlike
-what is proposed in that article, we refrained from applying a highpass filter to retain the tonic component of the EDA signal. 
+(cutoff: 3 Hz; order: 4) was employed to clean the signal, as suggested by [Privratsky et al. (2020)](https://doi.org/10.1016/j.ijpsycho.2020.09.015). However, 
+unlike what is proposed in that article, we refrained from applying a highpass filter to retain the tonic component of the EDA signal. After the filtering procedure,
+the EDA signal was decomposed into its phasic and tonic components using the method implemented in Biopac's Acqknowledge (i.e. highpass filtering with a cutoff of 0.05 Hz).
+From the extracted phasic component, the skin conductance responses were detected by finding the local maxima in the signal (minimum relative amplitude of 0.1).
+
 
 Respiratory activity
 
 : The RSP filtering procedure was implemented as per [Khodadad et al., 2018](https://doi.org/10.1088/1361-6579/aad7e6), which includes a bidirectional 
 butterworth bandpass filter (low cutoff: 0.05 Hz; high cutoff: 3 Hz; order: 2). The lower cutoff was set to preserve breathing rate higher than 3 breath
-per minute. The signal was than downsample to 1000 Hz.
+per minute. The signal was than downsample to 1000 Hz. The peaks and trouhgs were identified on the downsampled signal as per [Khondadad et al. (2018)](https://doi.org/10.1088/1361-6579/aad7e6).
+From those parameters, the respiratory amplitude were calculated as the difference between a trough and the following peak. Additionally, the Respiratory 
+Volume per Time (RVT) was computed using the method described in [Harrison et al. (2021)](https://doi.org/10.1016/j.neuroimage.2021.117787).
 
 ### QC-ing pipeline description
 In order to evaluate the accuracy of the physiological data, quality indices were calculated for each modality using filtered signals. These signals were 
 analysed in 1-minute sliding windows with a step size of 10 seconds for each run. A quality report was generated for each run, and can be found under: 
-dataset/derivatives/sub-XX/ses-XX/XX_physio.html. A quantitative description of the processed biosignals, and interactive plots for each modality can be found 
+`dataset/derivatives/sub-XX/ses-XX/XX_physio.html`. A quantitative description of the processed biosignals, and interactive plots for each modality can be found 
 in that report. A visual inspection was conducted to ensure the overall quality of the data. The details about the computed quality metrics for each modality are 
 described below. Even if a quality assessment is provided for each run, it is the responsibility of the researchers to make sure the data met their quality requirements. 
+
 
 Cardiac signals 
 
@@ -240,6 +257,7 @@ Cardiac signals
 We assessed the quality of cardiac signals for each run based on normal NN intervals mean and NN intervals standard deviation. One-minute segments were classified as 
 good if the mean of NN intervals was within the range of 600 and 1200, and if the standard deviation was below 300. Based on the number of segments classified as good, 
 we provided the percentage of the run containing cardiac signals within the normal NN intervals range.
+
 
 Electrodermal activity
 
@@ -254,6 +272,7 @@ Electrodermal activity
 The metrics listed above are provided as a quantitative description of the acquired EDA signals. Considering the susceptibility of the EDA signal to external factors (e.g. 
 temperature, humidity) and to individual variability (e.g. sweat gland activity, skin properties, and baselines arousal levels), we leave it up to the researchers to set 
 their own quality threshold. 
+
 
 Respiratory activity
 
