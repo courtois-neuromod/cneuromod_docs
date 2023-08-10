@@ -206,7 +206,7 @@ using two different methods are available. In the  first method, peak placements
 NeuroKit2 package: intervals between peaks outside of the 0.5-1.5 seconds range were identified as outliers, and were corrected 
 (see [`signal_fixpeaks`](https://neuropsychology.github.io/NeuroKit/functions/signal.html#signal-fixpeaks) documentation). The second method 
 is based on [Lipponen & Tarvainen (2019)](https://doi.org/10.1080/03091902.2019.1640306) and consists of detecting the type of erroneous beats 
-and correcting themaccordingly.
+(i.e., ectopic, long, short, missed, and extra beats) and correcting them accordingly.
 
 
 Electrocardiography
@@ -225,9 +225,10 @@ Electrodermal activity
 : The EDA filtering procedure was implemented as per [NeuroKit2 default EDA cleaning method](https://neuropsychology.github.io/NeuroKit/functions/eda.html#preprocessing). 
 Since EDA signal is characterised by low-frequency components and MRI gradients introduce high-frequency artefacts, a bidirectional butterworth lowpass filter 
 (cutoff: 3 Hz; order: 4) was employed to clean the signal, as suggested by [Privratsky et al. (2020)](https://doi.org/10.1016/j.ijpsycho.2020.09.015). However, 
-unlike what is proposed in that article, we refrained from applying a highpass filter to retain the tonic component of the EDA signal. After the filtering procedure,
-the EDA signal was decomposed into its phasic and tonic components using the method implemented in Biopac's Acqknowledge (i.e. highpass filtering with a cutoff of 0.05 Hz).
-From the extracted phasic component, the skin conductance responses were detected by finding the local maxima in the signal (minimum relative amplitude of 0.1).
+unlike what is proposed in that article, we refrained from applying a highpass filter to retain the tonic component of the EDA signal. The signal was than downsample 
+to 1000 Hz. After the filtering procedure, the EDA signal was decomposed into its phasic and tonic components using the method implemented in Biopac's Acqknowledge 
+(i.e. highpass filtering with a cutoff of 0.05 Hz). From the extracted phasic component, the skin conductance responses were detected by finding the local maxima in
+the signal (minimum relative amplitude of 0.1).
 
 
 Respiratory activity
@@ -256,7 +257,8 @@ Cardiac signals
 
 We assessed the quality of cardiac signals for each run based on normal NN intervals mean and NN intervals standard deviation. One-minute segments were classified as 
 good if the mean of NN intervals was within the range of 600 and 1200, and if the standard deviation was below 300. Based on the number of segments classified as good, 
-we provided the percentage of the run containing cardiac signals within the normal NN intervals range.
+we provided the percentage of the run containing cardiac signals within the normal NN intervals range. Futher quality checks should be carried out to ensure that the 
+available cardiac signal is suitable for a given analysis.
 
 
 Electrodermal activity
@@ -269,9 +271,8 @@ Electrodermal activity
     - SCR rise time: Mean; Median; Standard deviation; Minimum; Maximum
     - Number of detected SCR
 
-The metrics listed above are provided as a quantitative description of the acquired EDA signals. Considering the susceptibility of the EDA signal to external factors (e.g. 
-temperature, humidity) and to individual variability (e.g. sweat gland activity, skin properties, and baselines arousal levels), we leave it up to the researchers to set 
-their own quality threshold. 
+The metrics listed above are provided as a quantitative description of the acquired EDA signals. The quality of the signal was assessed based on the number of detected 
+SCR. Futher quality checks should be carried out to ensure that the available EDA signal is suitable for a given analysis.
 
 
 Respiratory activity
@@ -282,4 +283,4 @@ Respiratory activity
 
 To ensure that the respiratory waveforms are within a normal range, a threshold of 0.5 Hz was used on the signal rate. If the averaged respiratory rate within a specific 
 window was below 0.5 Hz, the signal was considered normal. However, if the averaged respiratory rate exceeded that threshold, the signal window was classified as having 
-poor quality.
+poor quality. Futher quality checks should be carried out to ensure that the available respiratory signal is suitable for a given analysis.
