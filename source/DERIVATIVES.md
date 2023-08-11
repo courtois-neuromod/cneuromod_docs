@@ -213,10 +213,10 @@ Electrocardiography
 
 : The ECG filtering procedure was implemented as per the [manufacturer application notes](https://www.biopac.com/wp-content/uploads/app242x.pdf). 
 Namely, a bidirectional butterworth highpass filter (cutoff: 2 Hz; order: 2) was first apply to remove low frequency artefacts such as respiration 
-and baseline wander. Unlike Biopac's recommandations, we did not performed a comb filter given the computational cost, and the limited benefit of 
-that step on the quality of the ECG signal (see [Bottenhorn et al., 2021](https://doi.org/10.1101/2021.04.01.437293)). A bidirectional butterworth 
-lowpass filter (cutoff: 40 Hz; order: 2) was finally applied before downsampling the signal to 1000 Hz. The R-peaks were detected using a probabilistic 
-approach as implemented in the [NeuroKit2 ProMAC method](https://neuropsychology.github.io/NeuroKit/functions/ecg.html#ecg-peaks). R-peaks were corrected
+and baseline wander. A second-order IIR notch digital filter was performed to filter fundamental and specific harmonics (Q: 100; see 
+[manufacturer application notes](https://www.biopac.com/wp-content/uploads/app242x.pdf) and [Bottenhorn et al., 2021](https://doi.org/10.1101/2021.04.01.437293)).
+A bidirectional butterworth lowpass filter (cutoff: 40 Hz; order: 2) was finally applied before downsampling the signal to 1000 Hz. The R-peaks were detected using a 
+probabilistic approach as implemented in the [NeuroKit2 ProMAC method](https://neuropsychology.github.io/NeuroKit/functions/ecg.html#ecg-peaks). R-peaks were corrected
 using the same procedure as described above for the systolic peak detection.
 
 
