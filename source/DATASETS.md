@@ -11,13 +11,13 @@ Note that BIDS session names have no meaning apart from being data acquired in t
 
 ## Participants
 
-Six healthy participants (aged 31 to 47 at the time of recruitment in 2018), 3 women (`sub-03`, `sub-04` and `sub-06`) and 3 men (`sub-01`, `sub-02` and `sub-05`) consented to participate in the Courtois Neuromod Project for at least 5 years. Three of the participants reported being native francophone speakers (`sub-01`, `sub-02` and `sub-04`), one as being a native anglophone (`sub-06`) and two as bilingual native speakers (`sub-03` and `sub-05`).   All participants reported the right hand as being their dominant hand and reported being in good general health. 
+Six healthy participants (aged 31 to 47 at the time of recruitment in 2018), 3 women (`sub-03`, `sub-04` and `sub-06`) and 3 men (`sub-01`, `sub-02` and `sub-05`) consented to participate in the Courtois Neuromod Project for at least 5 years. Three of the participants reported being native francophone speakers (`sub-01`, `sub-02` and `sub-04`), one as being a native anglophone (`sub-06`) and two as bilingual native speakers (`sub-03` and `sub-05`).   All participants reported the right hand as being their dominant hand and reported being in good general health.
 
 Exclusion criteria included visual or auditory impairments that would prevent participants from seeing and/or hearing stimuli in the scanner and major psychiatric or neurological problems. Standard exclusion criteria for MRI and MEG were also applied. Lastly, given that all stimuli and instructions are presented in English, all participants had to report having an advanced comprehension of the English language for inclusion.
 
 ## anat
 
-The anatomical dataset includes longitudinal anatomical images of the brain and upper spinal cord at an approximate rate of 4 sessions a year. The primary intended use of this dataset is to monitor the structural stability of the brain of participants for the duration of the study. Many quantitative measures of brain structure can also be derived and included in analyses, such as gray matter morphometry, tractography or measures of myelination.
+The anatomical dataset includes longitudinal anatomical images of the brain and upper spinal cord at an approximate rate of 4 sessions a year. The primary intended use of this dataset is to monitor the structural stability of the brain of participants for the duration of the study. Many quantitative measures of brain structure can also be derived and included in analyses, such as gray matter morphometry, tractography or measures of myelination. Cortical flat maps cut with TkSurfer 6.0.0 are provided with the freesurfer derivatives for visualization.
 
 The MRI sequences are described in more detailed in [](Brain_anatomical_sequences) and [](Spinal_cord_anatomical_sequences), including pdfs of the Siemens exam cards.
 
@@ -87,7 +87,7 @@ There are instances of re-scanned segments (due to scan QC fail), these re-scans
 This dataset contains functional data acquired while showing participants episodes of the Friends TV show in English. It includes seasons 1-6 for all subjects, except `sub-04` who only completed seasons 1-4 (and a few segments of season 5). Each episode is cut in two segments (a/b) to allow more flexible scanning and give participants opportunities for breaks. There is a small overlap between the segments to allow participants to catch up with the storyline. The task BIDS entity identifies the season, episode and segments (a/b) as such `task-s<eason>e<pisode>[ab]`.
 
 :::{important}
-A mistake happened when ripping the first season, causing `s01e01` and `s01e06` to be swapped in name and order of presentation. Files were renamed afterward to match external data such as annotations. However the order of presentation remains, slightly disrupting the storyline presented to the participant.
+A mistake happened when the pilot episode (`s01e01`) was accidentally skipped at the beginning of the first season. It was shown to participants after they had watched episodes `s01e02` to `s01e06`, causing a slight disruption in the storyline. In the latest release, files have been renamed to match the episodes' intended order (rather than the order in which they were administered) and to be consistent with external data such as annotation corpora.
 :::
 
 
@@ -113,12 +113,38 @@ This dataset contains about 10h of gameplay on the videogame Shinobi III The Ret
 
 Participants moved to the next level if they successfully completed a level, or lost three lives. A new level was then initiated unless 10 minutes had elapsed from the start of the run, at which point the run ended. The duration of each run is thus variable to a degree, with a minimum of ten minutes. Due to the fixed order in the cycle, `Level-1` was repeated more often than `Level-4` and `Level-5`.
 
-In this dataset and the related documentation, we use the term `run` to designate a single functional sequence acquisition (per the usual in neuroimaging). The term `repetition` is used to designate the play of a single level (from start to either completion or the loss of three lives). As such, each run contains around 3 to 5 repetitions. 
+In this dataset and the related documentation, we use the term `run` to designate a single functional sequence acquisition (per the usual in neuroimaging). The term `repetition` is used to designate the play of a single level (from start to either completion or the loss of three lives). As such, each run contains around 3 to 5 repetitions.
 
-For each functional run, a companion file `_events.tsv` contains the timing and duration of each repetition played, as well as a `_annotated_events.tsv` file that additionally contains richer annotations, including button presses, handcrafted annotations (Kills, Health losses), and frame-wise RAM values. Additional documentation on the available annotations can be [found here](https://github.com/courtois-neuromod/shinobi/blob/annotations/code/annotations/ANNOTATIONS.md). 
+For each functional run, a companion file `_events.tsv` contains the timing and duration of each repetition played, as well as a `_annotated_events.tsv` file that additionally contains richer annotations, including button presses, handcrafted annotations (Kills, Health losses), and frame-wise RAM values. Additional documentation on the available annotations can be [found here](https://github.com/courtois-neuromod/shinobi/blob/annotations/code/annotations/ANNOTATIONS.md).
 
 The companion `.bk2` files can be found in the `<participant>/<sess>/gamelogs` folder.
 
 :::{important}
 Due to a programming error a certain number of game recording files were lost during acquisition, these repetitions are still listed in the events file but their `stim_file` field is left blank. Choice is left to the user whether to exclude the corresponding fMRI volumes or not for their analysis.
 :::
+
+## things
+
+N=4 participants completed between 33 (`sub-06`) and 36 (`sub-01`, `sub-02`, `sub-03`) fMRI sessions of a continuous recognition task with images from the [THINGS dataset](https://things-initiative.org/). The first session included 3 runs, and all subsequent sessions included 6 runs. Each 4.7 minutes run included 60 trials. For each trial, an image was shown in the center of the screen for 2.98s, followed by a 1.49s ISI. Subjects maintained fixation on a black fixation marker overlaid onto the image center and visible at all times throughout a run. Images were sampled from 720 THINGS categories. `sub-01`, `sub-02`, `sub-03` were shown 6 images per category (4320 unique stimuli), and `sub-06` was shown 5 images for 480 categories and 6 images for the remaining 240 (3840 unique stimuli).  
+
+Each image was shown three times throughout the duration of the experiment (it was repeated once within and once across weekly sessions). For each trial, participants reported whether the image was shown for the first time (“unseen”) or whether it had been shown previously (“seen”), either during the current or a previous session or both. Participants also reported whether or not they felt confident in their answer. Responses (seen/unseen ✕ low/high confidence) were made with the right thumb by pressing one of four buttons (top, bottom, left, right) on a video game controller designed by the team and described in [Harel et al. (2022)](https://psyarxiv.com/m2x6y/). No feedback was given to participants throughout the entire duration of the experiment.
+
+For each functional run, a companion file `_events.tsv` contains the timing and duration of each trial, the identity of the image shown, the condition (seen/unseen), whether the image was repeated between and/or within session, the subject's response and whether it was correct, the delay and number of trials since the last presentation (for repeating items), and metrics of fixation compliance derived from eye-tracking data. Available trial annotations are described [here](https://github.com/courtois-neuromod/things_memory_results/blob/marie_dev/src/behav_data/events_descriptors_wEyetrack.json)
+
+:::{important}
+A few sessions were accidentally administered out of the planed order, introducing atypical patterns of repetition for images shown during/after those sessions. Users may want to exclude these sessions from analyses that depend on repetition patterns or memory performance. These include `ses-024`, `ses-025` and `ses-026` for `sub-03`, and `ses-019` to `ses-026` (inclusively) for `sub-06`. fMRI data from `run 6` of `sub-06`'s `ses-008` are excluded from the dataset due to poor brain alignment.
+:::
+
+## retinotopy
+
+Three participants (`sub-01`, `sub-02`, `sub-03`) completed multiple sessions (6 for `sub-01` and `sub-02`, 5 for `sub-03`) of a retinotopy task adapted from [Kay et al. (2013)](https://doi.org/10.1152/jn.00105.2013) and implemented in Psychopy. This task was designed to derive population receptive field (pFR) properties at the voxel level and to delineate ROIs from the early visual cortex.
+
+Each session included three 5-minutes functional runs, each of which used a different aperture shape : `ring`, `bar` or `wedge`. A run included eight cycles during which an aperture moved slowly across the stimulated visual field to reveal a portion of visual pattern designed to drive both low-level and high-level visual areas. Patterns were drawn randomly at a rate of 15 fps from the [Human Connectome Project retinotopy stimuli](https://doi.org/10.1167/18.13.23) (downloaded [here](http://kendrickkay.net/analyzePRF)).
+
+The stimulated visual field was a circular area with a diameter corresponding to 10 degrees of visual angle. `ring` runs featured a thick circle aperture that expanded from and contracted toward the screen center. `wedge` runs featured a wedge aperture rotating clockwise and counter-clockwise. `bar` runs featured a wide bar aperture sweeping across the screen in 8 different directions. Participants fixated their gaze on a central dot and pressed a button whenever the dot changed color.
+
+## floc
+
+Three participants (`sub-01`, `sub-02`, `sub-03`) completed six sessions of a functional localizer task designed to identify brain regions responding preferentially to specific stimulus categories. The task was based on a [Psychopy implementation](https://github.com/NBCLab/pyfLoc) of the [Stanford VPN lab's fLoc task](https://doi.org/10.1523/JNEUROSCI.4822-14.2015) using stimuli from the fLoc functional localizer package (downloaded [here](https://github.com/VPNL/fLoc)).
+
+Each session included two functional runs of 3.85 minutes with randomly ordered ~6s blocks of rapidly presented images from one of five categories : `faces`, `places`, `bodies`, `objects` and `characters`. Each block included 12 trials for which an image from the block’s category was displayed centrally for 0.4s, followed by a 0.095-0.1s ISI. Subjects were instructed to fixate on a red dot in the middle of the screen and to press a button whenever the same image appeared twice in a row (the “one-back” task variation). Blocks of baseline condition during which the red fixation dot appeared on a grey background for 5.96s were also intermixed in the block sequence. Each run included 6 blocks from each of the five categories and 6 blocks of baseline. For each session, the first run included images from the house (`places`), body (`body parts`), word (`characters`), adult (`faces`) and car (`objects`) fLoc package sub-categories. The second run included images from the corridor (`places`), limb (`body parts`), word (`characters`), adult (`faces`) and instrument (`objects`) sub-categories.
