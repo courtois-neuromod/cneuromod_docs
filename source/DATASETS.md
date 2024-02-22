@@ -11,7 +11,7 @@ Note that BIDS session names have no meaning apart from being data acquired in t
 
 ## Participants
 
-Six healthy participants (aged 31 to 47 at the time of recruitment in 2018), 3 women (`sub-03`, `sub-04` and `sub-06`) and 3 men (`sub-01`, `sub-02` and `sub-05`) consented to participate in the Courtois Neuromod Project for at least 5 years. Three of the participants reported being native francophone speakers (`sub-01`, `sub-02` and `sub-04`), one as being a native anglophone (`sub-06`) and two as bilingual native speakers (`sub-03` and `sub-05`).   All participants reported the right hand as being their dominant hand and reported being in good general health. 
+Six healthy participants (aged 31 to 47 at the time of recruitment in 2018), 3 women (`sub-03`, `sub-04` and `sub-06`) and 3 men (`sub-01`, `sub-02` and `sub-05`) consented to participate in the Courtois Neuromod Project for at least 5 years. Three of the participants reported being native francophone speakers (`sub-01`, `sub-02` and `sub-04`), one as being a native anglophone (`sub-06`) and two as bilingual native speakers (`sub-03` and `sub-05`).   All participants reported the right hand as being their dominant hand and reported being in good general health.
 
 Exclusion criteria included visual or auditory impairments that would prevent participants from seeing and/or hearing stimuli in the scanner and major psychiatric or neurological problems. Standard exclusion criteria for MRI and MEG were also applied. Lastly, given that all stimuli and instructions are presented in English, all participants had to report having an advanced comprehension of the English language for inclusion.
 
@@ -49,14 +49,43 @@ The duration of BOLD series are slightly varying across participants and repetit
 ### [Relational processing](http://www.cognitiveatlas.org/task/id/trm_550b5a47aa23e/)
 `relational` duration: approximately 3 minutes. Participants were shown 6 different shapes filled with 1 of 6 different textures (Smith et al. 2007). There were two conditions: relations processing (event type `relational`), and control matching condition (event type `control`). In the `relational` events, 2 pairs of objects were presented on the screen, with one pair at the top of the screen, and the other pair at the bottom. Participants were instructed to decide what dimension differed in the top pair (shape or texture), and then decide if the bottom pair differed, or not, on the same dimension (i.e. if the top pair differed in shape, did the bottom pair also differ in shape). Their answers were recorded by one of two button presses: “a” differ on same dimension; “b” don't differ on same dimension. In the `control` events, participants were shown two objects at the top of the screen, and one object at the bottom of the screen, with a word in the middle of the screen (either “shape” or “texture”).They were told to decide whether the bottom object matched either of the top two objects on that dimension (i.e., if the word is “shape”, did the bottom object have the same shape as either of the top two objects). Participants responded “yes” or “no” using the button box. For the `relational` condition, the stimuli were presented for 3500 ms, with a 500 ms ITI, and there were four trials per block. In the `control`condition, stimuli were presented for 2800 ms, with a 400 ms ITI, and there were 5 trials per block. In total there were two runs, each with three `relational` blocks, three `control` blocks and three 16-second fixation blocks.
 
-### [Emotion processing](http://www.cognitiveatlas.org/task/id/trm_550b5b066d37b/)  
+### [Emotion processing](http://www.cognitiveatlas.org/task/id/trm_550b5b066d37b/)
 `emotion` duration: approximately 2 minutes. Participants were shown triads of faces (event type `face`) or shapes (event type `shape`), and were asked to decide which of the shapes at the bottom of the screen matches the target face/ shape at the top of the screen (adapted from Smith et al. 2007). Faces had either an angry or fearful expression. Faces, and shapes were presented in three blocks of 6 trials (3 `face` and 3 `shape`), with each trial lasting 2 seconds, followed by a 1 second inter-stimulus interval. Each block was preceded by a 3000 ms task cue (“shape” or “face”), so that each block was 21 seconds long, including the cue. In total there were two runs, three `face` blocks and three `shape` blocks, with 8 seconds of fixation at the end of each run.
 
-### [Working memory](http://www.cognitiveatlas.org/task/id/trm_550b50095d4a3/)  
+### [Working memory](http://www.cognitiveatlas.org/task/id/trm_550b50095d4a3/)
 `wm` duration: approximately 5 minutes. There were two subtasks: a category specific representation, and a working memory task. Participants were presented with blocks of either places, tools, faces, and body parts. Within each run, all 4 types of stimuli were presented in block, with each block being labelled as a 2-back task (participants needed to indicate if they saw the same image two images back), or a version of a 0-back task (participants were shown a target at the start of the trial and they needed to indicate if the image that they were seeing matched the target). There were thus 8 different event types `<stim>_<back>`, where `<stim>` was one of `place`, `tools`, `face` or `body`, and `<back>` was one of `0back` or `2back`. Each image was presented for 2 seconds, followed by a 500 ms ITI. Stimuli were presented for 2 seconds, followed by a 500 ms inter-task interval. Each of the 2 runs included 8 event types with 10 trials per type, as well as 4 fixations blocks (15 secs).
 
 ### [Resting state](http://www.cognitiveatlas.org/task/id/trm_4c8a834779883/)
 `restingstate` duration: 15 minutes. In every other session, one resting-state fMRI run was acquired, giving 5 runs per participant. Participants were asked to have their eye open, be looking at fixation cross in the middle of the screen and be instructed to not fall asleep. A total of five resting-state fMRI runs were acquired per subject.
+
+
+## Language Annotations
+
+The `cneuromod` language annotation dataset is extracted for the naturalistic stimuli sets ([friends](https://github.com/courtois-neuromod/friends.stimuli), [movie10](https://github.com/courtois-neuromod/movie10.stimuli), [narratives](https://github.com/courtois-neuromod/narratives.stimuli), [le petit prince](https://github.com/courtois-neuromod/petit_prince.stimuli)). The annotations were extracted using [AssemblyAI](https://www.assemblyai.com/). Annotations were structured into a `.json` file format, associating each audio or video file of the data with its own `json` file. Each `json` file contains the whole `transcript`, each single `word`, its `start` and `end` time points in seconds, and `confidence`, the probability value AssemblyAI gives regarding its success rate in identifying the word from the audio.
+
+```
+{"results":
+    {"channels":
+        [{"alternatives":
+            [{"transcript": "There's nothing to tell. Just some guy I work with. Come on, you're ...
+                "words":
+                        [{"word": "There's",
+                            "start": 18.97,
+                            "end": 19.146,
+                            "Confidence": 0.6398
+                        }]
+            }]
+        }]
+    }
+}
+```
+
+Each language annotation resides in the stimuli repository of the dataset itself under [CNeuromod GitHub organization](https://github.com/courtois-neuromod) alongside a `dataset_description.json` file where we provide a generic description about the dataset, a simple exploratory statistical analysis of the words and token counts and the version of the annotation extraction tool is used.
+
+
+
+
+
 
 ## movie10
 
@@ -113,9 +142,9 @@ This dataset contains about 10h of gameplay on the videogame Shinobi III The Ret
 
 Participants moved to the next level if they successfully completed a level, or lost three lives. A new level was then initiated unless 10 minutes had elapsed from the start of the run, at which point the run ended. The duration of each run is thus variable to a degree, with a minimum of ten minutes. Due to the fixed order in the cycle, `Level-1` was repeated more often than `Level-4` and `Level-5`.
 
-In this dataset and the related documentation, we use the term `run` to designate a single functional sequence acquisition (per the usual in neuroimaging). The term `repetition` is used to designate the play of a single level (from start to either completion or the loss of three lives). As such, each run contains around 3 to 5 repetitions. 
+In this dataset and the related documentation, we use the term `run` to designate a single functional sequence acquisition (per the usual in neuroimaging). The term `repetition` is used to designate the play of a single level (from start to either completion or the loss of three lives). As such, each run contains around 3 to 5 repetitions.
 
-For each functional run, a companion file `_events.tsv` contains the timing and duration of each repetition played, as well as a `_annotated_events.tsv` file that additionally contains richer annotations, including button presses, handcrafted annotations (Kills, Health losses), and frame-wise RAM values. Additional documentation on the available annotations can be [found here](https://github.com/courtois-neuromod/shinobi/blob/annotations/code/annotations/ANNOTATIONS.md). 
+For each functional run, a companion file `_events.tsv` contains the timing and duration of each repetition played, as well as a `_annotated_events.tsv` file that additionally contains richer annotations, including button presses, handcrafted annotations (Kills, Health losses), and frame-wise RAM values. Additional documentation on the available annotations can be [found here](https://github.com/courtois-neuromod/shinobi/blob/annotations/code/annotations/ANNOTATIONS.md).
 
 The companion `.bk2` files can be found in the `<participant>/<sess>/gamelogs` folder.
 
