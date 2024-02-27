@@ -82,7 +82,7 @@ datalad get -r fmriprep/movie10/sourcedata/movie10/stimuli fmriprep/movie10/sour
 
 or to get subject specific event files for tasks collecting behavioral responses:
 ```
-datalad get -r fmriprep/movie10/sourcedata/hcptrt/sub-*/ses-*/func/*_events.tsv
+datalad get -r fmriprep/hcptrt/sourcedata/hcptrt/sub-*/ses-*/func/*_events.tsv
 ```
 
 ## Updates
