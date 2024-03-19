@@ -104,9 +104,16 @@ The participants were first introduced to the game by playing the Level-1 at lea
 
 This dataset can be used to analyze learning or individual game-play styles, and can be investigated in conjunction with the fMRI dataset.
 
+## gamepad
+
+This dataset contains the data acquired for the validation study of the CNeuromod videogame controller. The CNeuromod videogame controller is a custom-built fully fiber-optic MRI controller, designed by the Courtois-Neuromod team and described in [Harel et al. (2023)](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0290158). The `gamepad` dataset thus contains the MRI and behavioral data acquired on 4 participants (`sub-01`, `sub-02`, `sub-03` and `sub-06`) during a simple cued-response task in which the participants were instructed to press the various controller buttons for short and long durations (5 blocs of 10 trials per condition).
+
+Each subject performed 8 sessions of two runs. 4 of these sessions were performed in the MRI scanner with our MRI-compatible videogame controller, and are accompanied by BOLD recordings. The 4 other sessions were performed in the mock MRI scanner with a [commercially available SNES controller](https://lyonsden.net/innext-usb-game-controller-review/), and served as a reference for our validation study. The mock and MRI sessions are alterned, and the starting order (mock or MRI first) was balanced across subjects. For the MRI sessions, the behavioral data can be found in the `*_events.tsv` files stored in the `func` folder. For the mock sessions, they can be found in the `beh` folder instead.
+
+
 ## shinobi
 
-This dataset contains about 10h of gameplay on the videogame Shinobi III The Return of the Ninja Master, for N=4 participants (`sub-01`, `sub-02`, `sub-04` and `sub-06`). Participants used a custom-built fully fiber-optic MRI controller, designed by the team and described in [Harel et al. (2022)](https://psyarxiv.com/m2x6y/). In each run, participants played 3 levels in cycles and always in the same order. These levels were selected in the game to have fairly homogeneous core game mechanics (see the [Sega documentation](https://sega.fandom.com/wiki/Shinobi_III:_Return_of_the_Ninja_Master) for more details on game structure):
+This dataset contains about 10h of gameplay on the videogame Shinobi III The Return of the Ninja Master, for N=4 participants (`sub-01`, `sub-02`, `sub-04` and `sub-06`). Participants used the CNeuromod videogame controller described in [Harel et al. (2023)](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0290158). In each run, participants played 3 levels in cycles and always in the same order. These levels were selected in the game to have fairly homogeneous core game mechanics (see the [Sega documentation](https://sega.fandom.com/wiki/Shinobi_III:_Return_of_the_Ninja_Master) for more details on game structure):
  * `Level-1` corresponded to round 1 of the original game, "Zeed's Resurrection". It included one mini-boss and one boss fight.
  * `Level-4` corresponded to the beginning of round 4 of the original game, "Destruction". It included no mini-boss or boss fight.
  * `Level-5` corresponded to the beginning of round 5 of the original game, "Electric demon". It included one mini-boss fight and no boss fight.
