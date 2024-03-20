@@ -95,6 +95,12 @@ A mistake happened when ripping the first season, causing `s01e01` and `s01e06` 
 
 This dataset contains a single session per participant (N=5) when they read chapter 9 from chapter 9 of Harry Potter and the Sorcerer’s Stone. The text was presented word by word, at a 2Hz pace (each word presented for .5s). This chapter was split over 7 runs of approximate equal length. The stimuli used in this dataset are taken from the experiment reported by [Wehbe et al. (2014)](https://www.biorxiv.org/content/10.1101/2020.09.28.316935v4.full.pdf#cite.wehbe2014) for which a separate fMRI dataset (N=9) has been collected and shared.
 
+## gamepad
+
+This dataset was acquired as a validation study of the CNeuroMod videogame controller. The CNeuromod videogame controller is an open source, custom-built, fiber-optic, MRI compatible video game controller, designed by our team engineer, Mr. André Cyr, and described in [Harel et al. (2023)](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0290158). For a detailed description of the controller, including building instructions visit this [site](https://controller-doc.readthedocs.io/en/latest/). The gamepad dataset contains both fMRI and behavioural data acquired on 4 participants (`sub-01`, `sub-02`, `sub-03` and `sub-06`) during a simple cued-response task in which the participants were instructed to press the various controller buttons for short and long durations (5 blocs of 10 trials per condition).
+
+For each subject we acquired 8 sessions, of two runs each. Four of the sessions were acquired in the MRI scanner using our typical setup (i.e 64-channel head coil) along with the MRI-compatible videogame controller, during which we acquired BOLD recordings. The four remaining sessions were acquired in our MRI [simulator](https://pstnet.com/products/mri-simulator/), with a mock 64-channel head coil, and using a [commercially available SNES-like controller](https://lyonsden.net/innext-usb-game-controller-review/). The latter served as a reference for our validation study. Mock and MRI sessions were alternated, and the starting order (mock or MRI first) was counterbalanced across subjects. For the MRI sessions, the behavioural data can be found in the `*_events.tsv` files stored in the `func` folder. For the mock sessions, behavioural data can be found in the `beh` folder.
+
 ## shinobi_training
 
 This is a pure behavioral dataset collected while participants trained at home on the videogame Shinobi III The Return of the Ninja Master.
@@ -103,13 +109,6 @@ A subset of 3 levels of the game was selected for their similarity in terms of c
 The participants were first introduced to the game by playing the Level-1 at least once. This level introduces the basic game mechanics (moving from left to right, avoid or kill enemies) at an abordable difficulty level for most players. Then, the participants were able to freely choose the level on which they played as well as the training sessions frequency. No training regimen was imposed to the participants making that dataset highly heterogeneous. The dataset consists of sessions of gameplay as collections of `.bk2` files recorded by the [gym-retro](https://github.com/openai/retro) API.
 
 This dataset can be used to analyze learning or individual game-play styles, and can be investigated in conjunction with the fMRI dataset.
-
-## gamepad
-
-This dataset contains the data acquired for the validation study of the CNeuromod videogame controller. The CNeuromod videogame controller is a custom-built fully fiber-optic MRI controller, designed by the Courtois-Neuromod team and described in [Harel et al. (2023)](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0290158). The `gamepad` dataset thus contains the MRI and behavioral data acquired on 4 participants (`sub-01`, `sub-02`, `sub-03` and `sub-06`) during a simple cued-response task in which the participants were instructed to press the various controller buttons for short and long durations (5 blocs of 10 trials per condition).
-
-Each subject performed 8 sessions of two runs. 4 of these sessions were performed in the MRI scanner with our MRI-compatible videogame controller, and are accompanied by BOLD recordings. The 4 other sessions were performed in the mock MRI scanner with a [commercially available SNES controller](https://lyonsden.net/innext-usb-game-controller-review/), and served as a reference for our validation study. The mock and MRI sessions are alterned, and the starting order (mock or MRI first) was balanced across subjects. For the MRI sessions, the behavioral data can be found in the `*_events.tsv` files stored in the `func` folder. For the mock sessions, they can be found in the `beh` folder instead.
-
 
 ## shinobi
 
