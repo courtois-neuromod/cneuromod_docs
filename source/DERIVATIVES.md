@@ -150,22 +150,36 @@ It is released under the [CC0](https://creativecommons.org/publicdomain/zero/1.0
 
 ### Overview
 The physiological data were preprocessed using a pipeline developed within the lab, called Physprep. 
-Physprep is a pipeline that segments, cleans and processes PPG, ECG, EDA, and respiratory (RSP) signals 
-from minimal user input. The Physprep pipeline integrates open access python packages including Phys2Bids, 
-NeuroKit2, and Systole.
+Physprep is a pipeline that segments, cleans and processes photoplethysmography (PPG), electrocardiography (ECG), 
+electrodermal (EDA), and respiratory (RSP) signals from minimal user input. The Physprep pipeline integrates 
+open access python packages including Phys2Bids, NeuroKit2, and Systole.
 
 ### Outputs
 The description of participant, session, task and event tags can be found in the Datasets section.
 
+
+Raw timeseries
+
+Metadata associated with the physiological files can be find at the root directory under `physio.json`
+
 Each participant folder (`sub-*`) contains the following outputs alongside the fMRI data:
 - `ses-*/func`
-  - `*_physio.tsv.gz` : raw segmented biosignals.
-  - `*_physio.json` : contains tsv columns names, start time, and signal sampling frequency information. 
+  - `<match>_physio.tsv.gz` : raw segmented biosignals.
+  - `<match>_physio.json` : contains tsv columns names, start time, and signal sampling frequency information. 
 
-- `ses_*/derivatives`
-  - `*_physio.tsv.gz` : processed time series.
-  - `*_physio.json` : extracted features.
-  - `*_physio.html` : report of the biosignals quality.
+
+Preprocessed timeseries (derivatives)
+
+Metadata associated with the derivatives files can be find at the root directory under:
+- `preproc_physio.json` : contains tsv columns names, start time, and signal sampling frequency information associated with the `<match>_desc-preproc_physio.tsv.gz` files in the `sub-*/ses-*/func/` folders.
+- `events.json` : contains description of the columns in the tabular events files located in the `sub-*/ses-*/func/` folders.
+
+The physiological derivatives are located in derivatives datasets following the naming convention `<dataset>.physprep`. 
+Each participant folder (`sub-*`) contains the following outputs:
+- `ses-*/func`
+  - `<match>_desc-preproc_physio.tsv.gz` : processed time series.
+  - `<match>_desc-quality.json` : quality assessment of the biosignals.
+  - `<match>_events.tsv` : extracted features.
 
 ### Preprocessing pipeline description
 The workflow developed to process the physiological data is based on Phys2Bids 2.8.3; Scipy 1.9.0; Neurokit2 0.2.3; 
