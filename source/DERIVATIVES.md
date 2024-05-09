@@ -160,9 +160,10 @@ The description of participant, session, task and event tags can be found in the
 
 **Raw timeseries**
 
-Metadata associated with the physiological files can be find at the root directory under `physio.json`
+The physiological raw timeseries are located in `<dataset>` alongside the fMRI data. Metadata associated with 
+the physiological files can be find at the root directory under `physio.json`.
 
-Each participant folder (`sub-*`) contains the following outputs alongside the fMRI data:
+Each participant folder (`sub-*`) contains the following outputs:
 - `ses-*/func`
   - `<match>_physio.tsv.gz` : raw segmented biosignals.
   - `<match>_physio.json` : contains tsv columns names, start time, and signal sampling frequency information. 
@@ -170,11 +171,12 @@ Each participant folder (`sub-*`) contains the following outputs alongside the f
 
 **Preprocessed timeseries & extracted features (derivatives)**
 
+The physiological derivatives are located in derivatives datasets following the naming convention `<dataset>.physprep`. 
+
 Metadata associated with the derivatives files can be find at the root directory under:
 - `preproc_physio.json` : contains tsv columns names, start time, and signal sampling frequency information associated with the `<match>_desc-preproc_physio.tsv.gz` files in the `sub-*/ses-*/func/` folders.
 - `events.json` : contains description of the columns in the tabular events files located in the `sub-*/ses-*/func/` folders.
 
-The physiological derivatives are located in derivatives datasets following the naming convention `<dataset>.physprep`. 
 Each participant folder (`sub-*`) contains the following outputs:
 - `ses-*/func`
   - `<match>_desc-preproc_physio.tsv.gz` : processed time series.
@@ -230,8 +232,8 @@ per minute. The signal was then downsample to 1000 Hz. The peaks and trouhgs wer
 
 ### QC-ing pipeline description
 In order to evaluate the accuracy of the physiological data, quality indices were calculated for each modality using filtered signals. These signals were 
-analysed in 1-minute sliding windows with a step size of 10 seconds for each run. A quality report was generated for each run, and can be found under: 
-`dataset/derivatives/sub-XX/ses-XX/XX_physio.html`. A quantitative description of the processed biosignals, and interactive plots for each modality can be found 
+analysed in 1-minute windows for each run. The quality assessment was generated for each run, and can be found under: 
+`<>.physprep/derivatives/sub-XX/ses-XX/XX_physio.html`. A quantitative description of the processed biosignals, and interactive plots for each modality can be found 
 in that report. A visual inspection was conducted to ensure the overall quality of the data. The details about the computed quality metrics for each modality are 
 described below. Even if a quality assessment is provided for each run, it is the responsibility of the researchers to make sure the data met their quality requirements. 
 
