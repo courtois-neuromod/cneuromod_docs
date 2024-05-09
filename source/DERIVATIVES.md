@@ -194,12 +194,9 @@ Photoplethysmography
 The artefacts were removed using a bidirectional butterworth bandpass filter (low cutoff: 0.5 Hz; high cutoff: 8 Hz; order: 3). 
 The signal was then downsampled to 1000 Hz. Systolic peaks were then detected using the method described in 
 [Elgendi et al. (2013)](https://doi.org/10.1371/journal.pone.0076585), and implemented in NeuroKit2 (see 
-[`ppg_findpeaks`](https://neuropsychology.github.io/NeuroKit/functions/ppg.html#ppg-findpeaks) documentation). Systolic peaks corrected
-using two different methods are available. In the  first method, peak placements were corrected using the peak-to-peak differences from the 
-NeuroKit2 package: intervals between peaks outside of the 0.5-1.5 seconds range were identified as outliers, and were corrected 
-(see [`signal_fixpeaks`](https://neuropsychology.github.io/NeuroKit/functions/signal.html#signal-fixpeaks) documentation). The second method 
-is based on [Lipponen & Tarvainen (2019)](https://doi.org/10.1080/03091902.2019.1640306) and consists of detecting the type of erroneous beats 
-(i.e., ectopic, long, short, missed, and extra beats) and correcting them accordingly.
+[`ppg_findpeaks`](https://neuropsychology.github.io/NeuroKit/functions/ppg.html#ppg-findpeaks) documentation). Systolic peak placements 
+were corrected using the peak-to-peak differences from the NeuroKit2 package: intervals between peaks outside of the 0.5-1.5 seconds 
+range were identified as outliers, and were corrected (see [`signal_fixpeaks`](https://neuropsychology.github.io/NeuroKit/functions/signal.html#signal-fixpeaks) documentation).
 
 
 Electrocardiography
@@ -229,8 +226,7 @@ Respiratory activity
 : The RSP filtering procedure was implemented as per [Khodadad et al., 2018](https://doi.org/10.1088/1361-6579/aad7e6), which includes a bidirectional 
 butterworth bandpass filter (low cutoff: 0.05 Hz; high cutoff: 3 Hz; order: 2). The lower cutoff was set to preserve breathing rate higher than 3 breath
 per minute. The signal was then downsample to 1000 Hz. The peaks and trouhgs were identified on the downsampled signal as per [Khondadad et al. (2018)](https://doi.org/10.1088/1361-6579/aad7e6).
-From those parameters, the respiratory amplitude were calculated as the difference between a trough and the following peak. Additionally, the Respiratory 
-Volume per Time (RVT) was computed using the method described in [Harrison et al. (2021)](https://doi.org/10.1016/j.neuroimage.2021.117787).
+
 
 ### QC-ing pipeline description
 In order to evaluate the accuracy of the physiological data, quality indices were calculated for each modality using filtered signals. These signals were 
