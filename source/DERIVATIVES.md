@@ -158,7 +158,7 @@ open access python packages including Phys2Bids, NeuroKit2, and Systole.
 The description of participant, session, task and event tags can be found in the Datasets section.
 
 
-Raw timeseries
+**Raw timeseries**
 
 Metadata associated with the physiological files can be find at the root directory under `physio.json`
 
@@ -168,7 +168,7 @@ Each participant folder (`sub-*`) contains the following outputs alongside the f
   - `<match>_physio.json` : contains tsv columns names, start time, and signal sampling frequency information. 
 
 
-Preprocessed timeseries (derivatives)
+**Preprocessed timeseries & extracted features (derivatives)**
 
 Metadata associated with the derivatives files can be find at the root directory under:
 - `preproc_physio.json` : contains tsv columns names, start time, and signal sampling frequency information associated with the `<match>_desc-preproc_physio.tsv.gz` files in the `sub-*/ses-*/func/` folders.
