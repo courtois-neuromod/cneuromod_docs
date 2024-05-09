@@ -231,47 +231,36 @@ per minute. The signal was then downsample to 1000 Hz. The peaks and trouhgs wer
 
 
 ### QC-ing pipeline description
-In order to evaluate the accuracy of the physiological data, quality indices were calculated for each modality using filtered signals. These signals were 
-analysed in 1-minute windows for each run. The quality assessment was generated for each run, and can be found under: 
-`<>.physprep/derivatives/sub-XX/ses-XX/XX_physio.html`. A quantitative description of the processed biosignals, and interactive plots for each modality can be found 
-in that report. A visual inspection was conducted to ensure the overall quality of the data. The details about the computed quality metrics for each modality are 
-described below. Even if a quality assessment is provided for each run, it is the responsibility of the researchers to make sure the data met their quality requirements. 
+In order to evaluate the accuracy of the physiological data, quality assessment was performed for each modality using the filtered signals. 
+These signals were analysed run-by-run in 1-minute windows. The quality assessment was generated for each run, and can be found under: 
+`<dataset>.physprep/sub-XX/ses-XX/func/<match>_desc-quality.json`. For a given run, if more than 80% of the 1 min windows were acceptable, the run
+passed the quality assessment, otherwise it failed. Those information can be find in the `<match>_desc-quality.json` under the `QualityAssessment` key 
+(possible value: `Pass` and `Fail`). The details about the quality assessement for each modality are described below. 
+
+:::{important} 
+Even if an automatic quality assessment is provided for each run, it is the responsibility of the users to make sure the data meet their quality requirements.
+:::
 
 
 Cardiac signals 
 
-: For the PPG and the ECG signals, the following metrics were reported:
-  - Overall signal: Skewness; Kurtosis; Number of missed/extra/short/long beats
-  - NN intervals: Mean; Median; Standard deviation
-  - Heart rate: Mean; Median; Standard deviation; Minimum; Maximum
-  
-
-We assessed the quality of cardiac signals for each run based on normal NN intervals mean and NN intervals standard deviation. One-minute segments were classified as 
-good if the mean of NN intervals was within the range of 600 and 1200, and if the standard deviation was below 300. Based on the number of segments classified as good, 
-we provided the percentage of the run containing cardiac signals within the normal NN intervals range. Futher quality checks should be carried out to ensure that the 
-available cardiac signal is suitable for a given analysis.
+: We assessed the quality of cardiac signals (PPG and ECG) for each run based on normal NN intervals mean and NN intervals standard deviation. One-minute segments were classified as 
+acceptable if the mean of NN intervals was within the range of 600 and 1200, and if the standard deviation was below 300. Futher quality checks should be carried out to ensure that 
+the available cardiac signal is suitable for a given analysis.
 
 
 Electrodermal activity
 
-: For the EDA signal, the following metrics were reported:
-  - Overall signal: Minimal range; Rate of Amplitude Change; Mean; Median; Standard deviation; Minimum; Maximum
-  - Skin Conductance Level (SCL): Mean; Median; Standard deviation; Minimum; Maximum
-  - Skin Conductance Response (SCR): 
-    - SCR amplitude: Mean; Median; Standard deviation; Minimum; Maximum
-    - SCR rise time: Mean; Median; Standard deviation; Minimum; Maximum
-    - Number of detected SCR
-
-The metrics listed above are provided as a quantitative description of the acquired EDA signals. The quality of the signal was assessed based on the number of detected 
-SCR. Futher quality checks should be carried out to ensure that the available EDA signal is suitable for a given analysis.
+: We assessed the quality of the preprocessed EDA waveforms for each each run based on the criteria proposed by [Böttcher et al. (2022)](https://doi.org/10.1038/s41598-022-25949-x). 
+For each 2 sec window, the quality score was equal to 1 if the rate of amplitude change (RAC) was smaller than 0.2 and if the mean of the signal was greater than 0.05, otherwise the 
+quality score was equal to 0. To obtain quality score for the 1min windows, the quality scores of the 2 sec segments were averaged. The signal within a window was considered acceptable
+if the quality score was equal to 1. Futher quality checks should be carried out to ensure that the available EDA signal is suitable for a given analysis.
 
 
 Respiratory activity
 
-: For the respiratory signals, the following metrics were reported:
-  - Signal amplitude: Mean; Median; Standard deviation; Minimum; Maximum; Coefficient of variation
-  - Signal rate: Mean; Median; Standard deviation; Minimum; Maximum; Coefficient of variation
+: To ensure that the respiratory waveforms are within a normal range, a threshold of 0.5 Hz was used on the signal rate. If the averaged respiratory rate within a specific 
+window was below 0.5 Hz, the signal was considered normal. However, if the averaged respiratory rate exceeded that threshold, the signal window was considered unacceptable. Futher quality 
+checks should be carried out to ensure that the available respiratory signal is suitable for a given analysis.
 
-To ensure that the respiratory waveforms are within a normal range, a threshold of 0.5 Hz was used on the signal rate. If the averaged respiratory rate within a specific 
-window was below 0.5 Hz, the signal was considered normal. However, if the averaged respiratory rate exceeded that threshold, the signal window was classified as having 
-poor quality. Futher quality checks should be carried out to ensure that the available respiratory signal is suitable for a given analysis.
+
