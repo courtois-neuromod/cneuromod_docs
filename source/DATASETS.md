@@ -104,15 +104,28 @@ For each subject we acquired 8 sessions, of two runs each. Four of the sessions 
 ## shinobi_training
 
 This is a pure behavioral dataset collected while participants trained at home on the videogame Shinobi III The Return of the Ninja Master.
-A subset of 3 levels of the game was selected for their similarity in terms of core gameplay although some mechanics were specific to each level. These levels were the same than those used in the `shinobi` dataset.
+A subset of 3 levels of the game was selected for their similarity in terms of core gameplay although some mechanics were specific to each level. These levels were the same than those used in the [`shinobi`](https://docs.cneuromod.ca/en/latest/DATASETS.html#shinobi) dataset.
 
 The participants were first introduced to the game by playing the Level-1 at least once. This level introduces the basic game mechanics (moving from left to right, avoid or kill enemies) at an abordable difficulty level for most players. Then, the participants were able to freely choose the level on which they played as well as the training sessions frequency. No training regimen was imposed to the participants making that dataset highly heterogeneous. The dataset consists of sessions of gameplay as collections of `.bk2` files recorded by the [gym-retro](https://github.com/openai/retro) API.
 
 This dataset can be used to analyze learning or individual game-play styles, and can be investigated in conjunction with the fMRI dataset.
 
+The following table summarizes the volume of data acquired per subject and per level, including the total number of repetitions for each level, the number of cleared repetitions, and the corresponding play time.
+|         | Level 1      |            |              | Level 4      |            |              | Level 5      |            |              | Total       |            |              |
+|---------|--------------|------------|--------------|--------------|------------|--------------|--------------|------------|--------------|-------------|------------|--------------|
+| Subject | N            | Cleared    | Duration (h:m:s) | N            | Cleared    | Duration (h:m:s) | N            | Cleared    | Duration (h:m:s) | N           | Cleared    | Duration (h:m:s) |
+| sub-01  | 187          | 116        | 07:34:10     | 110          | 24         | 03:02:11     | 116          | 43         | 05:00:30     | 413         | 183        | 15:36:53     |
+| sub-02  | 263          | 52         | 12:56:22     | 290          | 75         | 10:40:20     | 51           | 17         | 02:58:26     | 604         | 144        | 26:35:09     |
+| sub-04  | 57           | 2          | 03:56:12     | 98           | 14         | 05:32:58     | 57           | 13         | 03:13:22     | 212         | 29         | 12:42:33     |
+| sub-06  | 9            | 3          | 00:42:43     | 36           | 7          | 01:48:47     | 32           | 8          | 01:44:54     | 77          | 18         | 04:16:25     |
+| Total   | 516          | 173        | 25:09:28     | 534          | 120        | 21:04:18     | 256          | 81         | 12:57:14     | 1306        | 374        | 59:11:01     |
+
+
 ## shinobi
 
-This dataset contains about 10h of gameplay on the videogame Shinobi III The Return of the Ninja Master, for N=4 participants (`sub-01`, `sub-02`, `sub-04` and `sub-06`). Participants used the CNeuromod videogame controller described in [Harel et al. (2023)](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0290158). In each run, participants played 3 levels in cycles and always in the same order. These levels were selected in the game to have fairly homogeneous core game mechanics (see the [Sega documentation](https://sega.fandom.com/wiki/Shinobi_III:_Return_of_the_Ninja_Master) for more details on game structure):
+This dataset contains about 8h of gameplay on the videogame Shinobi III The Return of the Ninja Master for N=4 participants (`sub-01`, `sub-02`, `sub-04` and `sub-06`). To limit the impact of learning on the `shinobi` dataset, fMRI data were acquired after an initial training phase (constituting the [`shinobi_training`](https://docs.cneuromod.ca/en/latest/DATASETS.html#shinobi-training) dataset) where the subjects were introduced to the game content outside the MRI scanner. Thus, the `shinobi` dataset contains fMRI and behavioral gameplay data during a phase of relatively stable performance, providing a rich and naturalistic dataset suitable for cognitive neuroscience and imitation learning research.
+
+Participants used the CNeuromod videogame controller described in [Harel et al. (2023)](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0290158). In each run, participants played 3 levels in cycles and always in the same order. These levels were selected in the game to have fairly homogeneous core game mechanics (see the [Sega documentation](https://sega.fandom.com/wiki/Shinobi_III:_Return_of_the_Ninja_Master) for more details on game structure):
  * `Level-1` corresponded to round 1 of the original game, "Zeed's Resurrection". It included one mini-boss and one boss fight.
  * `Level-4` corresponded to the beginning of round 4 of the original game, "Destruction". It included no mini-boss or boss fight.
  * `Level-5` corresponded to the beginning of round 5 of the original game, "Electric demon". It included one mini-boss fight and no boss fight.
@@ -124,6 +137,17 @@ In this dataset and the related documentation, we use the term `run` to designat
 For each functional run, a companion file `_events.tsv` contains the timing and duration of each repetition played, as well as a `_annotated_events.tsv` file that additionally contains richer annotations, including button presses, handcrafted annotations (Kills, Health losses), and frame-wise RAM values. Additional documentation on the available annotations can be [found here](https://github.com/courtois-neuromod/shinobi/blob/annotations/code/annotations/ANNOTATIONS.md).
 
 The companion `.bk2` files can be found in the `<participant>/<sess>/gamelogs` folder.
+
+The following table summarizes the volume of data acquired per subject and per level, including the total number of repetitions for each level, the number of cleared repetitions, and the corresponding play time.
+|         | Level 1      |            |              | Level 4      |            |              | Level 5      |            |              | Total       |            |              |
+|---------|--------------|------------|--------------|--------------|------------|--------------|--------------|------------|--------------|-------------|------------|--------------|
+| Subject | N            | Cleared    | Duration (h:m:s) | N            | Cleared    | Duration (h:m:s) | N            | Cleared    | Duration (h:m:s) | N           | Cleared    | Duration (h:m:s) |
+| sub-01  | 89           | 84         | 03:57:26     | 64           | 44         | 01:59:50     | 53           | 53         | 02:05:44     | 206         | 181        | 08:03:01     |
+| sub-02  | 81           | 76         | 03:41:53     | 58           | 30         | 02:11:49     | 55           | 47         | 02:37:34     | 194         | 153        | 08:31:16     |
+| sub-04  | 70           | 67         | 03:26:50     | 56           | 29         | 02:06:00     | 53           | 47         | 02:39:47     | 179         | 143        | 08:12:39     |
+| sub-06  | 46           | 45         | 03:29:24     | 42           | 23         | 02:44:22     | 13           | 12         | 00:48:59     | 101         | 80         | 07:02:45     |
+| Total   | 286          | 272        | 14:35:34     | 220          | 126        | 09:02:02     | 174          | 159        | 08:12:06     | 680         | 557        | 31:49:43     |
+
 
 :::{important}
 Due to a programming error a certain number of game recording files were lost during acquisition, these repetitions are still listed in the events file but their `stim_file` field is left blank. Choice is left to the user whether to exclude the corresponding fMRI volumes or not for their analysis.
