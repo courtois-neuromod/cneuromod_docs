@@ -129,6 +129,13 @@ The companion `.bk2` files can be found in the `<participant>/<sess>/gamelogs` f
 Due to a programming error a certain number of game recording files were lost during acquisition, these repetitions are still listed in the events file but their `stim_file` field is left blank. Choice is left to the user whether to exclude the corresponding fMRI volumes or not for their analysis.
 :::
 
+## Hearing safety protocol
+
+This dataset contains behavioral and physiological data acquired through a variety of clinical audiology tests (see the [CNeuroMod docs](https://docs.cneuromod.ca/en/latest/MRI.html) and [Fortier et al. (2023)](https://doi.org/10.31234/osf.io/7xkng) for details on the dataset's context and acquisition).
+Participants underwent multiple test sessions (minimum = 4, maximum = 18, mean = 12, SD = 4.858) composed of different combinations of tests (experimental-condition dependant).
+
+For each of the participants, a `_sessions.tsv` file lists the available test data for each of the sessions.
+
 ## things
 
 N=4 participants completed between 33 (`sub-06`) and 36 (`sub-01`, `sub-02`, `sub-03`) fMRI sessions of a continuous recognition task with images from the [THINGS dataset](https://things-initiative.org/). The first session included 3 runs, and all subsequent sessions included 6 runs. Each 4.7 minutes run included 60 trials. For each trial, an image was shown in the center of the screen for 2.98s, followed by a 1.49s ISI. Subjects maintained fixation on a black fixation marker overlaid onto the image center and visible at all times throughout a run. Images were sampled from 720 THINGS categories. `sub-01`, `sub-02`, `sub-03` were shown 6 images per category (4320 unique stimuli), and `sub-06` was shown 5 images for 480 categories and 6 images for the remaining 240 (3840 unique stimuli).  
