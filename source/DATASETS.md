@@ -132,7 +132,7 @@ Each image was shown three times throughout the duration of the experiment (it w
 For each functional run, a companion file `_events.tsv` contains the timing and duration of each trial, the identity of the image shown, the condition (seen/unseen), whether the image was repeated between and/or within session, the subject's response and whether it was correct, the delay and number of trials since the last presentation (for repeating items), and metrics of fixation compliance derived from eye-tracking data. Available trial annotations are described [here](https://github.com/courtois-neuromod/things_memory_results/blob/marie_dev/src/behav_data/events_descriptors_wEyetrack.json)
 
 :::{important}
-A few sessions were accidentally administered out of the planed order, introducing atypical patterns of repetition for images shown during/after those sessions. Users may want to exclude these sessions from analyses that depend on repetition patterns or memory performance. These include `ses-024`, `ses-025` and `ses-026` for `sub-03`, and `ses-019` to `ses-026` (inclusively) for `sub-06`. fMRI data from `run 6` of `sub-06`'s `ses-008` are excluded from the dataset due to poor brain alignment.
+A few sessions were accidentally administered out of the planned order, introducing atypical patterns of repetition for images shown during/after those sessions. Users may want to exclude these sessions from analyses that depend on repetition patterns or memory performance. These include `ses-024`, `ses-025` and `ses-026` for `sub-03`, and `ses-019` to `ses-026` (inclusively) for `sub-06`. fMRI data from `run 6` of `sub-06`'s `ses-008` are excluded from the dataset due to mistakenly positionned MRI field-of-view.
 :::
 
 ## retinotopy
