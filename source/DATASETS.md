@@ -141,7 +141,7 @@ Three participants (`sub-01`, `sub-02`, `sub-03`) completed multiple sessions (6
 
 Each session included three 5-minutes functional runs, each of which used a different aperture shape : `ring`, `bar` or `wedge`. A run included eight cycles during which an aperture moved slowly across the stimulated visual field to reveal a portion of visual pattern designed to drive both low-level and high-level visual areas. Patterns were drawn randomly at a rate of 15 fps from the [Human Connectome Project retinotopy stimuli](https://doi.org/10.1167/18.13.23) (downloaded [here](http://kendrickkay.net/analyzePRF)).
 
-The stimulated visual field was a circular area with a diameter corresponding to 10 degrees of visual angle. `ring` runs featured a thick circle aperture that expanded from and contracted toward the screen center. `wedge` runs featured a wedge aperture rotating clockwise and counter-clockwise. `bar` runs featured a wide bar aperture sweeping across the screen in 8 different directions. Participants fixated their gaze on a central dot and pressed a button whenever the dot changed color.
+The stimulated visual field was a circular area with a diameter corresponding to 10 degrees of visual angle. `ring` runs featured a thick circle aperture that expanded from and contracted toward the screen center. `wedge` runs featured a wedge aperture rotating clockwise and counter-clockwise. `bar` runs featured a wide bar aperture sweeping across the screen in 8 different directions. Participants fixated their gaze on a central dot and pressed a button whenever the dot changed color (alternating between blue and orange).
 
 ## floc
 
