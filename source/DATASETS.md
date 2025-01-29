@@ -95,6 +95,12 @@ A mistake happened when the pilot episode (`s01e01`) was accidentally skipped at
 
 This dataset contains a single session per participant (N=5) when they read chapter 9 from chapter 9 of Harry Potter and the Sorcerer’s Stone. The text was presented word by word, at a 2Hz pace (each word presented for .5s). This chapter was split over 7 runs of approximate equal length. The stimuli used in this dataset are taken from the experiment reported by [Wehbe et al. (2014)](https://www.biorxiv.org/content/10.1101/2020.09.28.316935v4.full.pdf#cite.wehbe2014) for which a separate fMRI dataset (N=9) has been collected and shared.
 
+## gamepad
+
+This dataset was acquired as a validation study of the CNeuroMod videogame controller. The CNeuromod videogame controller is an open source, custom-built, fiber-optic, MRI compatible video game controller, designed by our team engineer, Mr. André Cyr, and described in [Harel et al. (2023)](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0290158). For a detailed description of the controller, including building instructions visit this [site](https://controller-doc.readthedocs.io/en/latest/). The gamepad dataset contains both fMRI and behavioural data acquired on 4 participants (`sub-01`, `sub-02`, `sub-03` and `sub-06`) during a simple cued-response task in which the participants were instructed to press the various controller buttons for short and long durations (5 blocs of 10 trials per condition).
+
+For each subject we acquired 8 sessions, of two runs each. Four of the sessions were acquired in the MRI scanner using our typical setup (i.e 64-channel head coil) along with the MRI-compatible videogame controller, during which we acquired BOLD recordings. The four remaining sessions were acquired in our MRI [simulator](https://pstnet.com/products/mri-simulator/), with a mock 64-channel head coil, and using a [commercially available SNES-like controller](https://lyonsden.net/innext-usb-game-controller-review/). The latter served as a reference for our validation study. Mock and MRI sessions were alternated, and the starting order (mock or MRI first) was counterbalanced across subjects. For the MRI sessions, the behavioural data can be found in the `*_events.tsv` files stored in the `func` folder. For the mock sessions, behavioural data can be found in the `beh` folder.
+
 ## shinobi_training
 
 This is a pure behavioral dataset collected while participants trained at home on the videogame Shinobi III The Return of the Ninja Master.
@@ -106,7 +112,7 @@ This dataset can be used to analyze learning or individual game-play styles, and
 
 ## shinobi
 
-This dataset contains about 10h of gameplay on the videogame Shinobi III The Return of the Ninja Master, for N=4 participants (`sub-01`, `sub-02`, `sub-04` and `sub-06`). Participants used a custom-built fully fiber-optic MRI controller, designed by the team and described in [Harel et al. (2022)](https://psyarxiv.com/m2x6y/). In each run, participants played 3 levels in cycles and always in the same order. These levels were selected in the game to have fairly homogeneous core game mechanics (see the [Sega documentation](https://sega.fandom.com/wiki/Shinobi_III:_Return_of_the_Ninja_Master) for more details on game structure):
+This dataset contains about 10h of gameplay on the videogame Shinobi III The Return of the Ninja Master, for N=4 participants (`sub-01`, `sub-02`, `sub-04` and `sub-06`). Participants used the CNeuromod videogame controller described in [Harel et al. (2023)](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0290158). In each run, participants played 3 levels in cycles and always in the same order. These levels were selected in the game to have fairly homogeneous core game mechanics (see the [Sega documentation](https://sega.fandom.com/wiki/Shinobi_III:_Return_of_the_Ninja_Master) for more details on game structure):
  * `Level-1` corresponded to round 1 of the original game, "Zeed's Resurrection". It included one mini-boss and one boss fight.
  * `Level-4` corresponded to the beginning of round 4 of the original game, "Destruction". It included no mini-boss or boss fight.
  * `Level-5` corresponded to the beginning of round 5 of the original game, "Electric demon". It included one mini-boss fight and no boss fight.
