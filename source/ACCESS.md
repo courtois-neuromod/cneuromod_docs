@@ -1,8 +1,12 @@
-# Access
+# Access to Data
 
-## Data Transfer Agreement (DTA)
+## Partial fully unrestricted data access
 
-To access the cneuromod dataset, it is required to complete a form with a brief description of planned analyses, and complete an inter-institutional data transfer agreement. Links to relevant forms can be found on the [access request page](https://www.cneuromod.ca/access/access/).The data transfer agreement must be signed by the researcher responsible for the project as well as a representative of the main academic institution where the research team is affiliated. The application will be evaluated by a data access committee and, if approved, a transfer key will be shared with the research team in order to transfer the data (see [Downloading the dataset](downloading) section below).
+Four CNeuroMod subjects (`sub-01`, `sub-02`, `sub-03` and `sub-05`) have chosen to openly share their data via the Canadian Open Neuroscience Platform ([CONP](https://portal.conp.ca/dataset?id=projects/cneuromod)). These data are distributed under a liberal Creative Commons data license, in particular authorizing re-sharing of derivates. Note that you can use the instructions in this guide directly - the command will retrieve all the CONP data and simply raise warnings about the other subjects, which require an access key to download (see next Section for full access). 
+
+## Complete CNeuroMod databank via Data Transfer Agreement (DTA)
+
+To access all the data available in the CNeuroMod databank (i.e all 6 subjects) researchers are required to complete a form with a brief description of planned analyses, and complete an inter-institutional data transfer agreement. Links to relevant forms can be found on the [access request page](https://www.cneuromod.ca/access/access/). The data transfer agreement must be signed by the researcher responsible for the project as well as a representative of the main academic institution where the research team is affiliated. The application will be evaluated by a data access committee and, if approved, a transfer key will be shared with the research team in order to transfer the data (see [Downloading the dataset](downloading) section below).
 
 
 ## Ethics
@@ -78,7 +82,7 @@ datalad get -r fmriprep/movie10/sourcedata/movie10/stimuli fmriprep/movie10/sour
 
 or to get subject specific event files for tasks collecting behavioral responses:
 ```
-datalad get -r fmriprep/movie10/sourcedata/hcptrt/sub-*/ses-*/func/*_events.tsv
+datalad get -r fmriprep/hcptrt/sourcedata/hcptrt/sub-*/ses-*/func/*_events.tsv
 ```
 
 ## Updates
