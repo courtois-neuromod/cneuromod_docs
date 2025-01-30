@@ -30,7 +30,7 @@ The Courtois NeuroMod project was made possible by a 6.3M CAD (2018-23, PI Belle
 
 ### Vision
  * Sana Ahmadi, PhD Student (CRIUGM & Concordia, Québec, CA).
- * Marie Saint-Laurent, Research Professional (CRIUGM, Québec, CA).
+ * Marie St-Laurent, Research Professional (CRIUGM, Québec, CA).
  * [Martin Hebart](http://martin-hebart.de), Principal Investigator, Collaborator (Max Planck Institute for Human Cognitive and Brain Sciences, Germany).
  * [Katja Seeliger](http://seeliger.space/),  Post-Doctoral Fellow, Collaborator (Max Planck Institute for Human Cognitive and Brain Sciences, Germany).  
 
