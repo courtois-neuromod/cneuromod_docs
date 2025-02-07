@@ -197,9 +197,8 @@ The following section details the post-acquisition filtering procedure used for 
 
 Photoplethysmography
 
-: The PPG filtering procedure follows recommandations given by [Elgendi et al. 2013](https://doi.org/10.1371/journal.pone.0076585). 
-The artefacts were removed using a bidirectional butterworth bandpass filter (low cutoff: 0.5 Hz; high cutoff: 8 Hz; order: 3). 
-The signal was than downsampled to 1000 Hz. Systolic peaks were then detected using the method described in 
+: The PPG timeseries were first downsampled to 1000 Hz, before being filtered following recommandations given by [Elgendi et al. 2013](https://doi.org/10.1371/journal.pone.0076585). 
+The artefacts were removed using a bidirectional butterworth bandpass filter (low cutoff: 0.5 Hz; high cutoff: 8 Hz; order: 3). A notch filter was then applied to remove remaining artefacts (Q: 100; see [Bottenhorn et al., 2021](https://doi.org/10.1101/2021.04.01.437293)). Systolic peaks were then detected using the method described in 
 [Elgendi et al. (2013)](https://doi.org/10.1371/journal.pone.0076585), and implemented in NeuroKit2 (see 
 [`ppg_findpeaks`](https://neuropsychology.github.io/NeuroKit/functions/ppg.html#ppg-findpeaks) documentation). Systolic peaks corrected
 using two different methods are available. In the  first method, peak placements were corrected using the peak-to-peak differences from the 
@@ -211,11 +210,11 @@ is based on [Lipponen & Tarvainen (2019)](https://doi.org/10.1080/03091902.2019.
 
 Electrocardiography
 
-: The ECG filtering procedure was implemented as per the [manufacturer application notes](https://www.biopac.com/wp-content/uploads/app242x.pdf). 
+: The ECG signals were downsampled to 1000 Hz. The ECG filtering procedure was implemented as per the [manufacturer application notes](https://www.biopac.com/wp-content/uploads/app242x.pdf). 
 Namely, a bidirectional butterworth highpass filter (cutoff: 2 Hz; order: 2) was first apply to remove low frequency artefacts such as respiration 
 and baseline wander. A second-order IIR notch digital filter was performed to filter fundamental and specific harmonics (Q: 100; see 
 [manufacturer application notes](https://www.biopac.com/wp-content/uploads/app242x.pdf) and [Bottenhorn et al., 2021](https://doi.org/10.1101/2021.04.01.437293)).
-A bidirectional butterworth lowpass filter (cutoff: 40 Hz; order: 2) was finally applied before downsampling the signal to 1000 Hz. The R-peaks were detected using a 
+A bidirectional butterworth lowpass filter (cutoff: 40 Hz; order: 2) was finally applied. The R-peaks were detected using a 
 probabilistic approach as implemented in the [NeuroKit2 ProMAC method](https://neuropsychology.github.io/NeuroKit/functions/ecg.html#ecg-peaks). R-peaks were corrected
 using the same procedure as described above for the systolic peak detection.
 
