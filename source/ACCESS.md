@@ -2,7 +2,7 @@
 
 ## Partial fully unrestricted data access
 
-Four CNeuroMod subjects (`sub-01`, `sub-02`, `sub-03` and `sub-05`) have chosen to openly share their data via the Canadian Open Neuroscience Platform ([CONP](https://portal.conp.ca/dataset?id=projects/cneuromod)). These data are distributed under a liberal Creative Commons data license, in particular authorizing re-sharing of derivates. Note that you can use the instructions in this guide directly - the command will retrieve all the CONP data and simply raise warnings about the other subjects, which require an access key to download (see next Section for full access). 
+Four CNeuroMod subjects (`sub-01`, `sub-02`, `sub-03` and `sub-05`) have chosen to openly share their data via the Canadian Open Neuroscience Platform ([CONP](https://portal.conp.ca/dataset?id=projects/cneuromod)). These data are distributed under a liberal Creative Commons data license, in particular authorizing re-sharing of derivates. Note that you can use the instructions in this guide directly - the command will retrieve all the CONP data and simply raise warnings about the other subjects, which require an access key to download (see next Section for full access).
 
 ## Complete CNeuroMod databank via Data Transfer Agreement (DTA)
 
@@ -26,7 +26,8 @@ See the [DataLad handbook](http://handbook.datalad.org/en/latest/) for further i
 
 We recommend creating an SSH key (if not already present) on the machine on which the dataset will be installed and adding it to github. See the official [github instructions](https://help.github.com/en/enterprise/2.15/user/articles/adding-a-new-ssh-key-to-your-github-account) on how to create and add a key to your account.
 
-To obtain the data, you need to install a recent version of the [DataLad software](http://handbook.datalad.org/en/latest/intro/installation.html), available for Linux, OSX and Windows. Note that you need to have valid login credentials to access the NeuroMod git as well as the NeuroMod [Amazon S3](https://aws.amazon.com/s3) fileserver. Once you have obtained these credentials, you can proceed as follows in a terminal:
+To obtain the data, you need to install a recent version of the [DataLad software](http://handbook.datalad.org/en/latest/intro/installation.html), available for Linux, OSX and Windows.
+
 ```
 # Install recursively the dataset and subdataset of the current project.
 # If using ssh git clone as follow, you can set your public SSH key in the present git to ease future updates.
@@ -35,18 +36,24 @@ datalad install -r git@github.com:courtois-neuromod/cneuromod.git
 cd cneuromod
 ```
 
+### DTA restricted data.
+
+Some participants have not asked CNeuroMod and consented for a fully public release of their data through CONP and these are only accessible through the DTA. The s3 access_key and secret_key will be provided by the data manager after being granted access to cneuromod by the user access committee.
+
+To access DTA restricted data, you need to set as environment variable the credentials to the file server with the following line, replacing the placeholders.
+
+```
+export AWS_ACCESS_KEY_ID=<s3_access_key>  AWS_SECRET_ACCESS_KEY=<s3_secret_key>
+```
+
+.. warning:: These variables needs to be set in your `bash` every time you want to download DTA restricted data.
+
 ### Versioning
 
 By default, this will install the latest stable release of the dataset, which is the recommended version to get for a new analysis.
 If you are need to work on a specific version (for instance to reproduce a result), you can change to the appropriate tag with.
 ```
 git checkout 2020
-```
-
-We now set as environment variable the credentials to the file server. The s3 access_key and secret_key will be provided by the data manager after being granted access to cneuromod by the user access committee.
-```
-# This needs to be set in your `bash` everytime you want to download data.
-export AWS_ACCESS_KEY_ID=<s3_access_key>  AWS_SECRET_ACCESS_KEY=<s3_secret_key>
 ```
 
 ### Preprocessed data
