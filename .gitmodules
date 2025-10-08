@@ -1,0 +1,4 @@
+[submodule "source/datasets/cneuromod.all"]
+	path = source/datasets/cneuromod.all
+	url = https://github.com/courtois-neuromod/cneuromod.all.git
+	datalad-id = 8d29aa4a-b016-4e8e-ac87-fa9b8b8a9359
