@@ -1,23 +1,22 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Derivatives &mdash; Courtois NeuroMod 2020-beta documentation</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-    <link rel="shortcut icon" href="_static/logo_neuromod_small.png"/>
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+  <title>Derivatives &mdash; Courtois NeuroMod latest documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
+    <link rel="shortcut icon" href="_static/logo_neuromod_small.png"/>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=c6e86fd7"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -30,12 +29,16 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index.html" class="icon icon-home"> Courtois NeuroMod
-            <img src="_static/logo_neuromod_black.png" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Courtois NeuroMod
+              <img src="_static/logo_neuromod_black.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -43,23 +46,23 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="DATASETS.html">Datasets</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ACCESS.html">Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datasets/index_bids.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ACCESS.html">Access to Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="MRI.html">MRI</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Derivatives</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#smriprep">sMRIPrep</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#fmriprep">fMRIPrep</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#outputs">Outputs</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#recommended-preprocessing-strategy">Recommended preprocessing strategy</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#pipeline-description">Pipeline description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#anatomical-data-preprocessing-pipeline-description-https-github-com-courtois-neuromod-anat-smriprep">Anatomical data preprocessing pipeline description (https://github.com/courtois-neuromod/anat.smriprep)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#functional-data-preprocessing-pipeline-description">Functional data preprocessing pipeline description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#copyright-waiver">Copyright Waiver</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="RELEASES.html">Releases</a></li>
-<li class="toctree-l1"><a class="reference internal" href="COC.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CONTRIBUTING.html">Contributing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="AUTHORS.html">Authors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ACKNOWLEDGMENT.html">How to acknowledge</a></li>
 </ul>
@@ -77,7 +80,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">Derivatives</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/DERIVATIVES.md.txt" rel="nofollow"> View page source</a>
@@ -89,25 +92,26 @@
            <div itemprop="articleBody">
              
   <section id="derivatives">
-<h1>Derivatives<a class="headerlink" href="#derivatives" title="Permalink to this heading"></a></h1>
-<section id="smriprep">
-<h2><a class="reference external" href="https://github.com/courtois-neuromod/anat.smriprep">sMRIPrep</a><a class="headerlink" href="#smriprep" title="Permalink to this heading"></a></h2>
-<p>The anatomical data was preprocessed using <a class="reference external" href="https://github.com/nipreps/smriprep">sMRIPrep pipeline</a>.
-It took as input the T1w and T2w of the first 2 sessions of all participants, which were averaged after coregistration.</p>
-</section>
+<h1>Derivatives<a class="headerlink" href="#derivatives" title="Link to this heading"></a></h1>
 <section id="fmriprep">
-<h2><a class="reference external" href="https://github.com/courtois-neuromod/cneuromod.fmriprep">fMRIPrep</a><a class="headerlink" href="#fmriprep" title="Permalink to this heading"></a></h2>
+<h2><a class="reference external" href="https://github.com/courtois-neuromod/cneuromod.fmriprep">fMRIPrep</a><a class="headerlink" href="#fmriprep" title="Link to this heading"></a></h2>
+<p>Results included in this manuscript come from preprocessing
+performed using <em>fMRIPrep</em> 20.2.x LTS series
+(&#64;fmriprep1; &#64;fmriprep2; RRID:SCR_016216),
+which is based on <em>Nipype</em> 1.6.1
+(&#64;nipype1; &#64;nipype2; RRID:SCR_002502).</p>
+<p>The boilerplate automatically generated by the pipeline was adapted to match our preprocessing specifics (separate anat track and online preprocessing of functional data).</p>
 <section id="overview">
-<h3>Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h3>
+<h3>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h3>
 <p>The functional data was preprocessed using the <a class="reference external" href="https://fmriprep.readthedocs.io/en/stable/installation.html">fMRIprep pipeline</a>. FmriPrep is an fMRI data preprocessing pipeline that requires minimal user input, while providing error and output reporting. It performs basic processing steps (coregistration, normalization, unwarping, noise component extraction, segmentation, skullstripping etc.) and provides outputs that can be easily submitted to a variety of group level analyses, including task-based or resting-state fMRI, graph theory measures, surface or volume-based statistics, etc. The fMRIprep pipeline uses a combination of tools from well-known software packages, including FSL, ANTs, FreeSurfer and <a class="reference external" href="https://afni.nimh.nih.gov/">AFNI</a>. For additional information regarding fMRIPrep installation, workflow and outputs, please visit the <a class="reference external" href="https://fmriprep.readthedocs.io/en/stable/installation.html">documentation page</a>.
 Note that the <code class="docutils literal notranslate"><span class="pre">slicetiming</span></code> option was disabled (i.e. fMRIprep was invoked with the flag <code class="docutils literal notranslate"><span class="pre">--ignore</span> <span class="pre">slicetiming</span></code>).</p>
 </section>
 <section id="outputs">
-<h3>Outputs<a class="headerlink" href="#outputs" title="Permalink to this heading"></a></h3>
+<h3>Outputs<a class="headerlink" href="#outputs" title="Link to this heading"></a></h3>
 <p>The outputs of fMRIprep can be found as sub-datasets of the <a class="reference external" href="https://github.com/courtois-neuromod/cneuromod.processed">cneuromod.processed</a> super-dataset.
 fMRIPrep functional preprocessing was run using the anatomical “fast-track” (flag <code class="docutils literal notranslate"><span class="pre">--anat-derivatives</span></code>) with sMRIPrep output described above, so as to use the same anatomical basis for all functional dataset.
 The output was generated in <code class="docutils literal notranslate"><span class="pre">T1w</span></code>, <code class="docutils literal notranslate"><span class="pre">MNI152NLin2009cAsym</span></code> and <code class="docutils literal notranslate"><span class="pre">fsLR-den-91k</span></code> spaces as defined by <a class="reference external" href="https://www.templateflow.org/">templateflow</a> to respectively enable native space and volumetric or surface-based analyses.</p>
-<p>The description of participant, session, task and event tags can be found in the <span class="xref myst">Datasets</span> section. Each participant folder (<code class="docutils literal notranslate"><span class="pre">sub-*</span></code>) contains:</p>
+<p>The description of participant, session, task and event tags can be found in the <a class="reference internal" href="#DATASETS.html"><span class="xref myst">Datasets</span></a> section. Each participant folder (<code class="docutils literal notranslate"><span class="pre">sub-*</span></code>) contains:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">ses-*/func</span></code> containing for each fMRI run of that session file prefixed with:</p>
 <ul>
@@ -120,22 +124,42 @@ The output was generated in <code class="docutils literal notranslate"><span cla
 </ul>
 </section>
 <section id="recommended-preprocessing-strategy">
-<h3>Recommended preprocessing strategy<a class="headerlink" href="#recommended-preprocessing-strategy" title="Permalink to this heading"></a></h3>
+<h3>Recommended preprocessing strategy<a class="headerlink" href="#recommended-preprocessing-strategy" title="Link to this heading"></a></h3>
 <p>The confounding regressors are correlated, thus it is critical to only use a subset of these regressors. Also note that preprocessed time series have not been corrected for any confounds, but simply realigned in space, and it is therefore also critical to regress some of the available confounds prior to analysis. See the <a class="reference external" href="https://fmriprep.org/en/stable/outputs.html#confounds">fMRIprep documentation</a> for details on available confound regressors. For python users, we recommend using <a class="reference external" href="https://nilearn.github.io">nilearn</a> and the tool <a class="reference external" href="https://nilearn.github.io/stable/modules/generated/nilearn.interfaces.fmriprep.load_confounds_strategy.html">load_confounds_strategy</a> to load confounds from the fMRIprep outputs, using with a standardized strategy. As the NeuroMod data consistently exhibits low levels of motion, we recommend against removing time points with excessive motion (aka scrubbing), and the <code class="docutils literal notranslate"><span class="pre">minimal</span></code> strategy available in nilearn is a reasonable choice. Because of the 2 mm spatial resolution of the fMRI scan, there is substantial impact of thermal noise, and some amount of spatial smoothing is advisable, the extent of it being determined by your hypotheses and analysis.</p>
 </section>
-<section id="pipeline-description">
-<h3>Pipeline description<a class="headerlink" href="#pipeline-description" title="Permalink to this heading"></a></h3>
-<p>Results included in this manuscript come from preprocessing
-performed using <em>fMRIPrep</em> 20.2.5
-(&#64;fmriprep1; &#64;fmriprep2; RRID:SCR_016216),
-which is based on <em>Nipype</em> 1.6.1
-(&#64;nipype1; &#64;nipype2; RRID:SCR_002502).</p>
-<p>Anatomical data preprocessing</p>
-<p>: A total of 0 T1-weighted (T1w) images were found within the input
+<section id="anatomical-data-preprocessing-pipeline-description-https-github-com-courtois-neuromod-anat-smriprep">
+<h3>Anatomical data preprocessing pipeline description (https://github.com/courtois-neuromod/anat.smriprep)<a class="headerlink" href="#anatomical-data-preprocessing-pipeline-description-https-github-com-courtois-neuromod-anat-smriprep" title="Link to this heading"></a></h3>
+<p>The anatomical data was preprocessed using <a class="reference external" href="https://github.com/nipreps/smriprep">sMRIPrep pipeline</a>.
+It took as input the T1w and T2w of the first 2 sessions of all participants, which were averaged after coregistration.</p>
+<p>A total of 2 T1-weighted (T1w) images per subject were found within the input
 BIDS dataset.
-Anatomical preprocessing was reused from previously existing derivative objects.</p>
-<p>Functional data preprocessing</p>
-<p>: For each of the 2 BOLD runs found per subject (across all
+All of them were corrected for intensity non-uniformity (INU)
+with <code class="docutils literal notranslate"><span class="pre">N4BiasFieldCorrection</span></code> (&#64;n4), distributed with ANTs 2.3.3 (&#64;ants, RRID:SCR_004757).
+The T1w-reference was then skull-stripped with a <em>Nipype</em> implementation of
+the <code class="docutils literal notranslate"><span class="pre">antsBrainExtraction.sh</span></code> workflow (from ANTs), using OASIS30ANTs
+as target template.
+Brain tissue segmentation of cerebrospinal fluid (CSF),
+white-matter (WM) and gray-matter (GM) was performed on
+the brain-extracted T1w using <code class="docutils literal notranslate"><span class="pre">fast</span></code> (FSL 5.0.9, RRID:SCR_002823,
+&#64;fsl_fast).
+A T1w-reference map was computed after registration of
+2 T1w images (after INU-correction) using
+<code class="docutils literal notranslate"><span class="pre">mri_robust_template</span></code> (FreeSurfer 6.0.1, &#64;fs_template).
+Brain surfaces were reconstructed using <code class="docutils literal notranslate"><span class="pre">recon-all</span></code> (FreeSurfer 6.0.1,
+RRID:SCR_001847, &#64;fs_reconall), and the brain mask estimated
+previously was refined with a custom variation of the method to reconcile
+ANTs-derived and FreeSurfer-derived segmentations of the cortical
+gray-matter of Mindboggle (RRID:SCR_002438, &#64;mindboggle).
+Volume-based spatial normalization to two standard spaces (MNI152NLin2009cAsym, MNI152NLin6Asym) was performed through
+nonlinear registration with <code class="docutils literal notranslate"><span class="pre">antsRegistration</span></code> (ANTs 2.3.3),
+using brain-extracted versions of both T1w reference and the T1w template.
+The following templates were selected for spatial normalization:
+<em>ICBM 152 Nonlinear Asymmetrical template version 2009c</em> (&#64;mni152nlin2009casym, RRID:SCR_008796; TemplateFlow ID: MNI152NLin2009cAsym), <em>FSL’s MNI ICBM 152 non-linear 6th Generation Asymmetric Average Brain Stereotaxic Registration Model</em> (&#64;mni152nlin6asym, RRID:SCR_002823; TemplateFlow ID: MNI152NLin6Asym),</p>
+</section>
+<section id="functional-data-preprocessing-pipeline-description">
+<h3>Functional data preprocessing pipeline description<a class="headerlink" href="#functional-data-preprocessing-pipeline-description" title="Link to this heading"></a></h3>
+<p>Anatomical preprocessing was reused from previously existing derivative objects.</p>
+<p>: For each of the BOLD runs found per subject (across all
 tasks and sessions), the following preprocessing was performed.
 First, a reference volume and its skull-stripped version were generated
 by aligning and averaging
@@ -225,11 +249,11 @@ Non-gridded (surface) resamplings were performed using <code class="docutils lit
 <p>Many internal operations of <em>fMRIPrep</em> use
 <em>Nilearn</em> 0.6.2 [&#64;nilearn, RRID:SCR_001362],
 mostly within the functional processing workflow.
-For more details of the pipeline, see <a class="reference external" href="https://fmriprep.readthedocs.io/en/latest/workflows.html">the section corresponding
+For more details of the pipeline, see <a class="reference external" href="https://fmriprep.readthedocs.io/en/latest/workflows.html" title="FMRIPrep's documentation">the section corresponding
 to workflows in <em>fMRIPrep</em>’s documentation</a>.</p>
 </section>
 <section id="copyright-waiver">
-<h3>Copyright Waiver<a class="headerlink" href="#copyright-waiver" title="Permalink to this heading"></a></h3>
+<h3>Copyright Waiver<a class="headerlink" href="#copyright-waiver" title="Link to this heading"></a></h3>
 <p>The above boilerplate text was automatically generated by fMRIPrep
 with the express intention that users should copy and paste this
 text into their manuscripts <em>unchanged</em>.
@@ -249,7 +273,7 @@ It is released under the <a class="reference external" href="https://creativecom
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2022, Courtois NeuroMod team.</p>
+    <p>&#169; Copyright 2025, Courtois NeuroMod team.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

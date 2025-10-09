@@ -4,7 +4,7 @@
    :maxdepth: 1
    :caption: Contents:
 
-   DATASETS
+   datasets/index_bids
    ACCESS
    MRI
    DERIVATIVES

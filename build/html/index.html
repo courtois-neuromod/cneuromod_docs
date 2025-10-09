@@ -1,27 +1,26 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Courtois NeuroMod &mdash; Courtois NeuroMod 2020-beta documentation</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-    <link rel="shortcut icon" href="_static/logo_neuromod_small.png"/>
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+  <title>Courtois NeuroMod &mdash; Courtois NeuroMod latest documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
+    <link rel="shortcut icon" href="_static/logo_neuromod_small.png"/>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=c6e86fd7"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Datasets" href="DATASETS.html" /> 
+    <link rel="next" title="BIDS" href="datasets/index_bids.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -29,12 +28,16 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="#" class="icon icon-home"> Courtois NeuroMod
-            <img src="_static/logo_neuromod_black.png" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="#" class="icon icon-home">
+            Courtois NeuroMod
+              <img src="_static/logo_neuromod_black.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -42,12 +45,14 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="DATASETS.html">Datasets</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ACCESS.html">Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datasets/index_bids.html">BIDS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datasets/index_bids.html#participants">Participants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datasets/index_bids.html#datasets">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ACCESS.html">Access to Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="MRI.html">MRI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="DERIVATIVES.html">Derivatives</a></li>
 <li class="toctree-l1"><a class="reference internal" href="RELEASES.html">Releases</a></li>
-<li class="toctree-l1"><a class="reference internal" href="COC.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CONTRIBUTING.html">Contributing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="AUTHORS.html">Authors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ACKNOWLEDGMENT.html">How to acknowledge</a></li>
 </ul>
@@ -65,7 +70,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="#" class="icon icon-home"></a></li>
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">Courtois NeuroMod</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
@@ -77,25 +82,32 @@
            <div itemprop="articleBody">
              
   <section id="courtois-neuromod">
-<h1>Courtois NeuroMod<a class="headerlink" href="#courtois-neuromod" title="Permalink to this heading"></a></h1>
+<h1>Courtois NeuroMod<a class="headerlink" href="#courtois-neuromod" title="Link to this heading"></a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This documentation corresponds to the cneuromod-2022 alpha release.</p>
+<p>The full dataset has not yet been officially released. This documentation describes the subset of data currently available.</p>
 </div>
-<p>The Courtois project on Neural Modelling (cneuromod) aims at training artificial neural networks using extensive experimental data on individual human brain activity and behaviour. Six subjects (three women, three men) are getting scanned weekly for five years, for a total of 500 hours of functional data per subject, including functional localizers (vision, language, memory, emotion), movies and video game play. Functional neuroimaging data are collected with both functional magnetic resonance imaging, magnetoencephalography and a variety of sensors (including electrodermal activity and occulometry).</p>
-<p>The cneuromod project is funded by a donation of the Courtois foundation. Courtois NeuroMod data are freely shared with the scientific community to advance research at the interface of neuroscience and artificial intelligence. Access to to the data is based on a registered access model, requiring a short scientific project description and institutional signature of a data transfer agreement. An overview of the project is available on the cneuromod <a class="reference external" href="https://www.cneuromod.ca/">website</a> and the technical documentation of the latest release is accessible <a class="reference external" href="https://docs.cneuromod.ca/">here</a>.</p>
-<a class="reference internal image-reference" href="_images/logo_neuromod_black.png"><img alt="_images/logo_neuromod_black.png" src="_images/logo_neuromod_black.png" style="width: 200px;" /></a>
-<a class="reference internal image-reference" href="_images/logo_ciusss.png"><img alt="_images/logo_ciusss.png" src="_images/logo_ciusss.png" style="width: 200px;" /></a>
-<a class="reference internal image-reference" href="_images/logo_udem.png"><img alt="_images/logo_udem.png" src="_images/logo_udem.png" style="width: 200px;" /></a>
+<p>The Courtois project on Neural Modelling (cneuromod) aims at training artificial neural networks using extensive experimental data on individual human brain activity and behaviour. Six subjects (three women, three men) were scanned weekly for five years (2018-23), with more sporadic scanning sessions still ongoing.</p>
+<p>The cneuromod dataset currently features up to 200 hours of functional data per subject, including functional localizers (vision, language, memory, emotion), movies and video game play. So far functional neuroimaging data have been collected with functional magnetic resonance imaging and a variety of sensors (including electrodermal activity and occulometry). A smaller subset of data was collected with electroencephalography.</p>
+<p>The cneuromod project is funded by a donation of the Courtois foundation. Courtois NeuroMod data are freely shared with the scientific community to advance research at the interface of neuroscience and artificial intelligence. Four subjects have shared their data without any restriction, while access to the full sample follows a registered access model.</p>
+<p>An overview of the project is available on the cneuromod <a class="reference external" href="https://www.cneuromod.ca/">website</a> and the technical documentation of the latest release is accessible <a class="reference external" href="https://docs.cneuromod.ca/">here</a>.</p>
+<a class="reference internal image-reference" href="_images/logo_neuromod_black.png"><img alt="_images/logo_neuromod_black.png" src="_images/logo_neuromod_black.png" style="width: 200px;" />
+</a>
+<a class="reference internal image-reference" href="_images/logo_ciusss.png"><img alt="_images/logo_ciusss.png" src="_images/logo_ciusss.png" style="width: 200px;" />
+</a>
+<a class="reference internal image-reference" href="_images/logo_udem.png"><img alt="_images/logo_udem.png" src="_images/logo_udem.png" style="width: 200px;" />
+</a>
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="DATASETS.html">Datasets</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ACCESS.html">Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datasets/index_bids.html">BIDS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datasets/index_bids.html#participants">Participants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datasets/index_bids.html#datasets">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ACCESS.html">Access to Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="MRI.html">MRI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="DERIVATIVES.html">Derivatives</a></li>
 <li class="toctree-l1"><a class="reference internal" href="RELEASES.html">Releases</a></li>
-<li class="toctree-l1"><a class="reference internal" href="COC.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CONTRIBUTING.html">Contributing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="AUTHORS.html">Authors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ACKNOWLEDGMENT.html">How to acknowledge</a></li>
 </ul>
@@ -106,13 +118,13 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="DATASETS.html" class="btn btn-neutral float-right" title="Datasets" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="datasets/index_bids.html" class="btn btn-neutral float-right" title="BIDS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2022, Courtois NeuroMod team.</p>
+    <p>&#169; Copyright 2025, Courtois NeuroMod team.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

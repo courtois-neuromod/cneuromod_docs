@@ -1,28 +1,27 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MRI &mdash; Courtois NeuroMod 2020-beta documentation</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-    <link rel="shortcut icon" href="_static/logo_neuromod_small.png"/>
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+  <title>MRI &mdash; Courtois NeuroMod latest documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
+    <link rel="shortcut icon" href="_static/logo_neuromod_small.png"/>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=c6e86fd7"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Derivatives" href="DERIVATIVES.html" />
-    <link rel="prev" title="Access" href="ACCESS.html" /> 
+    <link rel="prev" title="Access to Data" href="ACCESS.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -30,12 +29,16 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index.html" class="icon icon-home"> Courtois NeuroMod
-            <img src="_static/logo_neuromod_black.png" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Courtois NeuroMod
+              <img src="_static/logo_neuromod_black.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -43,12 +46,13 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="DATASETS.html">Datasets</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ACCESS.html">Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datasets/index_bids.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ACCESS.html">Access to Data</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">MRI</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#image-acquisition">Image acquisition</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#scanner">Scanner</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#personalized-head-cases">Personalized head cases</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hearing-protection">Hearing protection</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#sequences">Sequences</a><ul>
@@ -72,11 +76,16 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#mock-scanner">Mock scanner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#auditory-health-monitoring">Auditory health monitoring</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#auditory-tests">Auditory tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#experimental-conditions">Experimental conditions</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="DERIVATIVES.html">Derivatives</a></li>
 <li class="toctree-l1"><a class="reference internal" href="RELEASES.html">Releases</a></li>
-<li class="toctree-l1"><a class="reference internal" href="COC.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CONTRIBUTING.html">Contributing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="AUTHORS.html">Authors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ACKNOWLEDGMENT.html">How to acknowledge</a></li>
 </ul>
@@ -94,7 +103,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">MRI</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/MRI.md.txt" rel="nofollow"> View page source</a>
@@ -106,26 +115,33 @@
            <div itemprop="articleBody">
              
   <section id="mri">
-<h1>MRI<a class="headerlink" href="#mri" title="Permalink to this heading"></a></h1>
+<h1>MRI<a class="headerlink" href="#mri" title="Link to this heading"></a></h1>
 <section id="image-acquisition">
-<h2>Image acquisition<a class="headerlink" href="#image-acquisition" title="Permalink to this heading"></a></h2>
+<h2>Image acquisition<a class="headerlink" href="#image-acquisition" title="Link to this heading"></a></h2>
 <section id="scanner">
-<h3>Scanner<a class="headerlink" href="#scanner" title="Permalink to this heading"></a></h3>
+<h3>Scanner<a class="headerlink" href="#scanner" title="Link to this heading"></a></h3>
 <p><img src="./_static/mri/mri.jpg" alt="UNF MRI" width="350" align="right" hspace="10"/> Magnetic resonance imaging (MRI) for the Courtois neuromod project is being acquired at the functional neuroimaging unit (<a class="reference external" href="https://unf-montreal.ca/">UNF</a>), located at the “Centre de Recherche de l’Institut Universitaire de Gériatrie de Montréal” (<a class="reference external" href="http://www.criugm.qc.ca/">CRIUGM</a>) and affiliated with <a class="reference external" href="https://www.umontreal.ca/">University of Montreal</a> as well as the <a class="reference external" href="https://ciusss-centresudmtl.gouv.qc.ca/propos/services-en-anglais">CIUSSS du Centre-Sud-de-l’île-de-Montréal</a>. The scanner is a Siemens Prisma Fit, equipped with a 2-channel transmit body coil and a 64-channel receive head/neck coil. Most imaging in the Courtois Neuromod project are composed solely of functional MRI runs. Periodically, an entire session is dedicated to anatomical scans.</p>
 </section>
 <section id="personalized-head-cases">
-<h3>Personalized head cases<a class="headerlink" href="#personalized-head-cases" title="Permalink to this heading"></a></h3>
+<h3>Personalized head cases<a class="headerlink" href="#personalized-head-cases" title="Link to this heading"></a></h3>
 <p><img src="./_static/mri/headcase.png" alt="head case" width="200" align="right" hspace="10"/> In order to minimize movement, each participant wears a custom-designed, personalized headcase during scanning, built by <a class="reference external" href="https://caseforge.co">Caseforge</a>. The headcases are milled based on a head scan of each participant generated using a handheld 3D scanner, and the shape of the MRI coil. Caseforge mills the personalized headcases in polystyrene foam blocks.</p>
+</section>
+<section id="hearing-protection">
+<h3>Hearing protection<a class="headerlink" href="#hearing-protection" title="Link to this heading"></a></h3>
+<p>In order to provide an additional level of hearing protection against repeated exposure to the noise of the MR scanner, as well as  optimize the quality of the auditory stimuli, we implemented two custom hearing protection set-ups for CNeuromod participants. The initial custom set-up was composed of the S15 MRI-compatible earphone system (<a class="reference external" href="http://www.sens.com/products/model-s15/">Sensimetric</a>), standard-sized disposable Comply canal tips (<a class="reference external" href="https://www.complyfoam.com/products/canal-tip">Hearing Components, Inc.</a>; advertised Noise Reduction Rating: 29 dB), and modified commercial earmuffs  (<a class="reference external" href="https://www.stanleytools.com/product/rst-63007/leightning-l2f-premium-folding-earmuff">Stanley Black &amp; Decker Inc</a>; unmodified advertised Noise Reduction Rating: 27 dB). The commercial earmuffs were modified to render them thinner by cutting the inner section of the earmuff (i.e leaving the external cup intact) and re-attaching the foam ring (i.e. foam that seals around the ear) to the modified earmuff. This modification was necessary to enable the earmuffs to fit inside the head coil (i.e Siemen’s 64-channel), along with CaseForge headcases and the participants’ heads. This version of the custom hearing protection was eventually abandoned due to pressure points it caused on some participants’ jaws, particularly individuals with larger heads, and when worn for extended periods of time (i.e 1h+).</p>
+<p>This initial hearing protection set-up was used by participants for the following datasets:(<code class="docutils literal notranslate"><span class="pre">hcptrt</span></code>),(<code class="docutils literal notranslate"><span class="pre">movie10</span></code>), (<code class="docutils literal notranslate"><span class="pre">friends</span></code>) seasons 1-4,  and (<code class="docutils literal notranslate"><span class="pre">shinobi</span></code>).</p>
+<p>The second, and current, custom hearing protection set-up is again composed of the S15 MRI-compatible earphone system (Sensimetrics Corporation), “custom” disposable Comply canal tips (Hearing Components, Inc., advertised Noise Reduction Rating: 29 dB), and headphone replacement memory foam rings (Brainwavz Audio). Additionally, each subject selected their “custom” Comply canal tip  from one of two types of styles (original and short), each with three sizes (slim, standard, large), based on their ideal comfort level (i.e fit based on their ear canal shape) and relative sense of optimal sound protection.</p>
+<p>The second version of the custom hearing protection set-up, which  is still currently in use, was used by participants for the (<code class="docutils literal notranslate"><span class="pre">friends</span></code>) seasons 5-6 datasets.</p>
 </section>
 </section>
 <section id="sequences">
-<h2>Sequences<a class="headerlink" href="#sequences" title="Permalink to this heading"></a></h2>
+<h2>Sequences<a class="headerlink" href="#sequences" title="Link to this heading"></a></h2>
 <section id="functional-sequences">
-<h3>Functional sequences<a class="headerlink" href="#functional-sequences" title="Permalink to this heading"></a></h3>
-<p>The parameters of the functional MRI sequence relevant for data analysis can be found in the NeuroMod DataLad. The functional acquisition parameters are all identical to the one used in the <code class="docutils literal notranslate"><span class="pre">hcptrt</span></code> dataset. The Siemens exam card can be found <a class="reference download internal" download="" href="_downloads/42fc64a7fa552dc3f100ee9702cfa61d/functional_protocol_HCP-trt.pdf"><span class="xref download myst">here</span></a>, and is briefly recapitulated below. Functional MRI data was acquired using an accelerated simultaneous multi-slice, gradient echo-planar imaging sequence <a class="reference external" href="http://www.ncbi.nlm.nih.gov/pubmed/23899722">(Xu et al., 2013)</a> developed at the Center for Magnetic Resonance Research (CMRR) University of Minnesota, as part of the Human Connectome Project <a class="reference external" href="https://www.nature.com/articles/nn.4361">(Glasser et al., 2016)</a>. The sequence is available on the Siemens PRISMA scanner at UNF through a concept to production (C2P) agreement, and was used with the following parameters: slice acceleration factor = 4, TR = 1.49 s, TE = 37 ms, flip angle = 52 degrees, voxel size = 2 mm x 2 mm x 2 mm, 60 slices, acquisition matrix 96x96. In each session, a short acquisition (3 volumes) with reversed phase encoding direction was run to allow retrospective correction of B0 field inhomogeneity-induced distortion.</p>
+<h3>Functional sequences<a class="headerlink" href="#functional-sequences" title="Link to this heading"></a></h3>
+<p>The parameters of the functional MRI sequence relevant for data analysis can be found in the NeuroMod DataLad. The functional acquisition parameters are all identical to the one used in the <code class="docutils literal notranslate"><span class="pre">hcptrt</span></code> dataset. The Siemens exam card can be found <a class="reference download internal" download="" href="_downloads/42fc64a7fa552dc3f100ee9702cfa61d/functional_protocol_HCP-trt.pdf"><span class="xref download myst">here</span></a>, and is briefly recapitulated below. Functional MRI data was acquired using an accelerated simultaneous multi-slice, gradient echo-planar imaging sequence <a class="reference external" href="http://www.ncbi.nlm.nih.gov/pubmed/23899722">(Xu et al., 2013)</a> developed at the Center for Magnetic Resonance Research (CMRR) University of Minnesota, as part of the Human Connectome Project <a class="reference external" href="https://www.nature.com/articles/nn.4361">(Glasser et al., 2016)</a>. The sequence is available on the Siemens PRISMA scanner at UNF through a concept to production (C2P) agreement, and was used with the following parameters: slice acceleration factor = 4, TR = 1.49 s, TE = 37 ms, flip angle = 52 degrees (based on Ernst angle calculation), voxel size = 2 mm x 2 mm x 2 mm, 60 slices, acquisition matrix 96x96. The field-of-view was set to cover the full brain (cerebrum and cerebellum) with an AC-PC -16° tilt. In each session, a short acquisition (3 volumes) with reversed phase encoding direction was run to allow retrospective correction of B0 field inhomogeneity-induced distortion.</p>
 </section>
 <section id="brain-anatomical-sequences">
-<span id="id1"></span><h3>Brain anatomical sequences<a class="headerlink" href="#brain-anatomical-sequences" title="Permalink to this heading"></a></h3>
+<h3>Brain anatomical sequences<a class="headerlink" href="#brain-anatomical-sequences" title="Link to this heading"></a></h3>
 <p>The parameters of the brain anatomical MRI sequences relevant for data analysis can be found in the NeuroMod DataLad. The acquisition parameters are identical for all anatomical sessions. The Siemens pdf exam card of the anatomical sessions can be found <a class="reference download internal" download="" href="_downloads/4f1f285d300373cc60a45d4085097bad/anatomical_protocol_2019-01-22.pdf"><span class="xref download myst">here</span></a>, and is briefly recapitulated below. A standard (brain) anatomical session started with a 21 s localizer scan, and then included the following sequences:</p>
 <ul class="simple">
 <li><p>T1-weighted MPRAGE 3D sagittal sequence (duration 6:38 min, TR = 2.4 s, TE = 2.2 ms, flip angle = 8 deg, voxel size = 0.8 mm isotropic, R=2 acceleration)</p></li>
@@ -140,7 +156,7 @@
 <p>.. warning::  T1w, T2w and DWI (from HCP development/aging protocol for Siemens Prisma) and SWI do not have gradient non-linearity correction applied on the scanner. Offline correction can be applied using tools such as <a class="reference external" href="https://github.com/Washington-University/gradunwarp">gradunwarp</a>, but is not included yet in fMRIPrep pipeline.</p>
 </section>
 <section id="spinal-cord-anatomical-sequences">
-<span id="id2"></span><h3>Spinal cord anatomical sequences<a class="headerlink" href="#spinal-cord-anatomical-sequences" title="Permalink to this heading"></a></h3>
+<span id="id1"></span><h3>Spinal cord anatomical sequences<a class="headerlink" href="#spinal-cord-anatomical-sequences" title="Link to this heading"></a></h3>
 <p>The parameters of the spinal cord anatomical MRI sequences relevant for data analysis can be found in the BIDS dataset, and included metadata. The acquisition parameters are identical for all anatomical sessions, and follow a community <a class="reference external" href="https://osf.io/tt4z9/">spinal cord standard imaging protocol</a>. The Siemens pdf exam card of the anatomical sessions can be found <a class="reference download internal" download="" href="_downloads/295ee425f78d66c2f90e294de404aba9/spine_generic_Prisma_VE11C_ZOOMit.pdf"><span class="xref download myst">here</span></a>, and is briefly recapitulated below. A standard (spinal cord) anatomical session starts with a 21 s localizer scan, and then includes the following sequences:</p>
 <ul class="simple">
 <li><p>T1-weighted 3D sagittal sequence (duration 4:44 min, TR = 2 s, TE = 3.72 ms, flip angle = 9 deg, voxel size = 1.0 mm isotropic, R=2 acceleration)</p></li>
@@ -154,47 +170,90 @@
 </section>
 </section>
 <section id="stimuli">
-<h2>Stimuli<a class="headerlink" href="#stimuli" title="Permalink to this heading"></a></h2>
+<h2>Stimuli<a class="headerlink" href="#stimuli" title="Link to this heading"></a></h2>
 <section id="visual-presentation">
-<h3>Visual presentation<a class="headerlink" href="#visual-presentation" title="Permalink to this heading"></a></h3>
+<h3>Visual presentation<a class="headerlink" href="#visual-presentation" title="Link to this heading"></a></h3>
 <p>All visual stimuli were projected using a Epson Powerlite L615U projector. The images were casted through a waveguide onto a blank screen located in the MRI room.</p>
 </section>
 <section id="auditory-system">
-<h3>Auditory system<a class="headerlink" href="#auditory-system" title="Permalink to this heading"></a></h3>
-<p>For functional sessions, participant wore MRI compatible  S15 <a class="reference external" href="http://www.sens.com/products/model-s15/">Sensimetric</a> headphone inserts, proving high-quality acoustic stimulation and substantial attenuation of background noise.  On the computer used for stimuli presentation, a custom impulse response of the headphones is applied with an online finite impulse response filter using the LADSPA DSP to all the presented stimuli.This impulse response was provided by the manufacturer. Sounds was amplified using an <a class="reference external" href="http://audiosource.net/shop/amp100vs/">AudioSource</a> AMP100V amplifier, situated in the control room. Participants also wear earmuffs, adapted from commercially available <a class="reference external" href="https://www.homedepot.ca/product/workhorse-foldable-head-band-earmuff-nrr-25/1001105366">model</a>. The commercial earmuffs have been cut and glued back together in order to be thin enough to be used with the 64-channels MRI coil.</p>
+<h3>Auditory system<a class="headerlink" href="#auditory-system" title="Link to this heading"></a></h3>
+<p>For functional sessions, participant wore MRI compatible  S15 <a class="reference external" href="http://www.sens.com/products/model-s15/">Sensimetric</a> headphone inserts, proving high-quality acoustic stimulation and substantial attenuation of background noise.  On the computer used for stimuli presentation, a custom impulse response of the headphones is applied with an online finite impulse response filter using the LADSPA DSP to all the presented stimuli.This impulse response was provided by the manufacturer. Sounds was amplified using an <a class="reference external" href="http://audiosource.net/shop/amp100vs/">AudioSource</a> AMP100V amplifier, situated in the control room. Participants also wear custom sound protection gear (see section on Hearing protection above).</p>
 </section>
 <section id="stimuli-presentation">
-<h3>Stimuli presentation<a class="headerlink" href="#stimuli-presentation" title="Permalink to this heading"></a></h3>
+<h3>Stimuli presentation<a class="headerlink" href="#stimuli-presentation" title="Link to this heading"></a></h3>
 <p>For the HCP-trt dataset, Eprime scripts provided by the Human Connectome project were adapted for our presentation system, and run using Eprime 2.0. For all other tasks, a custom overlay on top of the <a class="reference external" href="https://www.psychopy.org/">psychopy library</a> was used to present the different tasks and synchronize task with the scanner trigger pulses.
 This software also allowed to trigger the start of the eyetracking system, and onset the stimuli presentation. Trigger pulses were also recorded in the <a class="reference external" href="https://www.biopac.com/product/acqknowledge-software/">AcqKnowledge software</a>. All task stimuli scripts are available through <a class="reference external" href="https://github.com/courtois-neuromod/task_stimuli">github</a>.</p>
 </section>
 </section>
 <section id="physiological-measures">
-<h2>Physiological measures<a class="headerlink" href="#physiological-measures" title="Permalink to this heading"></a></h2>
+<h2>Physiological measures<a class="headerlink" href="#physiological-measures" title="Link to this heading"></a></h2>
 <section id="biopac">
-<h3>Biopac<a class="headerlink" href="#biopac" title="Permalink to this heading"></a></h3>
+<h3>Biopac<a class="headerlink" href="#biopac" title="Link to this heading"></a></h3>
 <p>During all sequences, electrophysiological signals were recorded using a Biopac M160  MRI compatible systems and amplifiers. Measurements were acquired at 1000 Hz. Recodings were synchronized to the MRI scans via trigger pulses. All measurements were recorded and monitored using Biopac’s AcqKnowledge sofware.</p>
 </section>
 <section id="plethysmograph">
-<h3>Plethysmograph<a class="headerlink" href="#plethysmograph" title="Permalink to this heading"></a></h3>
+<h3>Plethysmograph<a class="headerlink" href="#plethysmograph" title="Link to this heading"></a></h3>
 <p>Participant cardiac pulse was measured using an MRI compatible plethysmograph. A Biopac TSD200-MRI photoplethysmogram transducer was  placed on the foot or toe of the participants to obtain beat-by-beat estimates of heart rate.</p>
 </section>
 <section id="skin-conductance">
-<h3>Skin conductance<a class="headerlink" href="#skin-conductance" title="Permalink to this heading"></a></h3>
+<h3>Skin conductance<a class="headerlink" href="#skin-conductance" title="Link to this heading"></a></h3>
 <p>Skin conductance, was measured using two electrodes, one applied to the sole of the foot and the other to the ankle, to record the participant electrodermal response.</p>
 </section>
 <section id="electrocardiogram">
-<h3>Electrocardiogram<a class="headerlink" href="#electrocardiogram" title="Permalink to this heading"></a></h3>
+<h3>Electrocardiogram<a class="headerlink" href="#electrocardiogram" title="Link to this heading"></a></h3>
 <p>An electrocardiogram (ECG) was used to  measure the electrical activity generated by the heart. The ECG was recorded using three MRI compatible electrodes that were placed adjacent to one aother, on the lower left rib cage, just under the heart.</p>
 </section>
 <section id="respiration">
-<h3>Respiration<a class="headerlink" href="#respiration" title="Permalink to this heading"></a></h3>
+<h3>Respiration<a class="headerlink" href="#respiration" title="Link to this heading"></a></h3>
 <p>Participant’s respiration was measured using a custom MRI compatible respiration belt.  The respiration system consisted of: a pressure cuff taken from a blood pressure monitor (PhysioLogic blood), a pressure sensor (MPXV5004GC7U, NXP USA Inc), and flexible tubing. The cuff was attached to the participant upper abdomen using Velcro strap, and then connected to the pressure sensor, located outside the scanner room, using tubing passed through a waveguide. The pressure signal was recorded using an analog input on the Biopac system, and monitored using AcqKnowledge software.</p>
 </section>
 </section>
 <section id="mock-scanner">
-<h2>Mock scanner<a class="headerlink" href="#mock-scanner" title="Permalink to this heading"></a></h2>
+<h2>Mock scanner<a class="headerlink" href="#mock-scanner" title="Link to this heading"></a></h2>
 <p>Some of our datasets required a comparison between genuine in-scanner conditions and “mock” conditions, where the subject was installed in a fake scanner that reproduced the comfort and aspect of an MRI scanner. This mock setup was also located at <a class="reference external" href="https://unf-montreal.ca/">UNF</a>, and was equipped with a monitor screen for stimulus presentation as well as audio headphones and response devices (keyboard and video game controller).</p>
+</section>
+<section id="auditory-health-monitoring">
+<h2>Auditory health monitoring<a class="headerlink" href="#auditory-health-monitoring" title="Link to this heading"></a></h2>
+<p>In order to make sure no harm was caused to the participants’ hearing, an auditory health monitoring protocol using a variety of commonly used clinical audiology tests.
+Baselines were acquired for each of the tests when the participants joined CNeuroMod (November 2018 - July 2019) and also at the beginning of this monitoring protocol (January - February 2021).</p>
+<section id="auditory-tests">
+<h3>Auditory tests<a class="headerlink" href="#auditory-tests" title="Link to this heading"></a></h3>
+<p>The tests used during this monitoring protocol included:</p>
+<ul class="simple">
+<li><p>Otoscopic examination</p></li>
+<li><p>Tympanometry test</p></li>
+<li><p>Stapedial reflex test</p></li>
+<li><p>Pure-tone audiometry test</p>
+<ul>
+<li><p>Standard/Clinical frequency range (250 Hz - 8 kHz)</p></li>
+<li><p>Extended/Ultra-high frequency range (9 kHz - 20 kHz)</p></li>
+</ul>
+</li>
+<li><p>Matrix speech-in-noise perception test</p>
+<ul>
+<li><p>First language (English or French)</p></li>
+<li><p>Second language (French or English)</p></li>
+</ul>
+</li>
+<li><p>Transient-evoked otoacoustic emissions (TEOAE)</p></li>
+<li><p>Distorsion product otoacoustic emissions (DPOAE)</p></li>
+<li><p>Distorsion product otoacoustic emissions’ growth function</p>
+<ul>
+<li><p>for F2 = 2 kHz</p></li>
+<li><p>for F2 = 4 kHz</p></li>
+<li><p>for F2 = 6 kHz</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="experimental-conditions">
+<h3>Experimental conditions<a class="headerlink" href="#experimental-conditions" title="Link to this heading"></a></h3>
+<p>Two types of experimental conditions were developped to assess the potential short- and long-term impacts of the exposure to noise during scanning sessions.
+The first one comprised two separate sessions: one immediately before a scan and one immediately after that same scan.
+The second one comprised a single auditory test session scheduled between 48 hours and 7 days after a scan.
+The results acquired during the delayed sessions were then compared to the data acquired at baseline.</p>
+<p>For more details regarding the tests, the experimental conditions or the results, see <a class="reference external" href="https://doi.org/10.31234/osf.io/7xkng">Fortier et al. (2023)</a>.</p>
+</section>
 </section>
 </section>
 
@@ -202,14 +261,14 @@ This software also allowed to trigger the start of the eyetracking system, and o
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="ACCESS.html" class="btn btn-neutral float-left" title="Access" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ACCESS.html" class="btn btn-neutral float-left" title="Access to Data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="DERIVATIVES.html" class="btn btn-neutral float-right" title="Derivatives" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2022, Courtois NeuroMod team.</p>
+    <p>&#169; Copyright 2025, Courtois NeuroMod team.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
