@@ -1,3 +1,1 @@
-sphinx
-sphinx_rtd_theme
-myst-parser
+.git/annex/objects/XK/fw/SHA256E-s44--2515c090091c2fbbc295c4859eece37e4478cef88f356db24a1f7bf835ac4aeb.txt/SHA256E-s44--2515c090091c2fbbc295c4859eece37e4478cef88f356db24a1f7bf835ac4aeb.txt
