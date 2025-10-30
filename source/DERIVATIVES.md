@@ -183,7 +183,8 @@ Each participant folder (`sub-*`) contains the following outputs alongside the f
   - `*_physio.tsv.gz` : raw segmented biosignals.
   - `*_physio.json` : contains tsv columns names, start time, and signal sampling frequency information. 
 
-- `ses_*/derivatives`
+The derivatives can be found under the `<dataset>.physprep` folders:
+- `ses_*/func`
   - `*_desc-preproc_physio.tsv.gz` : processed time series.
   - `*_desc-physio_events.tsv` : extracted sparse features.
   - `*_desc-quality.json` : quality assessment
@@ -213,9 +214,8 @@ Respiratory activity
 
 : The RSP filtering procedure was implemented as per [Khodadad et al., 2018](https://doi.org/10.1088/1361-6579/aad7e6), which includes a bidirectional 
 butterworth bandpass filter (low cutoff: 0.05 Hz; high cutoff: 3 Hz; order: 2). The lower cutoff was set to preserve breathing rate higher than 3 breath
-per minute. The signal was than downsample to 1000 Hz. The peaks and trouhgs were identified on the downsampled signal as per [Khondadad et al. (2018)](https://doi.org/10.1088/1361-6579/aad7e6).
-From those parameters, the respiratory amplitude were calculated as the difference between a trough and the following peak. Additionally, the Respiratory 
-Volume per Time (RVT) was computed using the method described in [Harrison et al. (2021)](https://doi.org/10.1016/j.neuroimage.2021.117787).
+per minute. The signal was than downsample to 1000 Hz. The peaks and troughs were identified on the downsampled signal as per [Khondadad et al. (2018)](https://doi.org/10.1088/1361-6579/aad7e6).
+
 
 ### QC-ing pipeline description
 In order to evaluate the usability of the physiological data, quality indices were calculated for each modality on the filtered signals. These signals were 
