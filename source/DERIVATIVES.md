@@ -170,7 +170,7 @@ It is released under the [CC0](https://creativecommons.org/publicdomain/zero/1.0
 ## PhysPrep
 
 ### Overview
-The physiological data were preprocessed using a pipeline developed within the lab, called Physprep. 
+The physiological data were preprocessed using a pipeline developed in the context of the CNeuroMod project, called [Physprep](https://github.com/courtois-neuromod/physprep). 
 Physprep is a pipeline that segments, cleans and processes PPG, ECG, EDA, and respiratory (RSP) signals 
 from minimal user input. The Physprep pipeline integrates open access python packages including Phys2Bids, 
 NeuroKit2, and Systole.
@@ -189,8 +189,7 @@ Each participant folder (`sub-*`) contains the following outputs alongside the f
   - `*_desc-quality.json` : quality assessment
 
 ### Preprocessing pipeline description
-The workflow developed to process the physiological data is based on Phys2Bids 2.8.3; Scipy 1.9.0; Neurokit2 0.2.3; 
-Systole 0.2.4.
+The workflow developed to process the physiological data is based mainly on Phys2Bids, Scipy, Neurokit2 (for the specific dependencies, please check the [requirements.txt](https://github.com/courtois-neuromod/physprep/blob/main/requirements.txt)).
 
 The following section details the post-acquisition filtering procedure used for each physiological modality.
 
@@ -207,7 +206,7 @@ Electrocardiography
 
 Electrodermal activity
 
-: The EDA filtering procedure was implemented as per [NeuroKit2 default EDA cleaning method](https://neuropsychology.github.io/NeuroKit/functions/eda.html#preprocessing). Since EDA signal is characterised by low-frequency components and MRI gradients introduce high-frequency artefacts, a bidirectional butterworth lowpass filter (cutoff: 3 Hz; order: 4) was employed to clean the signal, as suggested by [Privratsky et al. (2020)](https://doi.org/10.1016/j.ijpsycho.2020.09.015). However, unlike what is proposed in that article, we refrained from applying a highpass filter to retain the tonic component of the EDA signal. The signal was than downsample to 1000 Hz. After the filtering procedure, the EDA signal was decomposed into its phasic and tonic components using the method implemented in Biopac's Acqknowledge (i.e. highpass filtering with a cutoff of 0.05 Hz). From the extracted phasic component, the skin conductance responses were detected by finding the local maxima in the signal (minimum relative amplitude of 0.1).
+: The EDA filtering procedure was implemented as per [NeuroKit2 default EDA cleaning method](https://neuropsychology.github.io/NeuroKit/functions/eda.html#preprocessing). Since EDA signal is characterised by low-frequency components and MRI gradients introduce high-frequency artefacts, a bidirectional butterworth lowpass filter (cutoff: 3 Hz; order: 4) was employed to clean the signal, as suggested by [Privratsky et al. (2020)](https://doi.org/10.1016/j.ijpsycho.2020.09.015). However, unlike what is proposed in that article, we did not apply a highpass filter in order to keep the tonic component of the EDA signal. The signal was than downsample to 1000 Hz. After the filtering procedure, the EDA signal was decomposed into its phasic and tonic components using the method implemented in Biopac's Acqknowledge (i.e. highpass filtering with a cutoff of 0.05 Hz). From the extracted phasic component, the skin conductance responses were detected by finding the local maxima in the signal (minimum relative amplitude of 0.1).
 
 
 Respiratory activity
