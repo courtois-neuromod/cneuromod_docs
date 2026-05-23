@@ -49,14 +49,43 @@ The duration of BOLD series are slightly varying across participants and repetit
 ### [Relational processing](http://www.cognitiveatlas.org/task/id/trm_550b5a47aa23e/)
 `relational` duration: approximately 3 minutes. Participants were shown 6 different shapes filled with 1 of 6 different textures (Smith et al. 2007). There were two conditions: relations processing (event type `relational`), and control matching condition (event type `control`). In the `relational` events, 2 pairs of objects were presented on the screen, with one pair at the top of the screen, and the other pair at the bottom. Participants were instructed to decide what dimension differed in the top pair (shape or texture), and then decide if the bottom pair differed, or not, on the same dimension (i.e. if the top pair differed in shape, did the bottom pair also differ in shape). Their answers were recorded by one of two button presses: “a” differ on same dimension; “b” don't differ on same dimension. In the `control` events, participants were shown two objects at the top of the screen, and one object at the bottom of the screen, with a word in the middle of the screen (either “shape” or “texture”).They were told to decide whether the bottom object matched either of the top two objects on that dimension (i.e., if the word is “shape”, did the bottom object have the same shape as either of the top two objects). Participants responded “yes” or “no” using the button box. For the `relational` condition, the stimuli were presented for 3500 ms, with a 500 ms ITI, and there were four trials per block. In the `control`condition, stimuli were presented for 2800 ms, with a 400 ms ITI, and there were 5 trials per block. In total there were two runs, each with three `relational` blocks, three `control` blocks and three 16-second fixation blocks.
 
-### [Emotion processing](http://www.cognitiveatlas.org/task/id/trm_550b5b066d37b/)  
+### [Emotion processing](http://www.cognitiveatlas.org/task/id/trm_550b5b066d37b/)
 `emotion` duration: approximately 2 minutes. Participants were shown triads of faces (event type `face`) or shapes (event type `shape`), and were asked to decide which of the shapes at the bottom of the screen matches the target face/ shape at the top of the screen (adapted from Smith et al. 2007). Faces had either an angry or fearful expression. Faces, and shapes were presented in three blocks of 6 trials (3 `face` and 3 `shape`), with each trial lasting 2 seconds, followed by a 1 second inter-stimulus interval. Each block was preceded by a 3000 ms task cue (“shape” or “face”), so that each block was 21 seconds long, including the cue. In total there were two runs, three `face` blocks and three `shape` blocks, with 8 seconds of fixation at the end of each run.
 
-### [Working memory](http://www.cognitiveatlas.org/task/id/trm_550b50095d4a3/)  
+### [Working memory](http://www.cognitiveatlas.org/task/id/trm_550b50095d4a3/)
 `wm` duration: approximately 5 minutes. There were two subtasks: a category specific representation, and a working memory task. Participants were presented with blocks of either places, tools, faces, and body parts. Within each run, all 4 types of stimuli were presented in block, with each block being labelled as a 2-back task (participants needed to indicate if they saw the same image two images back), or a version of a 0-back task (participants were shown a target at the start of the trial and they needed to indicate if the image that they were seeing matched the target). There were thus 8 different event types `<stim>_<back>`, where `<stim>` was one of `place`, `tools`, `face` or `body`, and `<back>` was one of `0back` or `2back`. Each image was presented for 2 seconds, followed by a 500 ms ITI. Stimuli were presented for 2 seconds, followed by a 500 ms inter-task interval. Each of the 2 runs included 8 event types with 10 trials per type, as well as 4 fixations blocks (15 secs).
 
 ### [Resting state](http://www.cognitiveatlas.org/task/id/trm_4c8a834779883/)
 `restingstate` duration: 15 minutes. In every other session, one resting-state fMRI run was acquired, giving 5 runs per participant. Participants were asked to have their eye open, be looking at fixation cross in the middle of the screen and be instructed to not fall asleep. A total of five resting-state fMRI runs were acquired per subject.
+
+
+## Language Annotations
+
+The `cneuromod` language annotation dataset is extracted for the naturalistic stimuli sets ([friends](https://github.com/courtois-neuromod/friends.stimuli), [movie10](https://github.com/courtois-neuromod/movie10.stimuli), [narratives](https://github.com/courtois-neuromod/narratives.stimuli), [le petit prince](https://github.com/courtois-neuromod/petit_prince.stimuli)). The annotations were extracted using [AssemblyAI](https://www.assemblyai.com/). Annotations were structured into a `.json` file format, associating each audio or video file of the data with its own `json` file. Each `json` file contains the whole `transcript`, each single `word`, its `start` and `end` time points in seconds, and `confidence`, the probability value AssemblyAI gives regarding its success rate in identifying the word from the audio.
+
+```
+{"results":
+    {"channels":
+        [{"alternatives":
+            [{"transcript": "There's nothing to tell. Just some guy I work with. Come on, you're ...
+                "words":
+                        [{"word": "There's",
+                            "start": 18.97,
+                            "end": 19.146,
+                            "Confidence": 0.6398
+                        }]
+            }]
+        }]
+    }
+}
+```
+
+Each language annotation resides in the stimuli repository of the dataset itself under [CNeuromod GitHub organization](https://github.com/courtois-neuromod) alongside a `dataset_description.json` file where we provide a generic description about the dataset, a simple exploratory statistical analysis of the words and token counts and the version of the annotation extraction tool is used.
+
+
+
+
+
 
 ## movie10
 
